@@ -269,7 +269,7 @@ export class SqlUsersServiceClient {
   // -- Service calls --
   // -------------------
   delete(
-    request: protos.google.cloud.sql.v1beta4.ISqlUsersDeleteRequest,
+    request?: protos.google.cloud.sql.v1beta4.ISqlUsersDeleteRequest,
     options?: CallOptions
   ): Promise<
     [
@@ -319,7 +319,7 @@ export class SqlUsersServiceClient {
    * const [response] = await client.delete(request);
    */
   delete(
-    request: protos.google.cloud.sql.v1beta4.ISqlUsersDeleteRequest,
+    request?: protos.google.cloud.sql.v1beta4.ISqlUsersDeleteRequest,
     optionsOrCallback?:
       | CallOptions
       | Callback<
@@ -360,7 +360,7 @@ export class SqlUsersServiceClient {
     return this.innerApiCalls.delete(request, options, callback);
   }
   insert(
-    request: protos.google.cloud.sql.v1beta4.ISqlUsersInsertRequest,
+    request?: protos.google.cloud.sql.v1beta4.ISqlUsersInsertRequest,
     options?: CallOptions
   ): Promise<
     [
@@ -407,7 +407,7 @@ export class SqlUsersServiceClient {
    * const [response] = await client.insert(request);
    */
   insert(
-    request: protos.google.cloud.sql.v1beta4.ISqlUsersInsertRequest,
+    request?: protos.google.cloud.sql.v1beta4.ISqlUsersInsertRequest,
     optionsOrCallback?:
       | CallOptions
       | Callback<
@@ -448,7 +448,7 @@ export class SqlUsersServiceClient {
     return this.innerApiCalls.insert(request, options, callback);
   }
   list(
-    request: protos.google.cloud.sql.v1beta4.ISqlUsersListRequest,
+    request?: protos.google.cloud.sql.v1beta4.ISqlUsersListRequest,
     options?: CallOptions
   ): Promise<
     [
@@ -494,7 +494,7 @@ export class SqlUsersServiceClient {
    * const [response] = await client.list(request);
    */
   list(
-    request: protos.google.cloud.sql.v1beta4.ISqlUsersListRequest,
+    request?: protos.google.cloud.sql.v1beta4.ISqlUsersListRequest,
     optionsOrCallback?:
       | CallOptions
       | Callback<
@@ -535,7 +535,7 @@ export class SqlUsersServiceClient {
     return this.innerApiCalls.list(request, options, callback);
   }
   update(
-    request: protos.google.cloud.sql.v1beta4.ISqlUsersUpdateRequest,
+    request?: protos.google.cloud.sql.v1beta4.ISqlUsersUpdateRequest,
     options?: CallOptions
   ): Promise<
     [
@@ -586,7 +586,7 @@ export class SqlUsersServiceClient {
    * const [response] = await client.update(request);
    */
   update(
-    request: protos.google.cloud.sql.v1beta4.ISqlUsersUpdateRequest,
+    request?: protos.google.cloud.sql.v1beta4.ISqlUsersUpdateRequest,
     optionsOrCallback?:
       | CallOptions
       | Callback<

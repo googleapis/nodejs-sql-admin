@@ -269,7 +269,7 @@ export class SqlSslCertsServiceClient {
   // -- Service calls --
   // -------------------
   delete(
-    request: protos.google.cloud.sql.v1beta4.ISqlSslCertsDeleteRequest,
+    request?: protos.google.cloud.sql.v1beta4.ISqlSslCertsDeleteRequest,
     options?: CallOptions
   ): Promise<
     [
@@ -322,7 +322,7 @@ export class SqlSslCertsServiceClient {
    * const [response] = await client.delete(request);
    */
   delete(
-    request: protos.google.cloud.sql.v1beta4.ISqlSslCertsDeleteRequest,
+    request?: protos.google.cloud.sql.v1beta4.ISqlSslCertsDeleteRequest,
     optionsOrCallback?:
       | CallOptions
       | Callback<
@@ -365,7 +365,7 @@ export class SqlSslCertsServiceClient {
     return this.innerApiCalls.delete(request, options, callback);
   }
   get(
-    request: protos.google.cloud.sql.v1beta4.ISqlSslCertsGetRequest,
+    request?: protos.google.cloud.sql.v1beta4.ISqlSslCertsGetRequest,
     options?: CallOptions
   ): Promise<
     [
@@ -415,7 +415,7 @@ export class SqlSslCertsServiceClient {
    * const [response] = await client.get(request);
    */
   get(
-    request: protos.google.cloud.sql.v1beta4.ISqlSslCertsGetRequest,
+    request?: protos.google.cloud.sql.v1beta4.ISqlSslCertsGetRequest,
     optionsOrCallback?:
       | CallOptions
       | Callback<
@@ -456,7 +456,7 @@ export class SqlSslCertsServiceClient {
     return this.innerApiCalls.get(request, options, callback);
   }
   insert(
-    request: protos.google.cloud.sql.v1beta4.ISqlSslCertsInsertRequest,
+    request?: protos.google.cloud.sql.v1beta4.ISqlSslCertsInsertRequest,
     options?: CallOptions
   ): Promise<
     [
@@ -509,7 +509,7 @@ export class SqlSslCertsServiceClient {
    * const [response] = await client.insert(request);
    */
   insert(
-    request: protos.google.cloud.sql.v1beta4.ISqlSslCertsInsertRequest,
+    request?: protos.google.cloud.sql.v1beta4.ISqlSslCertsInsertRequest,
     optionsOrCallback?:
       | CallOptions
       | Callback<
@@ -552,7 +552,7 @@ export class SqlSslCertsServiceClient {
     return this.innerApiCalls.insert(request, options, callback);
   }
   list(
-    request: protos.google.cloud.sql.v1beta4.ISqlSslCertsListRequest,
+    request?: protos.google.cloud.sql.v1beta4.ISqlSslCertsListRequest,
     options?: CallOptions
   ): Promise<
     [
@@ -602,7 +602,7 @@ export class SqlSslCertsServiceClient {
    * const [response] = await client.list(request);
    */
   list(
-    request: protos.google.cloud.sql.v1beta4.ISqlSslCertsListRequest,
+    request?: protos.google.cloud.sql.v1beta4.ISqlSslCertsListRequest,
     optionsOrCallback?:
       | CallOptions
       | Callback<
