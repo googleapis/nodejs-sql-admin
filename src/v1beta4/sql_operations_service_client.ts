@@ -269,7 +269,7 @@ export class SqlOperationsServiceClient {
   // -- Service calls --
   // -------------------
   get(
-    request: protos.google.cloud.sql.v1beta4.ISqlOperationsGetRequest,
+    request?: protos.google.cloud.sql.v1beta4.ISqlOperationsGetRequest,
     options?: CallOptions
   ): Promise<
     [
@@ -319,7 +319,7 @@ export class SqlOperationsServiceClient {
    * const [response] = await client.get(request);
    */
   get(
-    request: protos.google.cloud.sql.v1beta4.ISqlOperationsGetRequest,
+    request?: protos.google.cloud.sql.v1beta4.ISqlOperationsGetRequest,
     optionsOrCallback?:
       | CallOptions
       | Callback<
@@ -362,7 +362,7 @@ export class SqlOperationsServiceClient {
     return this.innerApiCalls.get(request, options, callback);
   }
   list(
-    request: protos.google.cloud.sql.v1beta4.ISqlOperationsListRequest,
+    request?: protos.google.cloud.sql.v1beta4.ISqlOperationsListRequest,
     options?: CallOptions
   ): Promise<
     [
@@ -418,7 +418,7 @@ export class SqlOperationsServiceClient {
    * const [response] = await client.list(request);
    */
   list(
-    request: protos.google.cloud.sql.v1beta4.ISqlOperationsListRequest,
+    request?: protos.google.cloud.sql.v1beta4.ISqlOperationsListRequest,
     optionsOrCallback?:
       | CallOptions
       | Callback<
