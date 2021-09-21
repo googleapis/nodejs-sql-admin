@@ -329,6 +329,10 @@ export class SqlTiersServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.list(request);
+   *
+   * @example <caption>include:samples/generated/v1beta4/sql_tiers_service.list.js</caption>
+   * region_tag:sql_list_sample
+   *
    */
   list(
     request?: protos.google.cloud.sql.v1beta4.ISqlTiersListRequest,

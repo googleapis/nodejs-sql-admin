@@ -341,6 +341,10 @@ export class SqlDatabasesServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.delete(request);
+   *
+   * @example <caption>include:samples/generated/v1beta4/sql_databases_service.delete.js</caption>
+   * region_tag:sql_delete_sample
+   *
    */
   delete(
     request?: protos.google.cloud.sql.v1beta4.ISqlDatabasesDeleteRequest,
@@ -437,6 +441,10 @@ export class SqlDatabasesServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.get(request);
+   *
+   * @example <caption>include:samples/generated/v1beta4/sql_databases_service.get.js</caption>
+   * region_tag:sql_get_sample
+   *
    */
   get(
     request?: protos.google.cloud.sql.v1beta4.ISqlDatabasesGetRequest,
@@ -532,6 +540,10 @@ export class SqlDatabasesServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.insert(request);
+   *
+   * @example <caption>include:samples/generated/v1beta4/sql_databases_service.insert.js</caption>
+   * region_tag:sql_insert_sample
+   *
    */
   insert(
     request?: protos.google.cloud.sql.v1beta4.ISqlDatabasesInsertRequest,
@@ -625,6 +637,10 @@ export class SqlDatabasesServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.list(request);
+   *
+   * @example <caption>include:samples/generated/v1beta4/sql_databases_service.list.js</caption>
+   * region_tag:sql_list_sample
+   *
    */
   list(
     request?: protos.google.cloud.sql.v1beta4.ISqlDatabasesListRequest,
@@ -722,6 +738,10 @@ export class SqlDatabasesServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.patch(request);
+   *
+   * @example <caption>include:samples/generated/v1beta4/sql_databases_service.patch.js</caption>
+   * region_tag:sql_patch_sample
+   *
    */
   patch(
     request?: protos.google.cloud.sql.v1beta4.ISqlDatabasesUpdateRequest,
@@ -819,6 +839,10 @@ export class SqlDatabasesServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.update(request);
+   *
+   * @example <caption>include:samples/generated/v1beta4/sql_databases_service.update.js</caption>
+   * region_tag:sql_update_sample
+   *
    */
   update(
     request?: protos.google.cloud.sql.v1beta4.ISqlDatabasesUpdateRequest,

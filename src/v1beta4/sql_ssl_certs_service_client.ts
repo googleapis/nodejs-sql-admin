@@ -335,6 +335,10 @@ export class SqlSslCertsServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.delete(request);
+   *
+   * @example <caption>include:samples/generated/v1beta4/sql_ssl_certs_service.delete.js</caption>
+   * region_tag:sql_delete_sample
+   *
    */
   delete(
     request?: protos.google.cloud.sql.v1beta4.ISqlSslCertsDeleteRequest,
@@ -428,6 +432,10 @@ export class SqlSslCertsServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.get(request);
+   *
+   * @example <caption>include:samples/generated/v1beta4/sql_ssl_certs_service.get.js</caption>
+   * region_tag:sql_get_sample
+   *
    */
   get(
     request?: protos.google.cloud.sql.v1beta4.ISqlSslCertsGetRequest,
@@ -522,6 +530,10 @@ export class SqlSslCertsServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.insert(request);
+   *
+   * @example <caption>include:samples/generated/v1beta4/sql_ssl_certs_service.insert.js</caption>
+   * region_tag:sql_insert_sample
+   *
    */
   insert(
     request?: protos.google.cloud.sql.v1beta4.ISqlSslCertsInsertRequest,
@@ -615,6 +627,10 @@ export class SqlSslCertsServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.list(request);
+   *
+   * @example <caption>include:samples/generated/v1beta4/sql_ssl_certs_service.list.js</caption>
+   * region_tag:sql_list_sample
+   *
    */
   list(
     request?: protos.google.cloud.sql.v1beta4.ISqlSslCertsListRequest,

@@ -332,6 +332,10 @@ export class SqlOperationsServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.get(request);
+   *
+   * @example <caption>include:samples/generated/v1beta4/sql_operations_service.get.js</caption>
+   * region_tag:sql_get_sample
+   *
    */
   get(
     request?: protos.google.cloud.sql.v1beta4.ISqlOperationsGetRequest,
@@ -431,6 +435,10 @@ export class SqlOperationsServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.list(request);
+   *
+   * @example <caption>include:samples/generated/v1beta4/sql_operations_service.list.js</caption>
+   * region_tag:sql_list_sample
+   *
    */
   list(
     request?: protos.google.cloud.sql.v1beta4.ISqlOperationsListRequest,

@@ -23,6 +23,15498 @@ export namespace google {
         /** Namespace sql. */
         namespace sql {
 
+            /** Namespace v1. */
+            namespace v1 {
+
+                /** Represents a SqlBackupRunsService */
+                class SqlBackupRunsService extends $protobuf.rpc.Service {
+
+                    /**
+                     * Constructs a new SqlBackupRunsService service.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     */
+                    constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                    /**
+                     * Creates new SqlBackupRunsService service using the specified rpc implementation.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     * @returns RPC service. Useful where requests and/or responses are streamed.
+                     */
+                    public static create(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean): SqlBackupRunsService;
+
+                    /**
+                     * Calls Delete.
+                     * @param request SqlBackupRunsDeleteRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public delete(request: google.cloud.sql.v1.ISqlBackupRunsDeleteRequest, callback: google.cloud.sql.v1.SqlBackupRunsService.DeleteCallback): void;
+
+                    /**
+                     * Calls Delete.
+                     * @param request SqlBackupRunsDeleteRequest message or plain object
+                     * @returns Promise
+                     */
+                    public delete(request: google.cloud.sql.v1.ISqlBackupRunsDeleteRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls Get.
+                     * @param request SqlBackupRunsGetRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and BackupRun
+                     */
+                    public get(request: google.cloud.sql.v1.ISqlBackupRunsGetRequest, callback: google.cloud.sql.v1.SqlBackupRunsService.GetCallback): void;
+
+                    /**
+                     * Calls Get.
+                     * @param request SqlBackupRunsGetRequest message or plain object
+                     * @returns Promise
+                     */
+                    public get(request: google.cloud.sql.v1.ISqlBackupRunsGetRequest): Promise<google.cloud.sql.v1.BackupRun>;
+
+                    /**
+                     * Calls Insert.
+                     * @param request SqlBackupRunsInsertRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public insert(request: google.cloud.sql.v1.ISqlBackupRunsInsertRequest, callback: google.cloud.sql.v1.SqlBackupRunsService.InsertCallback): void;
+
+                    /**
+                     * Calls Insert.
+                     * @param request SqlBackupRunsInsertRequest message or plain object
+                     * @returns Promise
+                     */
+                    public insert(request: google.cloud.sql.v1.ISqlBackupRunsInsertRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls List.
+                     * @param request SqlBackupRunsListRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and BackupRunsListResponse
+                     */
+                    public list(request: google.cloud.sql.v1.ISqlBackupRunsListRequest, callback: google.cloud.sql.v1.SqlBackupRunsService.ListCallback): void;
+
+                    /**
+                     * Calls List.
+                     * @param request SqlBackupRunsListRequest message or plain object
+                     * @returns Promise
+                     */
+                    public list(request: google.cloud.sql.v1.ISqlBackupRunsListRequest): Promise<google.cloud.sql.v1.BackupRunsListResponse>;
+                }
+
+                namespace SqlBackupRunsService {
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlBackupRunsService#delete_}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type DeleteCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlBackupRunsService#get}.
+                     * @param error Error, if any
+                     * @param [response] BackupRun
+                     */
+                    type GetCallback = (error: (Error|null), response?: google.cloud.sql.v1.BackupRun) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlBackupRunsService#insert}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type InsertCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlBackupRunsService#list}.
+                     * @param error Error, if any
+                     * @param [response] BackupRunsListResponse
+                     */
+                    type ListCallback = (error: (Error|null), response?: google.cloud.sql.v1.BackupRunsListResponse) => void;
+                }
+
+                /** Properties of a SqlBackupRunsDeleteRequest. */
+                interface ISqlBackupRunsDeleteRequest {
+
+                    /** SqlBackupRunsDeleteRequest id */
+                    id?: (number|Long|string|null);
+
+                    /** SqlBackupRunsDeleteRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlBackupRunsDeleteRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlBackupRunsDeleteRequest. */
+                class SqlBackupRunsDeleteRequest implements ISqlBackupRunsDeleteRequest {
+
+                    /**
+                     * Constructs a new SqlBackupRunsDeleteRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlBackupRunsDeleteRequest);
+
+                    /** SqlBackupRunsDeleteRequest id. */
+                    public id: (number|Long|string);
+
+                    /** SqlBackupRunsDeleteRequest instance. */
+                    public instance: string;
+
+                    /** SqlBackupRunsDeleteRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlBackupRunsDeleteRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlBackupRunsDeleteRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlBackupRunsDeleteRequest): google.cloud.sql.v1.SqlBackupRunsDeleteRequest;
+
+                    /**
+                     * Encodes the specified SqlBackupRunsDeleteRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlBackupRunsDeleteRequest.verify|verify} messages.
+                     * @param message SqlBackupRunsDeleteRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlBackupRunsDeleteRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlBackupRunsDeleteRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlBackupRunsDeleteRequest.verify|verify} messages.
+                     * @param message SqlBackupRunsDeleteRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlBackupRunsDeleteRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlBackupRunsDeleteRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlBackupRunsDeleteRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlBackupRunsDeleteRequest;
+
+                    /**
+                     * Decodes a SqlBackupRunsDeleteRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlBackupRunsDeleteRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlBackupRunsDeleteRequest;
+
+                    /**
+                     * Verifies a SqlBackupRunsDeleteRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlBackupRunsDeleteRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlBackupRunsDeleteRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlBackupRunsDeleteRequest;
+
+                    /**
+                     * Creates a plain object from a SqlBackupRunsDeleteRequest message. Also converts values to other types if specified.
+                     * @param message SqlBackupRunsDeleteRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlBackupRunsDeleteRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlBackupRunsDeleteRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlBackupRunsGetRequest. */
+                interface ISqlBackupRunsGetRequest {
+
+                    /** SqlBackupRunsGetRequest id */
+                    id?: (number|Long|string|null);
+
+                    /** SqlBackupRunsGetRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlBackupRunsGetRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlBackupRunsGetRequest. */
+                class SqlBackupRunsGetRequest implements ISqlBackupRunsGetRequest {
+
+                    /**
+                     * Constructs a new SqlBackupRunsGetRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlBackupRunsGetRequest);
+
+                    /** SqlBackupRunsGetRequest id. */
+                    public id: (number|Long|string);
+
+                    /** SqlBackupRunsGetRequest instance. */
+                    public instance: string;
+
+                    /** SqlBackupRunsGetRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlBackupRunsGetRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlBackupRunsGetRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlBackupRunsGetRequest): google.cloud.sql.v1.SqlBackupRunsGetRequest;
+
+                    /**
+                     * Encodes the specified SqlBackupRunsGetRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlBackupRunsGetRequest.verify|verify} messages.
+                     * @param message SqlBackupRunsGetRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlBackupRunsGetRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlBackupRunsGetRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlBackupRunsGetRequest.verify|verify} messages.
+                     * @param message SqlBackupRunsGetRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlBackupRunsGetRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlBackupRunsGetRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlBackupRunsGetRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlBackupRunsGetRequest;
+
+                    /**
+                     * Decodes a SqlBackupRunsGetRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlBackupRunsGetRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlBackupRunsGetRequest;
+
+                    /**
+                     * Verifies a SqlBackupRunsGetRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlBackupRunsGetRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlBackupRunsGetRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlBackupRunsGetRequest;
+
+                    /**
+                     * Creates a plain object from a SqlBackupRunsGetRequest message. Also converts values to other types if specified.
+                     * @param message SqlBackupRunsGetRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlBackupRunsGetRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlBackupRunsGetRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlBackupRunsInsertRequest. */
+                interface ISqlBackupRunsInsertRequest {
+
+                    /** SqlBackupRunsInsertRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlBackupRunsInsertRequest project */
+                    project?: (string|null);
+
+                    /** SqlBackupRunsInsertRequest body */
+                    body?: (google.cloud.sql.v1.IBackupRun|null);
+                }
+
+                /** Represents a SqlBackupRunsInsertRequest. */
+                class SqlBackupRunsInsertRequest implements ISqlBackupRunsInsertRequest {
+
+                    /**
+                     * Constructs a new SqlBackupRunsInsertRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlBackupRunsInsertRequest);
+
+                    /** SqlBackupRunsInsertRequest instance. */
+                    public instance: string;
+
+                    /** SqlBackupRunsInsertRequest project. */
+                    public project: string;
+
+                    /** SqlBackupRunsInsertRequest body. */
+                    public body?: (google.cloud.sql.v1.IBackupRun|null);
+
+                    /**
+                     * Creates a new SqlBackupRunsInsertRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlBackupRunsInsertRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlBackupRunsInsertRequest): google.cloud.sql.v1.SqlBackupRunsInsertRequest;
+
+                    /**
+                     * Encodes the specified SqlBackupRunsInsertRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlBackupRunsInsertRequest.verify|verify} messages.
+                     * @param message SqlBackupRunsInsertRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlBackupRunsInsertRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlBackupRunsInsertRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlBackupRunsInsertRequest.verify|verify} messages.
+                     * @param message SqlBackupRunsInsertRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlBackupRunsInsertRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlBackupRunsInsertRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlBackupRunsInsertRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlBackupRunsInsertRequest;
+
+                    /**
+                     * Decodes a SqlBackupRunsInsertRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlBackupRunsInsertRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlBackupRunsInsertRequest;
+
+                    /**
+                     * Verifies a SqlBackupRunsInsertRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlBackupRunsInsertRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlBackupRunsInsertRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlBackupRunsInsertRequest;
+
+                    /**
+                     * Creates a plain object from a SqlBackupRunsInsertRequest message. Also converts values to other types if specified.
+                     * @param message SqlBackupRunsInsertRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlBackupRunsInsertRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlBackupRunsInsertRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlBackupRunsListRequest. */
+                interface ISqlBackupRunsListRequest {
+
+                    /** SqlBackupRunsListRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlBackupRunsListRequest maxResults */
+                    maxResults?: (number|null);
+
+                    /** SqlBackupRunsListRequest pageToken */
+                    pageToken?: (string|null);
+
+                    /** SqlBackupRunsListRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlBackupRunsListRequest. */
+                class SqlBackupRunsListRequest implements ISqlBackupRunsListRequest {
+
+                    /**
+                     * Constructs a new SqlBackupRunsListRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlBackupRunsListRequest);
+
+                    /** SqlBackupRunsListRequest instance. */
+                    public instance: string;
+
+                    /** SqlBackupRunsListRequest maxResults. */
+                    public maxResults: number;
+
+                    /** SqlBackupRunsListRequest pageToken. */
+                    public pageToken: string;
+
+                    /** SqlBackupRunsListRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlBackupRunsListRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlBackupRunsListRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlBackupRunsListRequest): google.cloud.sql.v1.SqlBackupRunsListRequest;
+
+                    /**
+                     * Encodes the specified SqlBackupRunsListRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlBackupRunsListRequest.verify|verify} messages.
+                     * @param message SqlBackupRunsListRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlBackupRunsListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlBackupRunsListRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlBackupRunsListRequest.verify|verify} messages.
+                     * @param message SqlBackupRunsListRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlBackupRunsListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlBackupRunsListRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlBackupRunsListRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlBackupRunsListRequest;
+
+                    /**
+                     * Decodes a SqlBackupRunsListRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlBackupRunsListRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlBackupRunsListRequest;
+
+                    /**
+                     * Verifies a SqlBackupRunsListRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlBackupRunsListRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlBackupRunsListRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlBackupRunsListRequest;
+
+                    /**
+                     * Creates a plain object from a SqlBackupRunsListRequest message. Also converts values to other types if specified.
+                     * @param message SqlBackupRunsListRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlBackupRunsListRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlBackupRunsListRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a BackupRun. */
+                interface IBackupRun {
+
+                    /** BackupRun kind */
+                    kind?: (string|null);
+
+                    /** BackupRun status */
+                    status?: (google.cloud.sql.v1.SqlBackupRunStatus|keyof typeof google.cloud.sql.v1.SqlBackupRunStatus|null);
+
+                    /** BackupRun enqueuedTime */
+                    enqueuedTime?: (google.protobuf.ITimestamp|null);
+
+                    /** BackupRun id */
+                    id?: (number|Long|string|null);
+
+                    /** BackupRun startTime */
+                    startTime?: (google.protobuf.ITimestamp|null);
+
+                    /** BackupRun endTime */
+                    endTime?: (google.protobuf.ITimestamp|null);
+
+                    /** BackupRun error */
+                    error?: (google.cloud.sql.v1.IOperationError|null);
+
+                    /** BackupRun type */
+                    type?: (google.cloud.sql.v1.SqlBackupRunType|keyof typeof google.cloud.sql.v1.SqlBackupRunType|null);
+
+                    /** BackupRun description */
+                    description?: (string|null);
+
+                    /** BackupRun windowStartTime */
+                    windowStartTime?: (google.protobuf.ITimestamp|null);
+
+                    /** BackupRun instance */
+                    instance?: (string|null);
+
+                    /** BackupRun selfLink */
+                    selfLink?: (string|null);
+
+                    /** BackupRun location */
+                    location?: (string|null);
+
+                    /** BackupRun diskEncryptionConfiguration */
+                    diskEncryptionConfiguration?: (google.cloud.sql.v1.IDiskEncryptionConfiguration|null);
+
+                    /** BackupRun diskEncryptionStatus */
+                    diskEncryptionStatus?: (google.cloud.sql.v1.IDiskEncryptionStatus|null);
+
+                    /** BackupRun backupKind */
+                    backupKind?: (google.cloud.sql.v1.SqlBackupKind|keyof typeof google.cloud.sql.v1.SqlBackupKind|null);
+                }
+
+                /** Represents a BackupRun. */
+                class BackupRun implements IBackupRun {
+
+                    /**
+                     * Constructs a new BackupRun.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IBackupRun);
+
+                    /** BackupRun kind. */
+                    public kind: string;
+
+                    /** BackupRun status. */
+                    public status: (google.cloud.sql.v1.SqlBackupRunStatus|keyof typeof google.cloud.sql.v1.SqlBackupRunStatus);
+
+                    /** BackupRun enqueuedTime. */
+                    public enqueuedTime?: (google.protobuf.ITimestamp|null);
+
+                    /** BackupRun id. */
+                    public id: (number|Long|string);
+
+                    /** BackupRun startTime. */
+                    public startTime?: (google.protobuf.ITimestamp|null);
+
+                    /** BackupRun endTime. */
+                    public endTime?: (google.protobuf.ITimestamp|null);
+
+                    /** BackupRun error. */
+                    public error?: (google.cloud.sql.v1.IOperationError|null);
+
+                    /** BackupRun type. */
+                    public type: (google.cloud.sql.v1.SqlBackupRunType|keyof typeof google.cloud.sql.v1.SqlBackupRunType);
+
+                    /** BackupRun description. */
+                    public description: string;
+
+                    /** BackupRun windowStartTime. */
+                    public windowStartTime?: (google.protobuf.ITimestamp|null);
+
+                    /** BackupRun instance. */
+                    public instance: string;
+
+                    /** BackupRun selfLink. */
+                    public selfLink: string;
+
+                    /** BackupRun location. */
+                    public location: string;
+
+                    /** BackupRun diskEncryptionConfiguration. */
+                    public diskEncryptionConfiguration?: (google.cloud.sql.v1.IDiskEncryptionConfiguration|null);
+
+                    /** BackupRun diskEncryptionStatus. */
+                    public diskEncryptionStatus?: (google.cloud.sql.v1.IDiskEncryptionStatus|null);
+
+                    /** BackupRun backupKind. */
+                    public backupKind: (google.cloud.sql.v1.SqlBackupKind|keyof typeof google.cloud.sql.v1.SqlBackupKind);
+
+                    /**
+                     * Creates a new BackupRun instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns BackupRun instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IBackupRun): google.cloud.sql.v1.BackupRun;
+
+                    /**
+                     * Encodes the specified BackupRun message. Does not implicitly {@link google.cloud.sql.v1.BackupRun.verify|verify} messages.
+                     * @param message BackupRun message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IBackupRun, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified BackupRun message, length delimited. Does not implicitly {@link google.cloud.sql.v1.BackupRun.verify|verify} messages.
+                     * @param message BackupRun message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IBackupRun, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a BackupRun message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns BackupRun
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.BackupRun;
+
+                    /**
+                     * Decodes a BackupRun message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns BackupRun
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.BackupRun;
+
+                    /**
+                     * Verifies a BackupRun message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a BackupRun message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns BackupRun
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.BackupRun;
+
+                    /**
+                     * Creates a plain object from a BackupRun message. Also converts values to other types if specified.
+                     * @param message BackupRun
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.BackupRun, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this BackupRun to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a BackupRunsListResponse. */
+                interface IBackupRunsListResponse {
+
+                    /** BackupRunsListResponse kind */
+                    kind?: (string|null);
+
+                    /** BackupRunsListResponse items */
+                    items?: (google.cloud.sql.v1.IBackupRun[]|null);
+
+                    /** BackupRunsListResponse nextPageToken */
+                    nextPageToken?: (string|null);
+                }
+
+                /** Represents a BackupRunsListResponse. */
+                class BackupRunsListResponse implements IBackupRunsListResponse {
+
+                    /**
+                     * Constructs a new BackupRunsListResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IBackupRunsListResponse);
+
+                    /** BackupRunsListResponse kind. */
+                    public kind: string;
+
+                    /** BackupRunsListResponse items. */
+                    public items: google.cloud.sql.v1.IBackupRun[];
+
+                    /** BackupRunsListResponse nextPageToken. */
+                    public nextPageToken: string;
+
+                    /**
+                     * Creates a new BackupRunsListResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns BackupRunsListResponse instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IBackupRunsListResponse): google.cloud.sql.v1.BackupRunsListResponse;
+
+                    /**
+                     * Encodes the specified BackupRunsListResponse message. Does not implicitly {@link google.cloud.sql.v1.BackupRunsListResponse.verify|verify} messages.
+                     * @param message BackupRunsListResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IBackupRunsListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified BackupRunsListResponse message, length delimited. Does not implicitly {@link google.cloud.sql.v1.BackupRunsListResponse.verify|verify} messages.
+                     * @param message BackupRunsListResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IBackupRunsListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a BackupRunsListResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns BackupRunsListResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.BackupRunsListResponse;
+
+                    /**
+                     * Decodes a BackupRunsListResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns BackupRunsListResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.BackupRunsListResponse;
+
+                    /**
+                     * Verifies a BackupRunsListResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a BackupRunsListResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns BackupRunsListResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.BackupRunsListResponse;
+
+                    /**
+                     * Creates a plain object from a BackupRunsListResponse message. Also converts values to other types if specified.
+                     * @param message BackupRunsListResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.BackupRunsListResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this BackupRunsListResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** SqlBackupRunStatus enum. */
+                enum SqlBackupRunStatus {
+                    SQL_BACKUP_RUN_STATUS_UNSPECIFIED = 0,
+                    ENQUEUED = 1,
+                    OVERDUE = 2,
+                    RUNNING = 3,
+                    FAILED = 4,
+                    SUCCESSFUL = 5,
+                    SKIPPED = 6,
+                    DELETION_PENDING = 7,
+                    DELETION_FAILED = 8,
+                    DELETED = 9
+                }
+
+                /** SqlBackupKind enum. */
+                enum SqlBackupKind {
+                    SQL_BACKUP_KIND_UNSPECIFIED = 0,
+                    SNAPSHOT = 1,
+                    PHYSICAL = 2
+                }
+
+                /** SqlBackupRunType enum. */
+                enum SqlBackupRunType {
+                    SQL_BACKUP_RUN_TYPE_UNSPECIFIED = 0,
+                    AUTOMATED = 1,
+                    ON_DEMAND = 2
+                }
+
+                /** Properties of an AclEntry. */
+                interface IAclEntry {
+
+                    /** AclEntry value */
+                    value?: (string|null);
+
+                    /** AclEntry expirationTime */
+                    expirationTime?: (google.protobuf.ITimestamp|null);
+
+                    /** AclEntry name */
+                    name?: (string|null);
+
+                    /** AclEntry kind */
+                    kind?: (string|null);
+                }
+
+                /** Represents an AclEntry. */
+                class AclEntry implements IAclEntry {
+
+                    /**
+                     * Constructs a new AclEntry.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IAclEntry);
+
+                    /** AclEntry value. */
+                    public value: string;
+
+                    /** AclEntry expirationTime. */
+                    public expirationTime?: (google.protobuf.ITimestamp|null);
+
+                    /** AclEntry name. */
+                    public name: string;
+
+                    /** AclEntry kind. */
+                    public kind: string;
+
+                    /**
+                     * Creates a new AclEntry instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns AclEntry instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IAclEntry): google.cloud.sql.v1.AclEntry;
+
+                    /**
+                     * Encodes the specified AclEntry message. Does not implicitly {@link google.cloud.sql.v1.AclEntry.verify|verify} messages.
+                     * @param message AclEntry message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IAclEntry, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified AclEntry message, length delimited. Does not implicitly {@link google.cloud.sql.v1.AclEntry.verify|verify} messages.
+                     * @param message AclEntry message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IAclEntry, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an AclEntry message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns AclEntry
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.AclEntry;
+
+                    /**
+                     * Decodes an AclEntry message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns AclEntry
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.AclEntry;
+
+                    /**
+                     * Verifies an AclEntry message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an AclEntry message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns AclEntry
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.AclEntry;
+
+                    /**
+                     * Creates a plain object from an AclEntry message. Also converts values to other types if specified.
+                     * @param message AclEntry
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.AclEntry, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this AclEntry to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an ApiWarning. */
+                interface IApiWarning {
+
+                    /** ApiWarning code */
+                    code?: (google.cloud.sql.v1.ApiWarning.SqlApiWarningCode|keyof typeof google.cloud.sql.v1.ApiWarning.SqlApiWarningCode|null);
+
+                    /** ApiWarning message */
+                    message?: (string|null);
+
+                    /** ApiWarning region */
+                    region?: (string|null);
+                }
+
+                /** Represents an ApiWarning. */
+                class ApiWarning implements IApiWarning {
+
+                    /**
+                     * Constructs a new ApiWarning.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IApiWarning);
+
+                    /** ApiWarning code. */
+                    public code: (google.cloud.sql.v1.ApiWarning.SqlApiWarningCode|keyof typeof google.cloud.sql.v1.ApiWarning.SqlApiWarningCode);
+
+                    /** ApiWarning message. */
+                    public message: string;
+
+                    /** ApiWarning region. */
+                    public region: string;
+
+                    /**
+                     * Creates a new ApiWarning instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns ApiWarning instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IApiWarning): google.cloud.sql.v1.ApiWarning;
+
+                    /**
+                     * Encodes the specified ApiWarning message. Does not implicitly {@link google.cloud.sql.v1.ApiWarning.verify|verify} messages.
+                     * @param message ApiWarning message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IApiWarning, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified ApiWarning message, length delimited. Does not implicitly {@link google.cloud.sql.v1.ApiWarning.verify|verify} messages.
+                     * @param message ApiWarning message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IApiWarning, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an ApiWarning message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns ApiWarning
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.ApiWarning;
+
+                    /**
+                     * Decodes an ApiWarning message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns ApiWarning
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.ApiWarning;
+
+                    /**
+                     * Verifies an ApiWarning message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an ApiWarning message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns ApiWarning
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.ApiWarning;
+
+                    /**
+                     * Creates a plain object from an ApiWarning message. Also converts values to other types if specified.
+                     * @param message ApiWarning
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.ApiWarning, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this ApiWarning to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                namespace ApiWarning {
+
+                    /** SqlApiWarningCode enum. */
+                    enum SqlApiWarningCode {
+                        SQL_API_WARNING_CODE_UNSPECIFIED = 0,
+                        REGION_UNREACHABLE = 1
+                    }
+                }
+
+                /** Properties of a BackupRetentionSettings. */
+                interface IBackupRetentionSettings {
+
+                    /** BackupRetentionSettings retentionUnit */
+                    retentionUnit?: (google.cloud.sql.v1.BackupRetentionSettings.RetentionUnit|keyof typeof google.cloud.sql.v1.BackupRetentionSettings.RetentionUnit|null);
+
+                    /** BackupRetentionSettings retainedBackups */
+                    retainedBackups?: (google.protobuf.IInt32Value|null);
+                }
+
+                /** Represents a BackupRetentionSettings. */
+                class BackupRetentionSettings implements IBackupRetentionSettings {
+
+                    /**
+                     * Constructs a new BackupRetentionSettings.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IBackupRetentionSettings);
+
+                    /** BackupRetentionSettings retentionUnit. */
+                    public retentionUnit: (google.cloud.sql.v1.BackupRetentionSettings.RetentionUnit|keyof typeof google.cloud.sql.v1.BackupRetentionSettings.RetentionUnit);
+
+                    /** BackupRetentionSettings retainedBackups. */
+                    public retainedBackups?: (google.protobuf.IInt32Value|null);
+
+                    /**
+                     * Creates a new BackupRetentionSettings instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns BackupRetentionSettings instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IBackupRetentionSettings): google.cloud.sql.v1.BackupRetentionSettings;
+
+                    /**
+                     * Encodes the specified BackupRetentionSettings message. Does not implicitly {@link google.cloud.sql.v1.BackupRetentionSettings.verify|verify} messages.
+                     * @param message BackupRetentionSettings message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IBackupRetentionSettings, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified BackupRetentionSettings message, length delimited. Does not implicitly {@link google.cloud.sql.v1.BackupRetentionSettings.verify|verify} messages.
+                     * @param message BackupRetentionSettings message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IBackupRetentionSettings, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a BackupRetentionSettings message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns BackupRetentionSettings
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.BackupRetentionSettings;
+
+                    /**
+                     * Decodes a BackupRetentionSettings message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns BackupRetentionSettings
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.BackupRetentionSettings;
+
+                    /**
+                     * Verifies a BackupRetentionSettings message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a BackupRetentionSettings message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns BackupRetentionSettings
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.BackupRetentionSettings;
+
+                    /**
+                     * Creates a plain object from a BackupRetentionSettings message. Also converts values to other types if specified.
+                     * @param message BackupRetentionSettings
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.BackupRetentionSettings, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this BackupRetentionSettings to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                namespace BackupRetentionSettings {
+
+                    /** RetentionUnit enum. */
+                    enum RetentionUnit {
+                        RETENTION_UNIT_UNSPECIFIED = 0,
+                        COUNT = 1
+                    }
+                }
+
+                /** Properties of a BackupConfiguration. */
+                interface IBackupConfiguration {
+
+                    /** BackupConfiguration startTime */
+                    startTime?: (string|null);
+
+                    /** BackupConfiguration enabled */
+                    enabled?: (google.protobuf.IBoolValue|null);
+
+                    /** BackupConfiguration kind */
+                    kind?: (string|null);
+
+                    /** BackupConfiguration binaryLogEnabled */
+                    binaryLogEnabled?: (google.protobuf.IBoolValue|null);
+
+                    /** BackupConfiguration replicationLogArchivingEnabled */
+                    replicationLogArchivingEnabled?: (google.protobuf.IBoolValue|null);
+
+                    /** BackupConfiguration location */
+                    location?: (string|null);
+
+                    /** BackupConfiguration pointInTimeRecoveryEnabled */
+                    pointInTimeRecoveryEnabled?: (google.protobuf.IBoolValue|null);
+
+                    /** BackupConfiguration backupRetentionSettings */
+                    backupRetentionSettings?: (google.cloud.sql.v1.IBackupRetentionSettings|null);
+
+                    /** BackupConfiguration transactionLogRetentionDays */
+                    transactionLogRetentionDays?: (google.protobuf.IInt32Value|null);
+                }
+
+                /** Represents a BackupConfiguration. */
+                class BackupConfiguration implements IBackupConfiguration {
+
+                    /**
+                     * Constructs a new BackupConfiguration.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IBackupConfiguration);
+
+                    /** BackupConfiguration startTime. */
+                    public startTime: string;
+
+                    /** BackupConfiguration enabled. */
+                    public enabled?: (google.protobuf.IBoolValue|null);
+
+                    /** BackupConfiguration kind. */
+                    public kind: string;
+
+                    /** BackupConfiguration binaryLogEnabled. */
+                    public binaryLogEnabled?: (google.protobuf.IBoolValue|null);
+
+                    /** BackupConfiguration replicationLogArchivingEnabled. */
+                    public replicationLogArchivingEnabled?: (google.protobuf.IBoolValue|null);
+
+                    /** BackupConfiguration location. */
+                    public location: string;
+
+                    /** BackupConfiguration pointInTimeRecoveryEnabled. */
+                    public pointInTimeRecoveryEnabled?: (google.protobuf.IBoolValue|null);
+
+                    /** BackupConfiguration backupRetentionSettings. */
+                    public backupRetentionSettings?: (google.cloud.sql.v1.IBackupRetentionSettings|null);
+
+                    /** BackupConfiguration transactionLogRetentionDays. */
+                    public transactionLogRetentionDays?: (google.protobuf.IInt32Value|null);
+
+                    /**
+                     * Creates a new BackupConfiguration instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns BackupConfiguration instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IBackupConfiguration): google.cloud.sql.v1.BackupConfiguration;
+
+                    /**
+                     * Encodes the specified BackupConfiguration message. Does not implicitly {@link google.cloud.sql.v1.BackupConfiguration.verify|verify} messages.
+                     * @param message BackupConfiguration message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IBackupConfiguration, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified BackupConfiguration message, length delimited. Does not implicitly {@link google.cloud.sql.v1.BackupConfiguration.verify|verify} messages.
+                     * @param message BackupConfiguration message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IBackupConfiguration, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a BackupConfiguration message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns BackupConfiguration
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.BackupConfiguration;
+
+                    /**
+                     * Decodes a BackupConfiguration message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns BackupConfiguration
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.BackupConfiguration;
+
+                    /**
+                     * Verifies a BackupConfiguration message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a BackupConfiguration message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns BackupConfiguration
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.BackupConfiguration;
+
+                    /**
+                     * Creates a plain object from a BackupConfiguration message. Also converts values to other types if specified.
+                     * @param message BackupConfiguration
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.BackupConfiguration, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this BackupConfiguration to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a BackupContext. */
+                interface IBackupContext {
+
+                    /** BackupContext backupId */
+                    backupId?: (number|Long|string|null);
+
+                    /** BackupContext kind */
+                    kind?: (string|null);
+                }
+
+                /** Represents a BackupContext. */
+                class BackupContext implements IBackupContext {
+
+                    /**
+                     * Constructs a new BackupContext.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IBackupContext);
+
+                    /** BackupContext backupId. */
+                    public backupId: (number|Long|string);
+
+                    /** BackupContext kind. */
+                    public kind: string;
+
+                    /**
+                     * Creates a new BackupContext instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns BackupContext instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IBackupContext): google.cloud.sql.v1.BackupContext;
+
+                    /**
+                     * Encodes the specified BackupContext message. Does not implicitly {@link google.cloud.sql.v1.BackupContext.verify|verify} messages.
+                     * @param message BackupContext message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IBackupContext, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified BackupContext message, length delimited. Does not implicitly {@link google.cloud.sql.v1.BackupContext.verify|verify} messages.
+                     * @param message BackupContext message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IBackupContext, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a BackupContext message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns BackupContext
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.BackupContext;
+
+                    /**
+                     * Decodes a BackupContext message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns BackupContext
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.BackupContext;
+
+                    /**
+                     * Verifies a BackupContext message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a BackupContext message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns BackupContext
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.BackupContext;
+
+                    /**
+                     * Creates a plain object from a BackupContext message. Also converts values to other types if specified.
+                     * @param message BackupContext
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.BackupContext, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this BackupContext to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a Database. */
+                interface IDatabase {
+
+                    /** Database kind */
+                    kind?: (string|null);
+
+                    /** Database charset */
+                    charset?: (string|null);
+
+                    /** Database collation */
+                    collation?: (string|null);
+
+                    /** Database etag */
+                    etag?: (string|null);
+
+                    /** Database name */
+                    name?: (string|null);
+
+                    /** Database instance */
+                    instance?: (string|null);
+
+                    /** Database selfLink */
+                    selfLink?: (string|null);
+
+                    /** Database project */
+                    project?: (string|null);
+
+                    /** Database sqlserverDatabaseDetails */
+                    sqlserverDatabaseDetails?: (google.cloud.sql.v1.ISqlServerDatabaseDetails|null);
+                }
+
+                /** Represents a Database. */
+                class Database implements IDatabase {
+
+                    /**
+                     * Constructs a new Database.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IDatabase);
+
+                    /** Database kind. */
+                    public kind: string;
+
+                    /** Database charset. */
+                    public charset: string;
+
+                    /** Database collation. */
+                    public collation: string;
+
+                    /** Database etag. */
+                    public etag: string;
+
+                    /** Database name. */
+                    public name: string;
+
+                    /** Database instance. */
+                    public instance: string;
+
+                    /** Database selfLink. */
+                    public selfLink: string;
+
+                    /** Database project. */
+                    public project: string;
+
+                    /** Database sqlserverDatabaseDetails. */
+                    public sqlserverDatabaseDetails?: (google.cloud.sql.v1.ISqlServerDatabaseDetails|null);
+
+                    /** Database databaseDetails. */
+                    public databaseDetails?: "sqlserverDatabaseDetails";
+
+                    /**
+                     * Creates a new Database instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns Database instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IDatabase): google.cloud.sql.v1.Database;
+
+                    /**
+                     * Encodes the specified Database message. Does not implicitly {@link google.cloud.sql.v1.Database.verify|verify} messages.
+                     * @param message Database message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IDatabase, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified Database message, length delimited. Does not implicitly {@link google.cloud.sql.v1.Database.verify|verify} messages.
+                     * @param message Database message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IDatabase, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a Database message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns Database
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.Database;
+
+                    /**
+                     * Decodes a Database message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns Database
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.Database;
+
+                    /**
+                     * Verifies a Database message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a Database message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns Database
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.Database;
+
+                    /**
+                     * Creates a plain object from a Database message. Also converts values to other types if specified.
+                     * @param message Database
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.Database, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this Database to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlServerDatabaseDetails. */
+                interface ISqlServerDatabaseDetails {
+
+                    /** SqlServerDatabaseDetails compatibilityLevel */
+                    compatibilityLevel?: (number|null);
+
+                    /** SqlServerDatabaseDetails recoveryModel */
+                    recoveryModel?: (string|null);
+                }
+
+                /** Represents a SqlServerDatabaseDetails. */
+                class SqlServerDatabaseDetails implements ISqlServerDatabaseDetails {
+
+                    /**
+                     * Constructs a new SqlServerDatabaseDetails.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlServerDatabaseDetails);
+
+                    /** SqlServerDatabaseDetails compatibilityLevel. */
+                    public compatibilityLevel: number;
+
+                    /** SqlServerDatabaseDetails recoveryModel. */
+                    public recoveryModel: string;
+
+                    /**
+                     * Creates a new SqlServerDatabaseDetails instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlServerDatabaseDetails instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlServerDatabaseDetails): google.cloud.sql.v1.SqlServerDatabaseDetails;
+
+                    /**
+                     * Encodes the specified SqlServerDatabaseDetails message. Does not implicitly {@link google.cloud.sql.v1.SqlServerDatabaseDetails.verify|verify} messages.
+                     * @param message SqlServerDatabaseDetails message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlServerDatabaseDetails, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlServerDatabaseDetails message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlServerDatabaseDetails.verify|verify} messages.
+                     * @param message SqlServerDatabaseDetails message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlServerDatabaseDetails, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlServerDatabaseDetails message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlServerDatabaseDetails
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlServerDatabaseDetails;
+
+                    /**
+                     * Decodes a SqlServerDatabaseDetails message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlServerDatabaseDetails
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlServerDatabaseDetails;
+
+                    /**
+                     * Verifies a SqlServerDatabaseDetails message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlServerDatabaseDetails message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlServerDatabaseDetails
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlServerDatabaseDetails;
+
+                    /**
+                     * Creates a plain object from a SqlServerDatabaseDetails message. Also converts values to other types if specified.
+                     * @param message SqlServerDatabaseDetails
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlServerDatabaseDetails, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlServerDatabaseDetails to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a DatabaseFlags. */
+                interface IDatabaseFlags {
+
+                    /** DatabaseFlags name */
+                    name?: (string|null);
+
+                    /** DatabaseFlags value */
+                    value?: (string|null);
+                }
+
+                /** Represents a DatabaseFlags. */
+                class DatabaseFlags implements IDatabaseFlags {
+
+                    /**
+                     * Constructs a new DatabaseFlags.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IDatabaseFlags);
+
+                    /** DatabaseFlags name. */
+                    public name: string;
+
+                    /** DatabaseFlags value. */
+                    public value: string;
+
+                    /**
+                     * Creates a new DatabaseFlags instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns DatabaseFlags instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IDatabaseFlags): google.cloud.sql.v1.DatabaseFlags;
+
+                    /**
+                     * Encodes the specified DatabaseFlags message. Does not implicitly {@link google.cloud.sql.v1.DatabaseFlags.verify|verify} messages.
+                     * @param message DatabaseFlags message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IDatabaseFlags, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified DatabaseFlags message, length delimited. Does not implicitly {@link google.cloud.sql.v1.DatabaseFlags.verify|verify} messages.
+                     * @param message DatabaseFlags message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IDatabaseFlags, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a DatabaseFlags message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns DatabaseFlags
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.DatabaseFlags;
+
+                    /**
+                     * Decodes a DatabaseFlags message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns DatabaseFlags
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.DatabaseFlags;
+
+                    /**
+                     * Verifies a DatabaseFlags message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a DatabaseFlags message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns DatabaseFlags
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.DatabaseFlags;
+
+                    /**
+                     * Creates a plain object from a DatabaseFlags message. Also converts values to other types if specified.
+                     * @param message DatabaseFlags
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.DatabaseFlags, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this DatabaseFlags to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a MySqlSyncConfig. */
+                interface IMySqlSyncConfig {
+
+                    /** MySqlSyncConfig initialSyncFlags */
+                    initialSyncFlags?: (google.cloud.sql.v1.ISyncFlags[]|null);
+                }
+
+                /** Represents a MySqlSyncConfig. */
+                class MySqlSyncConfig implements IMySqlSyncConfig {
+
+                    /**
+                     * Constructs a new MySqlSyncConfig.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IMySqlSyncConfig);
+
+                    /** MySqlSyncConfig initialSyncFlags. */
+                    public initialSyncFlags: google.cloud.sql.v1.ISyncFlags[];
+
+                    /**
+                     * Creates a new MySqlSyncConfig instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns MySqlSyncConfig instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IMySqlSyncConfig): google.cloud.sql.v1.MySqlSyncConfig;
+
+                    /**
+                     * Encodes the specified MySqlSyncConfig message. Does not implicitly {@link google.cloud.sql.v1.MySqlSyncConfig.verify|verify} messages.
+                     * @param message MySqlSyncConfig message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IMySqlSyncConfig, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified MySqlSyncConfig message, length delimited. Does not implicitly {@link google.cloud.sql.v1.MySqlSyncConfig.verify|verify} messages.
+                     * @param message MySqlSyncConfig message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IMySqlSyncConfig, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a MySqlSyncConfig message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns MySqlSyncConfig
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.MySqlSyncConfig;
+
+                    /**
+                     * Decodes a MySqlSyncConfig message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns MySqlSyncConfig
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.MySqlSyncConfig;
+
+                    /**
+                     * Verifies a MySqlSyncConfig message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a MySqlSyncConfig message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns MySqlSyncConfig
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.MySqlSyncConfig;
+
+                    /**
+                     * Creates a plain object from a MySqlSyncConfig message. Also converts values to other types if specified.
+                     * @param message MySqlSyncConfig
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.MySqlSyncConfig, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this MySqlSyncConfig to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SyncFlags. */
+                interface ISyncFlags {
+
+                    /** SyncFlags name */
+                    name?: (string|null);
+
+                    /** SyncFlags value */
+                    value?: (string|null);
+                }
+
+                /** Represents a SyncFlags. */
+                class SyncFlags implements ISyncFlags {
+
+                    /**
+                     * Constructs a new SyncFlags.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISyncFlags);
+
+                    /** SyncFlags name. */
+                    public name: string;
+
+                    /** SyncFlags value. */
+                    public value: string;
+
+                    /**
+                     * Creates a new SyncFlags instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SyncFlags instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISyncFlags): google.cloud.sql.v1.SyncFlags;
+
+                    /**
+                     * Encodes the specified SyncFlags message. Does not implicitly {@link google.cloud.sql.v1.SyncFlags.verify|verify} messages.
+                     * @param message SyncFlags message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISyncFlags, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SyncFlags message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SyncFlags.verify|verify} messages.
+                     * @param message SyncFlags message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISyncFlags, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SyncFlags message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SyncFlags
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SyncFlags;
+
+                    /**
+                     * Decodes a SyncFlags message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SyncFlags
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SyncFlags;
+
+                    /**
+                     * Verifies a SyncFlags message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SyncFlags message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SyncFlags
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SyncFlags;
+
+                    /**
+                     * Creates a plain object from a SyncFlags message. Also converts values to other types if specified.
+                     * @param message SyncFlags
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SyncFlags, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SyncFlags to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an InstanceReference. */
+                interface IInstanceReference {
+
+                    /** InstanceReference name */
+                    name?: (string|null);
+
+                    /** InstanceReference region */
+                    region?: (string|null);
+
+                    /** InstanceReference project */
+                    project?: (string|null);
+                }
+
+                /** Represents an InstanceReference. */
+                class InstanceReference implements IInstanceReference {
+
+                    /**
+                     * Constructs a new InstanceReference.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IInstanceReference);
+
+                    /** InstanceReference name. */
+                    public name: string;
+
+                    /** InstanceReference region. */
+                    public region: string;
+
+                    /** InstanceReference project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new InstanceReference instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns InstanceReference instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IInstanceReference): google.cloud.sql.v1.InstanceReference;
+
+                    /**
+                     * Encodes the specified InstanceReference message. Does not implicitly {@link google.cloud.sql.v1.InstanceReference.verify|verify} messages.
+                     * @param message InstanceReference message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IInstanceReference, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified InstanceReference message, length delimited. Does not implicitly {@link google.cloud.sql.v1.InstanceReference.verify|verify} messages.
+                     * @param message InstanceReference message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IInstanceReference, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an InstanceReference message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns InstanceReference
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.InstanceReference;
+
+                    /**
+                     * Decodes an InstanceReference message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns InstanceReference
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.InstanceReference;
+
+                    /**
+                     * Verifies an InstanceReference message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an InstanceReference message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns InstanceReference
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.InstanceReference;
+
+                    /**
+                     * Creates a plain object from an InstanceReference message. Also converts values to other types if specified.
+                     * @param message InstanceReference
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.InstanceReference, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this InstanceReference to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a DemoteMasterConfiguration. */
+                interface IDemoteMasterConfiguration {
+
+                    /** DemoteMasterConfiguration kind */
+                    kind?: (string|null);
+
+                    /** DemoteMasterConfiguration mysqlReplicaConfiguration */
+                    mysqlReplicaConfiguration?: (google.cloud.sql.v1.IDemoteMasterMySqlReplicaConfiguration|null);
+                }
+
+                /** Represents a DemoteMasterConfiguration. */
+                class DemoteMasterConfiguration implements IDemoteMasterConfiguration {
+
+                    /**
+                     * Constructs a new DemoteMasterConfiguration.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IDemoteMasterConfiguration);
+
+                    /** DemoteMasterConfiguration kind. */
+                    public kind: string;
+
+                    /** DemoteMasterConfiguration mysqlReplicaConfiguration. */
+                    public mysqlReplicaConfiguration?: (google.cloud.sql.v1.IDemoteMasterMySqlReplicaConfiguration|null);
+
+                    /**
+                     * Creates a new DemoteMasterConfiguration instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns DemoteMasterConfiguration instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IDemoteMasterConfiguration): google.cloud.sql.v1.DemoteMasterConfiguration;
+
+                    /**
+                     * Encodes the specified DemoteMasterConfiguration message. Does not implicitly {@link google.cloud.sql.v1.DemoteMasterConfiguration.verify|verify} messages.
+                     * @param message DemoteMasterConfiguration message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IDemoteMasterConfiguration, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified DemoteMasterConfiguration message, length delimited. Does not implicitly {@link google.cloud.sql.v1.DemoteMasterConfiguration.verify|verify} messages.
+                     * @param message DemoteMasterConfiguration message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IDemoteMasterConfiguration, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a DemoteMasterConfiguration message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns DemoteMasterConfiguration
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.DemoteMasterConfiguration;
+
+                    /**
+                     * Decodes a DemoteMasterConfiguration message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns DemoteMasterConfiguration
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.DemoteMasterConfiguration;
+
+                    /**
+                     * Verifies a DemoteMasterConfiguration message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a DemoteMasterConfiguration message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns DemoteMasterConfiguration
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.DemoteMasterConfiguration;
+
+                    /**
+                     * Creates a plain object from a DemoteMasterConfiguration message. Also converts values to other types if specified.
+                     * @param message DemoteMasterConfiguration
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.DemoteMasterConfiguration, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this DemoteMasterConfiguration to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a DemoteMasterMySqlReplicaConfiguration. */
+                interface IDemoteMasterMySqlReplicaConfiguration {
+
+                    /** DemoteMasterMySqlReplicaConfiguration kind */
+                    kind?: (string|null);
+
+                    /** DemoteMasterMySqlReplicaConfiguration username */
+                    username?: (string|null);
+
+                    /** DemoteMasterMySqlReplicaConfiguration password */
+                    password?: (string|null);
+
+                    /** DemoteMasterMySqlReplicaConfiguration clientKey */
+                    clientKey?: (string|null);
+
+                    /** DemoteMasterMySqlReplicaConfiguration clientCertificate */
+                    clientCertificate?: (string|null);
+
+                    /** DemoteMasterMySqlReplicaConfiguration caCertificate */
+                    caCertificate?: (string|null);
+                }
+
+                /** Represents a DemoteMasterMySqlReplicaConfiguration. */
+                class DemoteMasterMySqlReplicaConfiguration implements IDemoteMasterMySqlReplicaConfiguration {
+
+                    /**
+                     * Constructs a new DemoteMasterMySqlReplicaConfiguration.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IDemoteMasterMySqlReplicaConfiguration);
+
+                    /** DemoteMasterMySqlReplicaConfiguration kind. */
+                    public kind: string;
+
+                    /** DemoteMasterMySqlReplicaConfiguration username. */
+                    public username: string;
+
+                    /** DemoteMasterMySqlReplicaConfiguration password. */
+                    public password: string;
+
+                    /** DemoteMasterMySqlReplicaConfiguration clientKey. */
+                    public clientKey: string;
+
+                    /** DemoteMasterMySqlReplicaConfiguration clientCertificate. */
+                    public clientCertificate: string;
+
+                    /** DemoteMasterMySqlReplicaConfiguration caCertificate. */
+                    public caCertificate: string;
+
+                    /**
+                     * Creates a new DemoteMasterMySqlReplicaConfiguration instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns DemoteMasterMySqlReplicaConfiguration instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IDemoteMasterMySqlReplicaConfiguration): google.cloud.sql.v1.DemoteMasterMySqlReplicaConfiguration;
+
+                    /**
+                     * Encodes the specified DemoteMasterMySqlReplicaConfiguration message. Does not implicitly {@link google.cloud.sql.v1.DemoteMasterMySqlReplicaConfiguration.verify|verify} messages.
+                     * @param message DemoteMasterMySqlReplicaConfiguration message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IDemoteMasterMySqlReplicaConfiguration, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified DemoteMasterMySqlReplicaConfiguration message, length delimited. Does not implicitly {@link google.cloud.sql.v1.DemoteMasterMySqlReplicaConfiguration.verify|verify} messages.
+                     * @param message DemoteMasterMySqlReplicaConfiguration message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IDemoteMasterMySqlReplicaConfiguration, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a DemoteMasterMySqlReplicaConfiguration message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns DemoteMasterMySqlReplicaConfiguration
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.DemoteMasterMySqlReplicaConfiguration;
+
+                    /**
+                     * Decodes a DemoteMasterMySqlReplicaConfiguration message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns DemoteMasterMySqlReplicaConfiguration
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.DemoteMasterMySqlReplicaConfiguration;
+
+                    /**
+                     * Verifies a DemoteMasterMySqlReplicaConfiguration message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a DemoteMasterMySqlReplicaConfiguration message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns DemoteMasterMySqlReplicaConfiguration
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.DemoteMasterMySqlReplicaConfiguration;
+
+                    /**
+                     * Creates a plain object from a DemoteMasterMySqlReplicaConfiguration message. Also converts values to other types if specified.
+                     * @param message DemoteMasterMySqlReplicaConfiguration
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.DemoteMasterMySqlReplicaConfiguration, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this DemoteMasterMySqlReplicaConfiguration to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an ExportContext. */
+                interface IExportContext {
+
+                    /** ExportContext uri */
+                    uri?: (string|null);
+
+                    /** ExportContext databases */
+                    databases?: (string[]|null);
+
+                    /** ExportContext kind */
+                    kind?: (string|null);
+
+                    /** ExportContext sqlExportOptions */
+                    sqlExportOptions?: (google.cloud.sql.v1.ExportContext.ISqlExportOptions|null);
+
+                    /** ExportContext csvExportOptions */
+                    csvExportOptions?: (google.cloud.sql.v1.ExportContext.ISqlCsvExportOptions|null);
+
+                    /** ExportContext fileType */
+                    fileType?: (google.cloud.sql.v1.SqlFileType|keyof typeof google.cloud.sql.v1.SqlFileType|null);
+
+                    /** ExportContext offload */
+                    offload?: (google.protobuf.IBoolValue|null);
+                }
+
+                /** Represents an ExportContext. */
+                class ExportContext implements IExportContext {
+
+                    /**
+                     * Constructs a new ExportContext.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IExportContext);
+
+                    /** ExportContext uri. */
+                    public uri: string;
+
+                    /** ExportContext databases. */
+                    public databases: string[];
+
+                    /** ExportContext kind. */
+                    public kind: string;
+
+                    /** ExportContext sqlExportOptions. */
+                    public sqlExportOptions?: (google.cloud.sql.v1.ExportContext.ISqlExportOptions|null);
+
+                    /** ExportContext csvExportOptions. */
+                    public csvExportOptions?: (google.cloud.sql.v1.ExportContext.ISqlCsvExportOptions|null);
+
+                    /** ExportContext fileType. */
+                    public fileType: (google.cloud.sql.v1.SqlFileType|keyof typeof google.cloud.sql.v1.SqlFileType);
+
+                    /** ExportContext offload. */
+                    public offload?: (google.protobuf.IBoolValue|null);
+
+                    /**
+                     * Creates a new ExportContext instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns ExportContext instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IExportContext): google.cloud.sql.v1.ExportContext;
+
+                    /**
+                     * Encodes the specified ExportContext message. Does not implicitly {@link google.cloud.sql.v1.ExportContext.verify|verify} messages.
+                     * @param message ExportContext message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IExportContext, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified ExportContext message, length delimited. Does not implicitly {@link google.cloud.sql.v1.ExportContext.verify|verify} messages.
+                     * @param message ExportContext message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IExportContext, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an ExportContext message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns ExportContext
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.ExportContext;
+
+                    /**
+                     * Decodes an ExportContext message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns ExportContext
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.ExportContext;
+
+                    /**
+                     * Verifies an ExportContext message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an ExportContext message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns ExportContext
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.ExportContext;
+
+                    /**
+                     * Creates a plain object from an ExportContext message. Also converts values to other types if specified.
+                     * @param message ExportContext
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.ExportContext, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this ExportContext to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                namespace ExportContext {
+
+                    /** Properties of a SqlCsvExportOptions. */
+                    interface ISqlCsvExportOptions {
+
+                        /** SqlCsvExportOptions selectQuery */
+                        selectQuery?: (string|null);
+
+                        /** SqlCsvExportOptions escapeCharacter */
+                        escapeCharacter?: (string|null);
+
+                        /** SqlCsvExportOptions quoteCharacter */
+                        quoteCharacter?: (string|null);
+
+                        /** SqlCsvExportOptions fieldsTerminatedBy */
+                        fieldsTerminatedBy?: (string|null);
+
+                        /** SqlCsvExportOptions linesTerminatedBy */
+                        linesTerminatedBy?: (string|null);
+                    }
+
+                    /** Represents a SqlCsvExportOptions. */
+                    class SqlCsvExportOptions implements ISqlCsvExportOptions {
+
+                        /**
+                         * Constructs a new SqlCsvExportOptions.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: google.cloud.sql.v1.ExportContext.ISqlCsvExportOptions);
+
+                        /** SqlCsvExportOptions selectQuery. */
+                        public selectQuery: string;
+
+                        /** SqlCsvExportOptions escapeCharacter. */
+                        public escapeCharacter: string;
+
+                        /** SqlCsvExportOptions quoteCharacter. */
+                        public quoteCharacter: string;
+
+                        /** SqlCsvExportOptions fieldsTerminatedBy. */
+                        public fieldsTerminatedBy: string;
+
+                        /** SqlCsvExportOptions linesTerminatedBy. */
+                        public linesTerminatedBy: string;
+
+                        /**
+                         * Creates a new SqlCsvExportOptions instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns SqlCsvExportOptions instance
+                         */
+                        public static create(properties?: google.cloud.sql.v1.ExportContext.ISqlCsvExportOptions): google.cloud.sql.v1.ExportContext.SqlCsvExportOptions;
+
+                        /**
+                         * Encodes the specified SqlCsvExportOptions message. Does not implicitly {@link google.cloud.sql.v1.ExportContext.SqlCsvExportOptions.verify|verify} messages.
+                         * @param message SqlCsvExportOptions message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: google.cloud.sql.v1.ExportContext.ISqlCsvExportOptions, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified SqlCsvExportOptions message, length delimited. Does not implicitly {@link google.cloud.sql.v1.ExportContext.SqlCsvExportOptions.verify|verify} messages.
+                         * @param message SqlCsvExportOptions message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: google.cloud.sql.v1.ExportContext.ISqlCsvExportOptions, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a SqlCsvExportOptions message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns SqlCsvExportOptions
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.ExportContext.SqlCsvExportOptions;
+
+                        /**
+                         * Decodes a SqlCsvExportOptions message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns SqlCsvExportOptions
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.ExportContext.SqlCsvExportOptions;
+
+                        /**
+                         * Verifies a SqlCsvExportOptions message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a SqlCsvExportOptions message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns SqlCsvExportOptions
+                         */
+                        public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.ExportContext.SqlCsvExportOptions;
+
+                        /**
+                         * Creates a plain object from a SqlCsvExportOptions message. Also converts values to other types if specified.
+                         * @param message SqlCsvExportOptions
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: google.cloud.sql.v1.ExportContext.SqlCsvExportOptions, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this SqlCsvExportOptions to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+                    }
+
+                    /** Properties of a SqlExportOptions. */
+                    interface ISqlExportOptions {
+
+                        /** SqlExportOptions tables */
+                        tables?: (string[]|null);
+
+                        /** SqlExportOptions schemaOnly */
+                        schemaOnly?: (google.protobuf.IBoolValue|null);
+
+                        /** SqlExportOptions mysqlExportOptions */
+                        mysqlExportOptions?: (google.cloud.sql.v1.ExportContext.SqlExportOptions.IMysqlExportOptions|null);
+                    }
+
+                    /** Represents a SqlExportOptions. */
+                    class SqlExportOptions implements ISqlExportOptions {
+
+                        /**
+                         * Constructs a new SqlExportOptions.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: google.cloud.sql.v1.ExportContext.ISqlExportOptions);
+
+                        /** SqlExportOptions tables. */
+                        public tables: string[];
+
+                        /** SqlExportOptions schemaOnly. */
+                        public schemaOnly?: (google.protobuf.IBoolValue|null);
+
+                        /** SqlExportOptions mysqlExportOptions. */
+                        public mysqlExportOptions?: (google.cloud.sql.v1.ExportContext.SqlExportOptions.IMysqlExportOptions|null);
+
+                        /**
+                         * Creates a new SqlExportOptions instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns SqlExportOptions instance
+                         */
+                        public static create(properties?: google.cloud.sql.v1.ExportContext.ISqlExportOptions): google.cloud.sql.v1.ExportContext.SqlExportOptions;
+
+                        /**
+                         * Encodes the specified SqlExportOptions message. Does not implicitly {@link google.cloud.sql.v1.ExportContext.SqlExportOptions.verify|verify} messages.
+                         * @param message SqlExportOptions message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: google.cloud.sql.v1.ExportContext.ISqlExportOptions, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified SqlExportOptions message, length delimited. Does not implicitly {@link google.cloud.sql.v1.ExportContext.SqlExportOptions.verify|verify} messages.
+                         * @param message SqlExportOptions message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: google.cloud.sql.v1.ExportContext.ISqlExportOptions, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a SqlExportOptions message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns SqlExportOptions
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.ExportContext.SqlExportOptions;
+
+                        /**
+                         * Decodes a SqlExportOptions message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns SqlExportOptions
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.ExportContext.SqlExportOptions;
+
+                        /**
+                         * Verifies a SqlExportOptions message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a SqlExportOptions message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns SqlExportOptions
+                         */
+                        public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.ExportContext.SqlExportOptions;
+
+                        /**
+                         * Creates a plain object from a SqlExportOptions message. Also converts values to other types if specified.
+                         * @param message SqlExportOptions
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: google.cloud.sql.v1.ExportContext.SqlExportOptions, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this SqlExportOptions to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+                    }
+
+                    namespace SqlExportOptions {
+
+                        /** Properties of a MysqlExportOptions. */
+                        interface IMysqlExportOptions {
+
+                            /** MysqlExportOptions masterData */
+                            masterData?: (google.protobuf.IInt32Value|null);
+                        }
+
+                        /** Represents a MysqlExportOptions. */
+                        class MysqlExportOptions implements IMysqlExportOptions {
+
+                            /**
+                             * Constructs a new MysqlExportOptions.
+                             * @param [properties] Properties to set
+                             */
+                            constructor(properties?: google.cloud.sql.v1.ExportContext.SqlExportOptions.IMysqlExportOptions);
+
+                            /** MysqlExportOptions masterData. */
+                            public masterData?: (google.protobuf.IInt32Value|null);
+
+                            /**
+                             * Creates a new MysqlExportOptions instance using the specified properties.
+                             * @param [properties] Properties to set
+                             * @returns MysqlExportOptions instance
+                             */
+                            public static create(properties?: google.cloud.sql.v1.ExportContext.SqlExportOptions.IMysqlExportOptions): google.cloud.sql.v1.ExportContext.SqlExportOptions.MysqlExportOptions;
+
+                            /**
+                             * Encodes the specified MysqlExportOptions message. Does not implicitly {@link google.cloud.sql.v1.ExportContext.SqlExportOptions.MysqlExportOptions.verify|verify} messages.
+                             * @param message MysqlExportOptions message or plain object to encode
+                             * @param [writer] Writer to encode to
+                             * @returns Writer
+                             */
+                            public static encode(message: google.cloud.sql.v1.ExportContext.SqlExportOptions.IMysqlExportOptions, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                            /**
+                             * Encodes the specified MysqlExportOptions message, length delimited. Does not implicitly {@link google.cloud.sql.v1.ExportContext.SqlExportOptions.MysqlExportOptions.verify|verify} messages.
+                             * @param message MysqlExportOptions message or plain object to encode
+                             * @param [writer] Writer to encode to
+                             * @returns Writer
+                             */
+                            public static encodeDelimited(message: google.cloud.sql.v1.ExportContext.SqlExportOptions.IMysqlExportOptions, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                            /**
+                             * Decodes a MysqlExportOptions message from the specified reader or buffer.
+                             * @param reader Reader or buffer to decode from
+                             * @param [length] Message length if known beforehand
+                             * @returns MysqlExportOptions
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.ExportContext.SqlExportOptions.MysqlExportOptions;
+
+                            /**
+                             * Decodes a MysqlExportOptions message from the specified reader or buffer, length delimited.
+                             * @param reader Reader or buffer to decode from
+                             * @returns MysqlExportOptions
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.ExportContext.SqlExportOptions.MysqlExportOptions;
+
+                            /**
+                             * Verifies a MysqlExportOptions message.
+                             * @param message Plain object to verify
+                             * @returns `null` if valid, otherwise the reason why it is not
+                             */
+                            public static verify(message: { [k: string]: any }): (string|null);
+
+                            /**
+                             * Creates a MysqlExportOptions message from a plain object. Also converts values to their respective internal types.
+                             * @param object Plain object
+                             * @returns MysqlExportOptions
+                             */
+                            public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.ExportContext.SqlExportOptions.MysqlExportOptions;
+
+                            /**
+                             * Creates a plain object from a MysqlExportOptions message. Also converts values to other types if specified.
+                             * @param message MysqlExportOptions
+                             * @param [options] Conversion options
+                             * @returns Plain object
+                             */
+                            public static toObject(message: google.cloud.sql.v1.ExportContext.SqlExportOptions.MysqlExportOptions, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                            /**
+                             * Converts this MysqlExportOptions to JSON.
+                             * @returns JSON object
+                             */
+                            public toJSON(): { [k: string]: any };
+                        }
+                    }
+                }
+
+                /** Properties of an ImportContext. */
+                interface IImportContext {
+
+                    /** ImportContext uri */
+                    uri?: (string|null);
+
+                    /** ImportContext database */
+                    database?: (string|null);
+
+                    /** ImportContext kind */
+                    kind?: (string|null);
+
+                    /** ImportContext fileType */
+                    fileType?: (google.cloud.sql.v1.SqlFileType|keyof typeof google.cloud.sql.v1.SqlFileType|null);
+
+                    /** ImportContext csvImportOptions */
+                    csvImportOptions?: (google.cloud.sql.v1.ImportContext.ISqlCsvImportOptions|null);
+
+                    /** ImportContext importUser */
+                    importUser?: (string|null);
+
+                    /** ImportContext bakImportOptions */
+                    bakImportOptions?: (google.cloud.sql.v1.ImportContext.ISqlBakImportOptions|null);
+                }
+
+                /** Represents an ImportContext. */
+                class ImportContext implements IImportContext {
+
+                    /**
+                     * Constructs a new ImportContext.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IImportContext);
+
+                    /** ImportContext uri. */
+                    public uri: string;
+
+                    /** ImportContext database. */
+                    public database: string;
+
+                    /** ImportContext kind. */
+                    public kind: string;
+
+                    /** ImportContext fileType. */
+                    public fileType: (google.cloud.sql.v1.SqlFileType|keyof typeof google.cloud.sql.v1.SqlFileType);
+
+                    /** ImportContext csvImportOptions. */
+                    public csvImportOptions?: (google.cloud.sql.v1.ImportContext.ISqlCsvImportOptions|null);
+
+                    /** ImportContext importUser. */
+                    public importUser: string;
+
+                    /** ImportContext bakImportOptions. */
+                    public bakImportOptions?: (google.cloud.sql.v1.ImportContext.ISqlBakImportOptions|null);
+
+                    /**
+                     * Creates a new ImportContext instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns ImportContext instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IImportContext): google.cloud.sql.v1.ImportContext;
+
+                    /**
+                     * Encodes the specified ImportContext message. Does not implicitly {@link google.cloud.sql.v1.ImportContext.verify|verify} messages.
+                     * @param message ImportContext message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IImportContext, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified ImportContext message, length delimited. Does not implicitly {@link google.cloud.sql.v1.ImportContext.verify|verify} messages.
+                     * @param message ImportContext message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IImportContext, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an ImportContext message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns ImportContext
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.ImportContext;
+
+                    /**
+                     * Decodes an ImportContext message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns ImportContext
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.ImportContext;
+
+                    /**
+                     * Verifies an ImportContext message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an ImportContext message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns ImportContext
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.ImportContext;
+
+                    /**
+                     * Creates a plain object from an ImportContext message. Also converts values to other types if specified.
+                     * @param message ImportContext
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.ImportContext, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this ImportContext to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                namespace ImportContext {
+
+                    /** Properties of a SqlCsvImportOptions. */
+                    interface ISqlCsvImportOptions {
+
+                        /** SqlCsvImportOptions table */
+                        table?: (string|null);
+
+                        /** SqlCsvImportOptions columns */
+                        columns?: (string[]|null);
+
+                        /** SqlCsvImportOptions escapeCharacter */
+                        escapeCharacter?: (string|null);
+
+                        /** SqlCsvImportOptions quoteCharacter */
+                        quoteCharacter?: (string|null);
+
+                        /** SqlCsvImportOptions fieldsTerminatedBy */
+                        fieldsTerminatedBy?: (string|null);
+
+                        /** SqlCsvImportOptions linesTerminatedBy */
+                        linesTerminatedBy?: (string|null);
+                    }
+
+                    /** Represents a SqlCsvImportOptions. */
+                    class SqlCsvImportOptions implements ISqlCsvImportOptions {
+
+                        /**
+                         * Constructs a new SqlCsvImportOptions.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: google.cloud.sql.v1.ImportContext.ISqlCsvImportOptions);
+
+                        /** SqlCsvImportOptions table. */
+                        public table: string;
+
+                        /** SqlCsvImportOptions columns. */
+                        public columns: string[];
+
+                        /** SqlCsvImportOptions escapeCharacter. */
+                        public escapeCharacter: string;
+
+                        /** SqlCsvImportOptions quoteCharacter. */
+                        public quoteCharacter: string;
+
+                        /** SqlCsvImportOptions fieldsTerminatedBy. */
+                        public fieldsTerminatedBy: string;
+
+                        /** SqlCsvImportOptions linesTerminatedBy. */
+                        public linesTerminatedBy: string;
+
+                        /**
+                         * Creates a new SqlCsvImportOptions instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns SqlCsvImportOptions instance
+                         */
+                        public static create(properties?: google.cloud.sql.v1.ImportContext.ISqlCsvImportOptions): google.cloud.sql.v1.ImportContext.SqlCsvImportOptions;
+
+                        /**
+                         * Encodes the specified SqlCsvImportOptions message. Does not implicitly {@link google.cloud.sql.v1.ImportContext.SqlCsvImportOptions.verify|verify} messages.
+                         * @param message SqlCsvImportOptions message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: google.cloud.sql.v1.ImportContext.ISqlCsvImportOptions, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified SqlCsvImportOptions message, length delimited. Does not implicitly {@link google.cloud.sql.v1.ImportContext.SqlCsvImportOptions.verify|verify} messages.
+                         * @param message SqlCsvImportOptions message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: google.cloud.sql.v1.ImportContext.ISqlCsvImportOptions, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a SqlCsvImportOptions message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns SqlCsvImportOptions
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.ImportContext.SqlCsvImportOptions;
+
+                        /**
+                         * Decodes a SqlCsvImportOptions message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns SqlCsvImportOptions
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.ImportContext.SqlCsvImportOptions;
+
+                        /**
+                         * Verifies a SqlCsvImportOptions message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a SqlCsvImportOptions message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns SqlCsvImportOptions
+                         */
+                        public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.ImportContext.SqlCsvImportOptions;
+
+                        /**
+                         * Creates a plain object from a SqlCsvImportOptions message. Also converts values to other types if specified.
+                         * @param message SqlCsvImportOptions
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: google.cloud.sql.v1.ImportContext.SqlCsvImportOptions, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this SqlCsvImportOptions to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+                    }
+
+                    /** Properties of a SqlBakImportOptions. */
+                    interface ISqlBakImportOptions {
+
+                        /** SqlBakImportOptions encryptionOptions */
+                        encryptionOptions?: (google.cloud.sql.v1.ImportContext.SqlBakImportOptions.IEncryptionOptions|null);
+                    }
+
+                    /** Represents a SqlBakImportOptions. */
+                    class SqlBakImportOptions implements ISqlBakImportOptions {
+
+                        /**
+                         * Constructs a new SqlBakImportOptions.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: google.cloud.sql.v1.ImportContext.ISqlBakImportOptions);
+
+                        /** SqlBakImportOptions encryptionOptions. */
+                        public encryptionOptions?: (google.cloud.sql.v1.ImportContext.SqlBakImportOptions.IEncryptionOptions|null);
+
+                        /**
+                         * Creates a new SqlBakImportOptions instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns SqlBakImportOptions instance
+                         */
+                        public static create(properties?: google.cloud.sql.v1.ImportContext.ISqlBakImportOptions): google.cloud.sql.v1.ImportContext.SqlBakImportOptions;
+
+                        /**
+                         * Encodes the specified SqlBakImportOptions message. Does not implicitly {@link google.cloud.sql.v1.ImportContext.SqlBakImportOptions.verify|verify} messages.
+                         * @param message SqlBakImportOptions message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: google.cloud.sql.v1.ImportContext.ISqlBakImportOptions, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified SqlBakImportOptions message, length delimited. Does not implicitly {@link google.cloud.sql.v1.ImportContext.SqlBakImportOptions.verify|verify} messages.
+                         * @param message SqlBakImportOptions message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: google.cloud.sql.v1.ImportContext.ISqlBakImportOptions, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a SqlBakImportOptions message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns SqlBakImportOptions
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.ImportContext.SqlBakImportOptions;
+
+                        /**
+                         * Decodes a SqlBakImportOptions message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns SqlBakImportOptions
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.ImportContext.SqlBakImportOptions;
+
+                        /**
+                         * Verifies a SqlBakImportOptions message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a SqlBakImportOptions message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns SqlBakImportOptions
+                         */
+                        public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.ImportContext.SqlBakImportOptions;
+
+                        /**
+                         * Creates a plain object from a SqlBakImportOptions message. Also converts values to other types if specified.
+                         * @param message SqlBakImportOptions
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: google.cloud.sql.v1.ImportContext.SqlBakImportOptions, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this SqlBakImportOptions to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+                    }
+
+                    namespace SqlBakImportOptions {
+
+                        /** Properties of an EncryptionOptions. */
+                        interface IEncryptionOptions {
+
+                            /** EncryptionOptions certPath */
+                            certPath?: (string|null);
+
+                            /** EncryptionOptions pvkPath */
+                            pvkPath?: (string|null);
+
+                            /** EncryptionOptions pvkPassword */
+                            pvkPassword?: (string|null);
+                        }
+
+                        /** Represents an EncryptionOptions. */
+                        class EncryptionOptions implements IEncryptionOptions {
+
+                            /**
+                             * Constructs a new EncryptionOptions.
+                             * @param [properties] Properties to set
+                             */
+                            constructor(properties?: google.cloud.sql.v1.ImportContext.SqlBakImportOptions.IEncryptionOptions);
+
+                            /** EncryptionOptions certPath. */
+                            public certPath: string;
+
+                            /** EncryptionOptions pvkPath. */
+                            public pvkPath: string;
+
+                            /** EncryptionOptions pvkPassword. */
+                            public pvkPassword: string;
+
+                            /**
+                             * Creates a new EncryptionOptions instance using the specified properties.
+                             * @param [properties] Properties to set
+                             * @returns EncryptionOptions instance
+                             */
+                            public static create(properties?: google.cloud.sql.v1.ImportContext.SqlBakImportOptions.IEncryptionOptions): google.cloud.sql.v1.ImportContext.SqlBakImportOptions.EncryptionOptions;
+
+                            /**
+                             * Encodes the specified EncryptionOptions message. Does not implicitly {@link google.cloud.sql.v1.ImportContext.SqlBakImportOptions.EncryptionOptions.verify|verify} messages.
+                             * @param message EncryptionOptions message or plain object to encode
+                             * @param [writer] Writer to encode to
+                             * @returns Writer
+                             */
+                            public static encode(message: google.cloud.sql.v1.ImportContext.SqlBakImportOptions.IEncryptionOptions, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                            /**
+                             * Encodes the specified EncryptionOptions message, length delimited. Does not implicitly {@link google.cloud.sql.v1.ImportContext.SqlBakImportOptions.EncryptionOptions.verify|verify} messages.
+                             * @param message EncryptionOptions message or plain object to encode
+                             * @param [writer] Writer to encode to
+                             * @returns Writer
+                             */
+                            public static encodeDelimited(message: google.cloud.sql.v1.ImportContext.SqlBakImportOptions.IEncryptionOptions, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                            /**
+                             * Decodes an EncryptionOptions message from the specified reader or buffer.
+                             * @param reader Reader or buffer to decode from
+                             * @param [length] Message length if known beforehand
+                             * @returns EncryptionOptions
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.ImportContext.SqlBakImportOptions.EncryptionOptions;
+
+                            /**
+                             * Decodes an EncryptionOptions message from the specified reader or buffer, length delimited.
+                             * @param reader Reader or buffer to decode from
+                             * @returns EncryptionOptions
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.ImportContext.SqlBakImportOptions.EncryptionOptions;
+
+                            /**
+                             * Verifies an EncryptionOptions message.
+                             * @param message Plain object to verify
+                             * @returns `null` if valid, otherwise the reason why it is not
+                             */
+                            public static verify(message: { [k: string]: any }): (string|null);
+
+                            /**
+                             * Creates an EncryptionOptions message from a plain object. Also converts values to their respective internal types.
+                             * @param object Plain object
+                             * @returns EncryptionOptions
+                             */
+                            public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.ImportContext.SqlBakImportOptions.EncryptionOptions;
+
+                            /**
+                             * Creates a plain object from an EncryptionOptions message. Also converts values to other types if specified.
+                             * @param message EncryptionOptions
+                             * @param [options] Conversion options
+                             * @returns Plain object
+                             */
+                            public static toObject(message: google.cloud.sql.v1.ImportContext.SqlBakImportOptions.EncryptionOptions, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                            /**
+                             * Converts this EncryptionOptions to JSON.
+                             * @returns JSON object
+                             */
+                            public toJSON(): { [k: string]: any };
+                        }
+                    }
+                }
+
+                /** SqlFileType enum. */
+                enum SqlFileType {
+                    SQL_FILE_TYPE_UNSPECIFIED = 0,
+                    SQL = 1,
+                    CSV = 2,
+                    BAK = 4
+                }
+
+                /** Properties of an IpConfiguration. */
+                interface IIpConfiguration {
+
+                    /** IpConfiguration ipv4Enabled */
+                    ipv4Enabled?: (google.protobuf.IBoolValue|null);
+
+                    /** IpConfiguration privateNetwork */
+                    privateNetwork?: (string|null);
+
+                    /** IpConfiguration requireSsl */
+                    requireSsl?: (google.protobuf.IBoolValue|null);
+
+                    /** IpConfiguration authorizedNetworks */
+                    authorizedNetworks?: (google.cloud.sql.v1.IAclEntry[]|null);
+
+                    /** IpConfiguration allocatedIpRange */
+                    allocatedIpRange?: (string|null);
+                }
+
+                /** Represents an IpConfiguration. */
+                class IpConfiguration implements IIpConfiguration {
+
+                    /**
+                     * Constructs a new IpConfiguration.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IIpConfiguration);
+
+                    /** IpConfiguration ipv4Enabled. */
+                    public ipv4Enabled?: (google.protobuf.IBoolValue|null);
+
+                    /** IpConfiguration privateNetwork. */
+                    public privateNetwork: string;
+
+                    /** IpConfiguration requireSsl. */
+                    public requireSsl?: (google.protobuf.IBoolValue|null);
+
+                    /** IpConfiguration authorizedNetworks. */
+                    public authorizedNetworks: google.cloud.sql.v1.IAclEntry[];
+
+                    /** IpConfiguration allocatedIpRange. */
+                    public allocatedIpRange: string;
+
+                    /**
+                     * Creates a new IpConfiguration instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns IpConfiguration instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IIpConfiguration): google.cloud.sql.v1.IpConfiguration;
+
+                    /**
+                     * Encodes the specified IpConfiguration message. Does not implicitly {@link google.cloud.sql.v1.IpConfiguration.verify|verify} messages.
+                     * @param message IpConfiguration message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IIpConfiguration, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified IpConfiguration message, length delimited. Does not implicitly {@link google.cloud.sql.v1.IpConfiguration.verify|verify} messages.
+                     * @param message IpConfiguration message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IIpConfiguration, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an IpConfiguration message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns IpConfiguration
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.IpConfiguration;
+
+                    /**
+                     * Decodes an IpConfiguration message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns IpConfiguration
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.IpConfiguration;
+
+                    /**
+                     * Verifies an IpConfiguration message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an IpConfiguration message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns IpConfiguration
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.IpConfiguration;
+
+                    /**
+                     * Creates a plain object from an IpConfiguration message. Also converts values to other types if specified.
+                     * @param message IpConfiguration
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.IpConfiguration, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this IpConfiguration to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a LocationPreference. */
+                interface ILocationPreference {
+
+                    /** LocationPreference followGaeApplication */
+                    followGaeApplication?: (string|null);
+
+                    /** LocationPreference zone */
+                    zone?: (string|null);
+
+                    /** LocationPreference secondaryZone */
+                    secondaryZone?: (string|null);
+
+                    /** LocationPreference kind */
+                    kind?: (string|null);
+                }
+
+                /** Represents a LocationPreference. */
+                class LocationPreference implements ILocationPreference {
+
+                    /**
+                     * Constructs a new LocationPreference.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ILocationPreference);
+
+                    /** LocationPreference followGaeApplication. */
+                    public followGaeApplication: string;
+
+                    /** LocationPreference zone. */
+                    public zone: string;
+
+                    /** LocationPreference secondaryZone. */
+                    public secondaryZone: string;
+
+                    /** LocationPreference kind. */
+                    public kind: string;
+
+                    /**
+                     * Creates a new LocationPreference instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns LocationPreference instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ILocationPreference): google.cloud.sql.v1.LocationPreference;
+
+                    /**
+                     * Encodes the specified LocationPreference message. Does not implicitly {@link google.cloud.sql.v1.LocationPreference.verify|verify} messages.
+                     * @param message LocationPreference message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ILocationPreference, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified LocationPreference message, length delimited. Does not implicitly {@link google.cloud.sql.v1.LocationPreference.verify|verify} messages.
+                     * @param message LocationPreference message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ILocationPreference, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a LocationPreference message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns LocationPreference
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.LocationPreference;
+
+                    /**
+                     * Decodes a LocationPreference message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns LocationPreference
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.LocationPreference;
+
+                    /**
+                     * Verifies a LocationPreference message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a LocationPreference message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns LocationPreference
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.LocationPreference;
+
+                    /**
+                     * Creates a plain object from a LocationPreference message. Also converts values to other types if specified.
+                     * @param message LocationPreference
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.LocationPreference, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this LocationPreference to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a MaintenanceWindow. */
+                interface IMaintenanceWindow {
+
+                    /** MaintenanceWindow hour */
+                    hour?: (google.protobuf.IInt32Value|null);
+
+                    /** MaintenanceWindow day */
+                    day?: (google.protobuf.IInt32Value|null);
+
+                    /** MaintenanceWindow updateTrack */
+                    updateTrack?: (google.cloud.sql.v1.SqlUpdateTrack|keyof typeof google.cloud.sql.v1.SqlUpdateTrack|null);
+
+                    /** MaintenanceWindow kind */
+                    kind?: (string|null);
+                }
+
+                /** Represents a MaintenanceWindow. */
+                class MaintenanceWindow implements IMaintenanceWindow {
+
+                    /**
+                     * Constructs a new MaintenanceWindow.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IMaintenanceWindow);
+
+                    /** MaintenanceWindow hour. */
+                    public hour?: (google.protobuf.IInt32Value|null);
+
+                    /** MaintenanceWindow day. */
+                    public day?: (google.protobuf.IInt32Value|null);
+
+                    /** MaintenanceWindow updateTrack. */
+                    public updateTrack: (google.cloud.sql.v1.SqlUpdateTrack|keyof typeof google.cloud.sql.v1.SqlUpdateTrack);
+
+                    /** MaintenanceWindow kind. */
+                    public kind: string;
+
+                    /**
+                     * Creates a new MaintenanceWindow instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns MaintenanceWindow instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IMaintenanceWindow): google.cloud.sql.v1.MaintenanceWindow;
+
+                    /**
+                     * Encodes the specified MaintenanceWindow message. Does not implicitly {@link google.cloud.sql.v1.MaintenanceWindow.verify|verify} messages.
+                     * @param message MaintenanceWindow message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IMaintenanceWindow, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified MaintenanceWindow message, length delimited. Does not implicitly {@link google.cloud.sql.v1.MaintenanceWindow.verify|verify} messages.
+                     * @param message MaintenanceWindow message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IMaintenanceWindow, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a MaintenanceWindow message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns MaintenanceWindow
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.MaintenanceWindow;
+
+                    /**
+                     * Decodes a MaintenanceWindow message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns MaintenanceWindow
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.MaintenanceWindow;
+
+                    /**
+                     * Verifies a MaintenanceWindow message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a MaintenanceWindow message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns MaintenanceWindow
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.MaintenanceWindow;
+
+                    /**
+                     * Creates a plain object from a MaintenanceWindow message. Also converts values to other types if specified.
+                     * @param message MaintenanceWindow
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.MaintenanceWindow, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this MaintenanceWindow to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a DenyMaintenancePeriod. */
+                interface IDenyMaintenancePeriod {
+
+                    /** DenyMaintenancePeriod startDate */
+                    startDate?: (string|null);
+
+                    /** DenyMaintenancePeriod endDate */
+                    endDate?: (string|null);
+
+                    /** DenyMaintenancePeriod time */
+                    time?: (string|null);
+                }
+
+                /** Represents a DenyMaintenancePeriod. */
+                class DenyMaintenancePeriod implements IDenyMaintenancePeriod {
+
+                    /**
+                     * Constructs a new DenyMaintenancePeriod.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IDenyMaintenancePeriod);
+
+                    /** DenyMaintenancePeriod startDate. */
+                    public startDate: string;
+
+                    /** DenyMaintenancePeriod endDate. */
+                    public endDate: string;
+
+                    /** DenyMaintenancePeriod time. */
+                    public time: string;
+
+                    /**
+                     * Creates a new DenyMaintenancePeriod instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns DenyMaintenancePeriod instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IDenyMaintenancePeriod): google.cloud.sql.v1.DenyMaintenancePeriod;
+
+                    /**
+                     * Encodes the specified DenyMaintenancePeriod message. Does not implicitly {@link google.cloud.sql.v1.DenyMaintenancePeriod.verify|verify} messages.
+                     * @param message DenyMaintenancePeriod message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IDenyMaintenancePeriod, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified DenyMaintenancePeriod message, length delimited. Does not implicitly {@link google.cloud.sql.v1.DenyMaintenancePeriod.verify|verify} messages.
+                     * @param message DenyMaintenancePeriod message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IDenyMaintenancePeriod, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a DenyMaintenancePeriod message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns DenyMaintenancePeriod
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.DenyMaintenancePeriod;
+
+                    /**
+                     * Decodes a DenyMaintenancePeriod message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns DenyMaintenancePeriod
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.DenyMaintenancePeriod;
+
+                    /**
+                     * Verifies a DenyMaintenancePeriod message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a DenyMaintenancePeriod message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns DenyMaintenancePeriod
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.DenyMaintenancePeriod;
+
+                    /**
+                     * Creates a plain object from a DenyMaintenancePeriod message. Also converts values to other types if specified.
+                     * @param message DenyMaintenancePeriod
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.DenyMaintenancePeriod, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this DenyMaintenancePeriod to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an InsightsConfig. */
+                interface IInsightsConfig {
+
+                    /** InsightsConfig queryInsightsEnabled */
+                    queryInsightsEnabled?: (boolean|null);
+
+                    /** InsightsConfig recordClientAddress */
+                    recordClientAddress?: (boolean|null);
+
+                    /** InsightsConfig recordApplicationTags */
+                    recordApplicationTags?: (boolean|null);
+
+                    /** InsightsConfig queryStringLength */
+                    queryStringLength?: (google.protobuf.IInt32Value|null);
+
+                    /** InsightsConfig queryPlansPerMinute */
+                    queryPlansPerMinute?: (google.protobuf.IInt32Value|null);
+                }
+
+                /** Represents an InsightsConfig. */
+                class InsightsConfig implements IInsightsConfig {
+
+                    /**
+                     * Constructs a new InsightsConfig.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IInsightsConfig);
+
+                    /** InsightsConfig queryInsightsEnabled. */
+                    public queryInsightsEnabled: boolean;
+
+                    /** InsightsConfig recordClientAddress. */
+                    public recordClientAddress: boolean;
+
+                    /** InsightsConfig recordApplicationTags. */
+                    public recordApplicationTags: boolean;
+
+                    /** InsightsConfig queryStringLength. */
+                    public queryStringLength?: (google.protobuf.IInt32Value|null);
+
+                    /** InsightsConfig queryPlansPerMinute. */
+                    public queryPlansPerMinute?: (google.protobuf.IInt32Value|null);
+
+                    /**
+                     * Creates a new InsightsConfig instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns InsightsConfig instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IInsightsConfig): google.cloud.sql.v1.InsightsConfig;
+
+                    /**
+                     * Encodes the specified InsightsConfig message. Does not implicitly {@link google.cloud.sql.v1.InsightsConfig.verify|verify} messages.
+                     * @param message InsightsConfig message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IInsightsConfig, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified InsightsConfig message, length delimited. Does not implicitly {@link google.cloud.sql.v1.InsightsConfig.verify|verify} messages.
+                     * @param message InsightsConfig message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IInsightsConfig, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an InsightsConfig message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns InsightsConfig
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.InsightsConfig;
+
+                    /**
+                     * Decodes an InsightsConfig message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns InsightsConfig
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.InsightsConfig;
+
+                    /**
+                     * Verifies an InsightsConfig message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an InsightsConfig message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns InsightsConfig
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.InsightsConfig;
+
+                    /**
+                     * Creates a plain object from an InsightsConfig message. Also converts values to other types if specified.
+                     * @param message InsightsConfig
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.InsightsConfig, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this InsightsConfig to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a MySqlReplicaConfiguration. */
+                interface IMySqlReplicaConfiguration {
+
+                    /** MySqlReplicaConfiguration dumpFilePath */
+                    dumpFilePath?: (string|null);
+
+                    /** MySqlReplicaConfiguration username */
+                    username?: (string|null);
+
+                    /** MySqlReplicaConfiguration password */
+                    password?: (string|null);
+
+                    /** MySqlReplicaConfiguration connectRetryInterval */
+                    connectRetryInterval?: (google.protobuf.IInt32Value|null);
+
+                    /** MySqlReplicaConfiguration masterHeartbeatPeriod */
+                    masterHeartbeatPeriod?: (google.protobuf.IInt64Value|null);
+
+                    /** MySqlReplicaConfiguration caCertificate */
+                    caCertificate?: (string|null);
+
+                    /** MySqlReplicaConfiguration clientCertificate */
+                    clientCertificate?: (string|null);
+
+                    /** MySqlReplicaConfiguration clientKey */
+                    clientKey?: (string|null);
+
+                    /** MySqlReplicaConfiguration sslCipher */
+                    sslCipher?: (string|null);
+
+                    /** MySqlReplicaConfiguration verifyServerCertificate */
+                    verifyServerCertificate?: (google.protobuf.IBoolValue|null);
+
+                    /** MySqlReplicaConfiguration kind */
+                    kind?: (string|null);
+                }
+
+                /** Represents a MySqlReplicaConfiguration. */
+                class MySqlReplicaConfiguration implements IMySqlReplicaConfiguration {
+
+                    /**
+                     * Constructs a new MySqlReplicaConfiguration.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IMySqlReplicaConfiguration);
+
+                    /** MySqlReplicaConfiguration dumpFilePath. */
+                    public dumpFilePath: string;
+
+                    /** MySqlReplicaConfiguration username. */
+                    public username: string;
+
+                    /** MySqlReplicaConfiguration password. */
+                    public password: string;
+
+                    /** MySqlReplicaConfiguration connectRetryInterval. */
+                    public connectRetryInterval?: (google.protobuf.IInt32Value|null);
+
+                    /** MySqlReplicaConfiguration masterHeartbeatPeriod. */
+                    public masterHeartbeatPeriod?: (google.protobuf.IInt64Value|null);
+
+                    /** MySqlReplicaConfiguration caCertificate. */
+                    public caCertificate: string;
+
+                    /** MySqlReplicaConfiguration clientCertificate. */
+                    public clientCertificate: string;
+
+                    /** MySqlReplicaConfiguration clientKey. */
+                    public clientKey: string;
+
+                    /** MySqlReplicaConfiguration sslCipher. */
+                    public sslCipher: string;
+
+                    /** MySqlReplicaConfiguration verifyServerCertificate. */
+                    public verifyServerCertificate?: (google.protobuf.IBoolValue|null);
+
+                    /** MySqlReplicaConfiguration kind. */
+                    public kind: string;
+
+                    /**
+                     * Creates a new MySqlReplicaConfiguration instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns MySqlReplicaConfiguration instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IMySqlReplicaConfiguration): google.cloud.sql.v1.MySqlReplicaConfiguration;
+
+                    /**
+                     * Encodes the specified MySqlReplicaConfiguration message. Does not implicitly {@link google.cloud.sql.v1.MySqlReplicaConfiguration.verify|verify} messages.
+                     * @param message MySqlReplicaConfiguration message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IMySqlReplicaConfiguration, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified MySqlReplicaConfiguration message, length delimited. Does not implicitly {@link google.cloud.sql.v1.MySqlReplicaConfiguration.verify|verify} messages.
+                     * @param message MySqlReplicaConfiguration message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IMySqlReplicaConfiguration, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a MySqlReplicaConfiguration message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns MySqlReplicaConfiguration
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.MySqlReplicaConfiguration;
+
+                    /**
+                     * Decodes a MySqlReplicaConfiguration message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns MySqlReplicaConfiguration
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.MySqlReplicaConfiguration;
+
+                    /**
+                     * Verifies a MySqlReplicaConfiguration message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a MySqlReplicaConfiguration message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns MySqlReplicaConfiguration
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.MySqlReplicaConfiguration;
+
+                    /**
+                     * Creates a plain object from a MySqlReplicaConfiguration message. Also converts values to other types if specified.
+                     * @param message MySqlReplicaConfiguration
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.MySqlReplicaConfiguration, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this MySqlReplicaConfiguration to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a DiskEncryptionConfiguration. */
+                interface IDiskEncryptionConfiguration {
+
+                    /** DiskEncryptionConfiguration kmsKeyName */
+                    kmsKeyName?: (string|null);
+
+                    /** DiskEncryptionConfiguration kind */
+                    kind?: (string|null);
+                }
+
+                /** Represents a DiskEncryptionConfiguration. */
+                class DiskEncryptionConfiguration implements IDiskEncryptionConfiguration {
+
+                    /**
+                     * Constructs a new DiskEncryptionConfiguration.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IDiskEncryptionConfiguration);
+
+                    /** DiskEncryptionConfiguration kmsKeyName. */
+                    public kmsKeyName: string;
+
+                    /** DiskEncryptionConfiguration kind. */
+                    public kind: string;
+
+                    /**
+                     * Creates a new DiskEncryptionConfiguration instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns DiskEncryptionConfiguration instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IDiskEncryptionConfiguration): google.cloud.sql.v1.DiskEncryptionConfiguration;
+
+                    /**
+                     * Encodes the specified DiskEncryptionConfiguration message. Does not implicitly {@link google.cloud.sql.v1.DiskEncryptionConfiguration.verify|verify} messages.
+                     * @param message DiskEncryptionConfiguration message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IDiskEncryptionConfiguration, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified DiskEncryptionConfiguration message, length delimited. Does not implicitly {@link google.cloud.sql.v1.DiskEncryptionConfiguration.verify|verify} messages.
+                     * @param message DiskEncryptionConfiguration message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IDiskEncryptionConfiguration, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a DiskEncryptionConfiguration message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns DiskEncryptionConfiguration
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.DiskEncryptionConfiguration;
+
+                    /**
+                     * Decodes a DiskEncryptionConfiguration message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns DiskEncryptionConfiguration
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.DiskEncryptionConfiguration;
+
+                    /**
+                     * Verifies a DiskEncryptionConfiguration message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a DiskEncryptionConfiguration message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns DiskEncryptionConfiguration
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.DiskEncryptionConfiguration;
+
+                    /**
+                     * Creates a plain object from a DiskEncryptionConfiguration message. Also converts values to other types if specified.
+                     * @param message DiskEncryptionConfiguration
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.DiskEncryptionConfiguration, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this DiskEncryptionConfiguration to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a DiskEncryptionStatus. */
+                interface IDiskEncryptionStatus {
+
+                    /** DiskEncryptionStatus kmsKeyVersionName */
+                    kmsKeyVersionName?: (string|null);
+
+                    /** DiskEncryptionStatus kind */
+                    kind?: (string|null);
+                }
+
+                /** Represents a DiskEncryptionStatus. */
+                class DiskEncryptionStatus implements IDiskEncryptionStatus {
+
+                    /**
+                     * Constructs a new DiskEncryptionStatus.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IDiskEncryptionStatus);
+
+                    /** DiskEncryptionStatus kmsKeyVersionName. */
+                    public kmsKeyVersionName: string;
+
+                    /** DiskEncryptionStatus kind. */
+                    public kind: string;
+
+                    /**
+                     * Creates a new DiskEncryptionStatus instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns DiskEncryptionStatus instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IDiskEncryptionStatus): google.cloud.sql.v1.DiskEncryptionStatus;
+
+                    /**
+                     * Encodes the specified DiskEncryptionStatus message. Does not implicitly {@link google.cloud.sql.v1.DiskEncryptionStatus.verify|verify} messages.
+                     * @param message DiskEncryptionStatus message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IDiskEncryptionStatus, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified DiskEncryptionStatus message, length delimited. Does not implicitly {@link google.cloud.sql.v1.DiskEncryptionStatus.verify|verify} messages.
+                     * @param message DiskEncryptionStatus message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IDiskEncryptionStatus, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a DiskEncryptionStatus message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns DiskEncryptionStatus
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.DiskEncryptionStatus;
+
+                    /**
+                     * Decodes a DiskEncryptionStatus message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns DiskEncryptionStatus
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.DiskEncryptionStatus;
+
+                    /**
+                     * Verifies a DiskEncryptionStatus message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a DiskEncryptionStatus message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns DiskEncryptionStatus
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.DiskEncryptionStatus;
+
+                    /**
+                     * Creates a plain object from a DiskEncryptionStatus message. Also converts values to other types if specified.
+                     * @param message DiskEncryptionStatus
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.DiskEncryptionStatus, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this DiskEncryptionStatus to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an IpMapping. */
+                interface IIpMapping {
+
+                    /** IpMapping type */
+                    type?: (google.cloud.sql.v1.SqlIpAddressType|keyof typeof google.cloud.sql.v1.SqlIpAddressType|null);
+
+                    /** IpMapping ipAddress */
+                    ipAddress?: (string|null);
+
+                    /** IpMapping timeToRetire */
+                    timeToRetire?: (google.protobuf.ITimestamp|null);
+                }
+
+                /** Represents an IpMapping. */
+                class IpMapping implements IIpMapping {
+
+                    /**
+                     * Constructs a new IpMapping.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IIpMapping);
+
+                    /** IpMapping type. */
+                    public type: (google.cloud.sql.v1.SqlIpAddressType|keyof typeof google.cloud.sql.v1.SqlIpAddressType);
+
+                    /** IpMapping ipAddress. */
+                    public ipAddress: string;
+
+                    /** IpMapping timeToRetire. */
+                    public timeToRetire?: (google.protobuf.ITimestamp|null);
+
+                    /**
+                     * Creates a new IpMapping instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns IpMapping instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IIpMapping): google.cloud.sql.v1.IpMapping;
+
+                    /**
+                     * Encodes the specified IpMapping message. Does not implicitly {@link google.cloud.sql.v1.IpMapping.verify|verify} messages.
+                     * @param message IpMapping message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IIpMapping, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified IpMapping message, length delimited. Does not implicitly {@link google.cloud.sql.v1.IpMapping.verify|verify} messages.
+                     * @param message IpMapping message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IIpMapping, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an IpMapping message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns IpMapping
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.IpMapping;
+
+                    /**
+                     * Decodes an IpMapping message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns IpMapping
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.IpMapping;
+
+                    /**
+                     * Verifies an IpMapping message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an IpMapping message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns IpMapping
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.IpMapping;
+
+                    /**
+                     * Creates a plain object from an IpMapping message. Also converts values to other types if specified.
+                     * @param message IpMapping
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.IpMapping, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this IpMapping to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an Operation. */
+                interface IOperation {
+
+                    /** Operation kind */
+                    kind?: (string|null);
+
+                    /** Operation targetLink */
+                    targetLink?: (string|null);
+
+                    /** Operation status */
+                    status?: (google.cloud.sql.v1.Operation.SqlOperationStatus|keyof typeof google.cloud.sql.v1.Operation.SqlOperationStatus|null);
+
+                    /** Operation user */
+                    user?: (string|null);
+
+                    /** Operation insertTime */
+                    insertTime?: (google.protobuf.ITimestamp|null);
+
+                    /** Operation startTime */
+                    startTime?: (google.protobuf.ITimestamp|null);
+
+                    /** Operation endTime */
+                    endTime?: (google.protobuf.ITimestamp|null);
+
+                    /** Operation error */
+                    error?: (google.cloud.sql.v1.IOperationErrors|null);
+
+                    /** Operation operationType */
+                    operationType?: (google.cloud.sql.v1.Operation.SqlOperationType|keyof typeof google.cloud.sql.v1.Operation.SqlOperationType|null);
+
+                    /** Operation importContext */
+                    importContext?: (google.cloud.sql.v1.IImportContext|null);
+
+                    /** Operation exportContext */
+                    exportContext?: (google.cloud.sql.v1.IExportContext|null);
+
+                    /** Operation backupContext */
+                    backupContext?: (google.cloud.sql.v1.IBackupContext|null);
+
+                    /** Operation name */
+                    name?: (string|null);
+
+                    /** Operation targetId */
+                    targetId?: (string|null);
+
+                    /** Operation selfLink */
+                    selfLink?: (string|null);
+
+                    /** Operation targetProject */
+                    targetProject?: (string|null);
+                }
+
+                /** Represents an Operation. */
+                class Operation implements IOperation {
+
+                    /**
+                     * Constructs a new Operation.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IOperation);
+
+                    /** Operation kind. */
+                    public kind: string;
+
+                    /** Operation targetLink. */
+                    public targetLink: string;
+
+                    /** Operation status. */
+                    public status: (google.cloud.sql.v1.Operation.SqlOperationStatus|keyof typeof google.cloud.sql.v1.Operation.SqlOperationStatus);
+
+                    /** Operation user. */
+                    public user: string;
+
+                    /** Operation insertTime. */
+                    public insertTime?: (google.protobuf.ITimestamp|null);
+
+                    /** Operation startTime. */
+                    public startTime?: (google.protobuf.ITimestamp|null);
+
+                    /** Operation endTime. */
+                    public endTime?: (google.protobuf.ITimestamp|null);
+
+                    /** Operation error. */
+                    public error?: (google.cloud.sql.v1.IOperationErrors|null);
+
+                    /** Operation operationType. */
+                    public operationType: (google.cloud.sql.v1.Operation.SqlOperationType|keyof typeof google.cloud.sql.v1.Operation.SqlOperationType);
+
+                    /** Operation importContext. */
+                    public importContext?: (google.cloud.sql.v1.IImportContext|null);
+
+                    /** Operation exportContext. */
+                    public exportContext?: (google.cloud.sql.v1.IExportContext|null);
+
+                    /** Operation backupContext. */
+                    public backupContext?: (google.cloud.sql.v1.IBackupContext|null);
+
+                    /** Operation name. */
+                    public name: string;
+
+                    /** Operation targetId. */
+                    public targetId: string;
+
+                    /** Operation selfLink. */
+                    public selfLink: string;
+
+                    /** Operation targetProject. */
+                    public targetProject: string;
+
+                    /**
+                     * Creates a new Operation instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns Operation instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IOperation): google.cloud.sql.v1.Operation;
+
+                    /**
+                     * Encodes the specified Operation message. Does not implicitly {@link google.cloud.sql.v1.Operation.verify|verify} messages.
+                     * @param message Operation message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IOperation, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified Operation message, length delimited. Does not implicitly {@link google.cloud.sql.v1.Operation.verify|verify} messages.
+                     * @param message Operation message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IOperation, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an Operation message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns Operation
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.Operation;
+
+                    /**
+                     * Decodes an Operation message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns Operation
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.Operation;
+
+                    /**
+                     * Verifies an Operation message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an Operation message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns Operation
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.Operation;
+
+                    /**
+                     * Creates a plain object from an Operation message. Also converts values to other types if specified.
+                     * @param message Operation
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.Operation, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this Operation to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                namespace Operation {
+
+                    /** SqlOperationType enum. */
+                    enum SqlOperationType {
+                        SQL_OPERATION_TYPE_UNSPECIFIED = 0,
+                        IMPORT = 1,
+                        EXPORT = 2,
+                        CREATE = 3,
+                        UPDATE = 4,
+                        DELETE = 5,
+                        RESTART = 6,
+                        BACKUP = 7,
+                        SNAPSHOT = 8,
+                        BACKUP_VOLUME = 9,
+                        DELETE_VOLUME = 10,
+                        RESTORE_VOLUME = 11,
+                        INJECT_USER = 12,
+                        CLONE = 14,
+                        STOP_REPLICA = 15,
+                        START_REPLICA = 16,
+                        PROMOTE_REPLICA = 17,
+                        CREATE_REPLICA = 18,
+                        CREATE_USER = 19,
+                        DELETE_USER = 20,
+                        UPDATE_USER = 21,
+                        CREATE_DATABASE = 22,
+                        DELETE_DATABASE = 23,
+                        UPDATE_DATABASE = 24,
+                        FAILOVER = 25,
+                        DELETE_BACKUP = 26,
+                        RECREATE_REPLICA = 27,
+                        TRUNCATE_LOG = 28,
+                        DEMOTE_MASTER = 29,
+                        MAINTENANCE = 30,
+                        ENABLE_PRIVATE_IP = 31,
+                        DEFER_MAINTENANCE = 32,
+                        CREATE_CLONE = 33,
+                        RESCHEDULE_MAINTENANCE = 34,
+                        START_EXTERNAL_SYNC = 35
+                    }
+
+                    /** SqlOperationStatus enum. */
+                    enum SqlOperationStatus {
+                        SQL_OPERATION_STATUS_UNSPECIFIED = 0,
+                        PENDING = 1,
+                        RUNNING = 2,
+                        DONE = 3
+                    }
+                }
+
+                /** Properties of an OperationError. */
+                interface IOperationError {
+
+                    /** OperationError kind */
+                    kind?: (string|null);
+
+                    /** OperationError code */
+                    code?: (string|null);
+
+                    /** OperationError message */
+                    message?: (string|null);
+                }
+
+                /** Represents an OperationError. */
+                class OperationError implements IOperationError {
+
+                    /**
+                     * Constructs a new OperationError.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IOperationError);
+
+                    /** OperationError kind. */
+                    public kind: string;
+
+                    /** OperationError code. */
+                    public code: string;
+
+                    /** OperationError message. */
+                    public message: string;
+
+                    /**
+                     * Creates a new OperationError instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns OperationError instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IOperationError): google.cloud.sql.v1.OperationError;
+
+                    /**
+                     * Encodes the specified OperationError message. Does not implicitly {@link google.cloud.sql.v1.OperationError.verify|verify} messages.
+                     * @param message OperationError message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IOperationError, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified OperationError message, length delimited. Does not implicitly {@link google.cloud.sql.v1.OperationError.verify|verify} messages.
+                     * @param message OperationError message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IOperationError, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an OperationError message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns OperationError
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.OperationError;
+
+                    /**
+                     * Decodes an OperationError message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns OperationError
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.OperationError;
+
+                    /**
+                     * Verifies an OperationError message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an OperationError message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns OperationError
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.OperationError;
+
+                    /**
+                     * Creates a plain object from an OperationError message. Also converts values to other types if specified.
+                     * @param message OperationError
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.OperationError, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this OperationError to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an OperationErrors. */
+                interface IOperationErrors {
+
+                    /** OperationErrors kind */
+                    kind?: (string|null);
+
+                    /** OperationErrors errors */
+                    errors?: (google.cloud.sql.v1.IOperationError[]|null);
+                }
+
+                /** Represents an OperationErrors. */
+                class OperationErrors implements IOperationErrors {
+
+                    /**
+                     * Constructs a new OperationErrors.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IOperationErrors);
+
+                    /** OperationErrors kind. */
+                    public kind: string;
+
+                    /** OperationErrors errors. */
+                    public errors: google.cloud.sql.v1.IOperationError[];
+
+                    /**
+                     * Creates a new OperationErrors instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns OperationErrors instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IOperationErrors): google.cloud.sql.v1.OperationErrors;
+
+                    /**
+                     * Encodes the specified OperationErrors message. Does not implicitly {@link google.cloud.sql.v1.OperationErrors.verify|verify} messages.
+                     * @param message OperationErrors message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IOperationErrors, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified OperationErrors message, length delimited. Does not implicitly {@link google.cloud.sql.v1.OperationErrors.verify|verify} messages.
+                     * @param message OperationErrors message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IOperationErrors, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an OperationErrors message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns OperationErrors
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.OperationErrors;
+
+                    /**
+                     * Decodes an OperationErrors message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns OperationErrors
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.OperationErrors;
+
+                    /**
+                     * Verifies an OperationErrors message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an OperationErrors message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns OperationErrors
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.OperationErrors;
+
+                    /**
+                     * Creates a plain object from an OperationErrors message. Also converts values to other types if specified.
+                     * @param message OperationErrors
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.OperationErrors, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this OperationErrors to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a Settings. */
+                interface ISettings {
+
+                    /** Settings settingsVersion */
+                    settingsVersion?: (google.protobuf.IInt64Value|null);
+
+                    /** Settings authorizedGaeApplications */
+                    authorizedGaeApplications?: (string[]|null);
+
+                    /** Settings tier */
+                    tier?: (string|null);
+
+                    /** Settings kind */
+                    kind?: (string|null);
+
+                    /** Settings userLabels */
+                    userLabels?: ({ [k: string]: string }|null);
+
+                    /** Settings availabilityType */
+                    availabilityType?: (google.cloud.sql.v1.SqlAvailabilityType|keyof typeof google.cloud.sql.v1.SqlAvailabilityType|null);
+
+                    /** Settings pricingPlan */
+                    pricingPlan?: (google.cloud.sql.v1.SqlPricingPlan|keyof typeof google.cloud.sql.v1.SqlPricingPlan|null);
+
+                    /** Settings replicationType */
+                    replicationType?: (google.cloud.sql.v1.SqlReplicationType|keyof typeof google.cloud.sql.v1.SqlReplicationType|null);
+
+                    /** Settings storageAutoResizeLimit */
+                    storageAutoResizeLimit?: (google.protobuf.IInt64Value|null);
+
+                    /** Settings activationPolicy */
+                    activationPolicy?: (google.cloud.sql.v1.Settings.SqlActivationPolicy|keyof typeof google.cloud.sql.v1.Settings.SqlActivationPolicy|null);
+
+                    /** Settings ipConfiguration */
+                    ipConfiguration?: (google.cloud.sql.v1.IIpConfiguration|null);
+
+                    /** Settings storageAutoResize */
+                    storageAutoResize?: (google.protobuf.IBoolValue|null);
+
+                    /** Settings locationPreference */
+                    locationPreference?: (google.cloud.sql.v1.ILocationPreference|null);
+
+                    /** Settings databaseFlags */
+                    databaseFlags?: (google.cloud.sql.v1.IDatabaseFlags[]|null);
+
+                    /** Settings dataDiskType */
+                    dataDiskType?: (google.cloud.sql.v1.SqlDataDiskType|keyof typeof google.cloud.sql.v1.SqlDataDiskType|null);
+
+                    /** Settings maintenanceWindow */
+                    maintenanceWindow?: (google.cloud.sql.v1.IMaintenanceWindow|null);
+
+                    /** Settings backupConfiguration */
+                    backupConfiguration?: (google.cloud.sql.v1.IBackupConfiguration|null);
+
+                    /** Settings databaseReplicationEnabled */
+                    databaseReplicationEnabled?: (google.protobuf.IBoolValue|null);
+
+                    /** Settings crashSafeReplicationEnabled */
+                    crashSafeReplicationEnabled?: (google.protobuf.IBoolValue|null);
+
+                    /** Settings dataDiskSizeGb */
+                    dataDiskSizeGb?: (google.protobuf.IInt64Value|null);
+
+                    /** Settings activeDirectoryConfig */
+                    activeDirectoryConfig?: (google.cloud.sql.v1.ISqlActiveDirectoryConfig|null);
+
+                    /** Settings collation */
+                    collation?: (string|null);
+
+                    /** Settings denyMaintenancePeriods */
+                    denyMaintenancePeriods?: (google.cloud.sql.v1.IDenyMaintenancePeriod[]|null);
+
+                    /** Settings insightsConfig */
+                    insightsConfig?: (google.cloud.sql.v1.IInsightsConfig|null);
+
+                    /** Settings sqlServerAuditConfig */
+                    sqlServerAuditConfig?: (google.cloud.sql.v1.ISqlServerAuditConfig|null);
+                }
+
+                /** Represents a Settings. */
+                class Settings implements ISettings {
+
+                    /**
+                     * Constructs a new Settings.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISettings);
+
+                    /** Settings settingsVersion. */
+                    public settingsVersion?: (google.protobuf.IInt64Value|null);
+
+                    /** Settings authorizedGaeApplications. */
+                    public authorizedGaeApplications: string[];
+
+                    /** Settings tier. */
+                    public tier: string;
+
+                    /** Settings kind. */
+                    public kind: string;
+
+                    /** Settings userLabels. */
+                    public userLabels: { [k: string]: string };
+
+                    /** Settings availabilityType. */
+                    public availabilityType: (google.cloud.sql.v1.SqlAvailabilityType|keyof typeof google.cloud.sql.v1.SqlAvailabilityType);
+
+                    /** Settings pricingPlan. */
+                    public pricingPlan: (google.cloud.sql.v1.SqlPricingPlan|keyof typeof google.cloud.sql.v1.SqlPricingPlan);
+
+                    /** Settings replicationType. */
+                    public replicationType: (google.cloud.sql.v1.SqlReplicationType|keyof typeof google.cloud.sql.v1.SqlReplicationType);
+
+                    /** Settings storageAutoResizeLimit. */
+                    public storageAutoResizeLimit?: (google.protobuf.IInt64Value|null);
+
+                    /** Settings activationPolicy. */
+                    public activationPolicy: (google.cloud.sql.v1.Settings.SqlActivationPolicy|keyof typeof google.cloud.sql.v1.Settings.SqlActivationPolicy);
+
+                    /** Settings ipConfiguration. */
+                    public ipConfiguration?: (google.cloud.sql.v1.IIpConfiguration|null);
+
+                    /** Settings storageAutoResize. */
+                    public storageAutoResize?: (google.protobuf.IBoolValue|null);
+
+                    /** Settings locationPreference. */
+                    public locationPreference?: (google.cloud.sql.v1.ILocationPreference|null);
+
+                    /** Settings databaseFlags. */
+                    public databaseFlags: google.cloud.sql.v1.IDatabaseFlags[];
+
+                    /** Settings dataDiskType. */
+                    public dataDiskType: (google.cloud.sql.v1.SqlDataDiskType|keyof typeof google.cloud.sql.v1.SqlDataDiskType);
+
+                    /** Settings maintenanceWindow. */
+                    public maintenanceWindow?: (google.cloud.sql.v1.IMaintenanceWindow|null);
+
+                    /** Settings backupConfiguration. */
+                    public backupConfiguration?: (google.cloud.sql.v1.IBackupConfiguration|null);
+
+                    /** Settings databaseReplicationEnabled. */
+                    public databaseReplicationEnabled?: (google.protobuf.IBoolValue|null);
+
+                    /** Settings crashSafeReplicationEnabled. */
+                    public crashSafeReplicationEnabled?: (google.protobuf.IBoolValue|null);
+
+                    /** Settings dataDiskSizeGb. */
+                    public dataDiskSizeGb?: (google.protobuf.IInt64Value|null);
+
+                    /** Settings activeDirectoryConfig. */
+                    public activeDirectoryConfig?: (google.cloud.sql.v1.ISqlActiveDirectoryConfig|null);
+
+                    /** Settings collation. */
+                    public collation: string;
+
+                    /** Settings denyMaintenancePeriods. */
+                    public denyMaintenancePeriods: google.cloud.sql.v1.IDenyMaintenancePeriod[];
+
+                    /** Settings insightsConfig. */
+                    public insightsConfig?: (google.cloud.sql.v1.IInsightsConfig|null);
+
+                    /** Settings sqlServerAuditConfig. */
+                    public sqlServerAuditConfig?: (google.cloud.sql.v1.ISqlServerAuditConfig|null);
+
+                    /**
+                     * Creates a new Settings instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns Settings instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISettings): google.cloud.sql.v1.Settings;
+
+                    /**
+                     * Encodes the specified Settings message. Does not implicitly {@link google.cloud.sql.v1.Settings.verify|verify} messages.
+                     * @param message Settings message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISettings, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified Settings message, length delimited. Does not implicitly {@link google.cloud.sql.v1.Settings.verify|verify} messages.
+                     * @param message Settings message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISettings, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a Settings message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns Settings
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.Settings;
+
+                    /**
+                     * Decodes a Settings message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns Settings
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.Settings;
+
+                    /**
+                     * Verifies a Settings message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a Settings message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns Settings
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.Settings;
+
+                    /**
+                     * Creates a plain object from a Settings message. Also converts values to other types if specified.
+                     * @param message Settings
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.Settings, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this Settings to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                namespace Settings {
+
+                    /** SqlActivationPolicy enum. */
+                    enum SqlActivationPolicy {
+                        SQL_ACTIVATION_POLICY_UNSPECIFIED = 0,
+                        ALWAYS = 1,
+                        NEVER = 2,
+                        ON_DEMAND = 3
+                    }
+                }
+
+                /** Properties of a SslCert. */
+                interface ISslCert {
+
+                    /** SslCert kind */
+                    kind?: (string|null);
+
+                    /** SslCert certSerialNumber */
+                    certSerialNumber?: (string|null);
+
+                    /** SslCert cert */
+                    cert?: (string|null);
+
+                    /** SslCert createTime */
+                    createTime?: (google.protobuf.ITimestamp|null);
+
+                    /** SslCert commonName */
+                    commonName?: (string|null);
+
+                    /** SslCert expirationTime */
+                    expirationTime?: (google.protobuf.ITimestamp|null);
+
+                    /** SslCert sha1Fingerprint */
+                    sha1Fingerprint?: (string|null);
+
+                    /** SslCert instance */
+                    instance?: (string|null);
+
+                    /** SslCert selfLink */
+                    selfLink?: (string|null);
+                }
+
+                /** Represents a SslCert. */
+                class SslCert implements ISslCert {
+
+                    /**
+                     * Constructs a new SslCert.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISslCert);
+
+                    /** SslCert kind. */
+                    public kind: string;
+
+                    /** SslCert certSerialNumber. */
+                    public certSerialNumber: string;
+
+                    /** SslCert cert. */
+                    public cert: string;
+
+                    /** SslCert createTime. */
+                    public createTime?: (google.protobuf.ITimestamp|null);
+
+                    /** SslCert commonName. */
+                    public commonName: string;
+
+                    /** SslCert expirationTime. */
+                    public expirationTime?: (google.protobuf.ITimestamp|null);
+
+                    /** SslCert sha1Fingerprint. */
+                    public sha1Fingerprint: string;
+
+                    /** SslCert instance. */
+                    public instance: string;
+
+                    /** SslCert selfLink. */
+                    public selfLink: string;
+
+                    /**
+                     * Creates a new SslCert instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SslCert instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISslCert): google.cloud.sql.v1.SslCert;
+
+                    /**
+                     * Encodes the specified SslCert message. Does not implicitly {@link google.cloud.sql.v1.SslCert.verify|verify} messages.
+                     * @param message SslCert message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISslCert, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SslCert message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SslCert.verify|verify} messages.
+                     * @param message SslCert message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISslCert, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SslCert message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SslCert
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SslCert;
+
+                    /**
+                     * Decodes a SslCert message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SslCert
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SslCert;
+
+                    /**
+                     * Verifies a SslCert message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SslCert message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SslCert
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SslCert;
+
+                    /**
+                     * Creates a plain object from a SslCert message. Also converts values to other types if specified.
+                     * @param message SslCert
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SslCert, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SslCert to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SslCertDetail. */
+                interface ISslCertDetail {
+
+                    /** SslCertDetail certInfo */
+                    certInfo?: (google.cloud.sql.v1.ISslCert|null);
+
+                    /** SslCertDetail certPrivateKey */
+                    certPrivateKey?: (string|null);
+                }
+
+                /** Represents a SslCertDetail. */
+                class SslCertDetail implements ISslCertDetail {
+
+                    /**
+                     * Constructs a new SslCertDetail.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISslCertDetail);
+
+                    /** SslCertDetail certInfo. */
+                    public certInfo?: (google.cloud.sql.v1.ISslCert|null);
+
+                    /** SslCertDetail certPrivateKey. */
+                    public certPrivateKey: string;
+
+                    /**
+                     * Creates a new SslCertDetail instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SslCertDetail instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISslCertDetail): google.cloud.sql.v1.SslCertDetail;
+
+                    /**
+                     * Encodes the specified SslCertDetail message. Does not implicitly {@link google.cloud.sql.v1.SslCertDetail.verify|verify} messages.
+                     * @param message SslCertDetail message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISslCertDetail, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SslCertDetail message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SslCertDetail.verify|verify} messages.
+                     * @param message SslCertDetail message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISslCertDetail, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SslCertDetail message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SslCertDetail
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SslCertDetail;
+
+                    /**
+                     * Decodes a SslCertDetail message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SslCertDetail
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SslCertDetail;
+
+                    /**
+                     * Verifies a SslCertDetail message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SslCertDetail message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SslCertDetail
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SslCertDetail;
+
+                    /**
+                     * Creates a plain object from a SslCertDetail message. Also converts values to other types if specified.
+                     * @param message SslCertDetail
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SslCertDetail, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SslCertDetail to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlActiveDirectoryConfig. */
+                interface ISqlActiveDirectoryConfig {
+
+                    /** SqlActiveDirectoryConfig kind */
+                    kind?: (string|null);
+
+                    /** SqlActiveDirectoryConfig domain */
+                    domain?: (string|null);
+                }
+
+                /** Represents a SqlActiveDirectoryConfig. */
+                class SqlActiveDirectoryConfig implements ISqlActiveDirectoryConfig {
+
+                    /**
+                     * Constructs a new SqlActiveDirectoryConfig.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlActiveDirectoryConfig);
+
+                    /** SqlActiveDirectoryConfig kind. */
+                    public kind: string;
+
+                    /** SqlActiveDirectoryConfig domain. */
+                    public domain: string;
+
+                    /**
+                     * Creates a new SqlActiveDirectoryConfig instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlActiveDirectoryConfig instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlActiveDirectoryConfig): google.cloud.sql.v1.SqlActiveDirectoryConfig;
+
+                    /**
+                     * Encodes the specified SqlActiveDirectoryConfig message. Does not implicitly {@link google.cloud.sql.v1.SqlActiveDirectoryConfig.verify|verify} messages.
+                     * @param message SqlActiveDirectoryConfig message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlActiveDirectoryConfig, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlActiveDirectoryConfig message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlActiveDirectoryConfig.verify|verify} messages.
+                     * @param message SqlActiveDirectoryConfig message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlActiveDirectoryConfig, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlActiveDirectoryConfig message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlActiveDirectoryConfig
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlActiveDirectoryConfig;
+
+                    /**
+                     * Decodes a SqlActiveDirectoryConfig message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlActiveDirectoryConfig
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlActiveDirectoryConfig;
+
+                    /**
+                     * Verifies a SqlActiveDirectoryConfig message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlActiveDirectoryConfig message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlActiveDirectoryConfig
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlActiveDirectoryConfig;
+
+                    /**
+                     * Creates a plain object from a SqlActiveDirectoryConfig message. Also converts values to other types if specified.
+                     * @param message SqlActiveDirectoryConfig
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlActiveDirectoryConfig, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlActiveDirectoryConfig to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlServerAuditConfig. */
+                interface ISqlServerAuditConfig {
+
+                    /** SqlServerAuditConfig kind */
+                    kind?: (string|null);
+
+                    /** SqlServerAuditConfig bucket */
+                    bucket?: (string|null);
+                }
+
+                /** Represents a SqlServerAuditConfig. */
+                class SqlServerAuditConfig implements ISqlServerAuditConfig {
+
+                    /**
+                     * Constructs a new SqlServerAuditConfig.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlServerAuditConfig);
+
+                    /** SqlServerAuditConfig kind. */
+                    public kind: string;
+
+                    /** SqlServerAuditConfig bucket. */
+                    public bucket: string;
+
+                    /**
+                     * Creates a new SqlServerAuditConfig instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlServerAuditConfig instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlServerAuditConfig): google.cloud.sql.v1.SqlServerAuditConfig;
+
+                    /**
+                     * Encodes the specified SqlServerAuditConfig message. Does not implicitly {@link google.cloud.sql.v1.SqlServerAuditConfig.verify|verify} messages.
+                     * @param message SqlServerAuditConfig message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlServerAuditConfig, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlServerAuditConfig message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlServerAuditConfig.verify|verify} messages.
+                     * @param message SqlServerAuditConfig message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlServerAuditConfig, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlServerAuditConfig message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlServerAuditConfig
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlServerAuditConfig;
+
+                    /**
+                     * Decodes a SqlServerAuditConfig message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlServerAuditConfig
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlServerAuditConfig;
+
+                    /**
+                     * Verifies a SqlServerAuditConfig message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlServerAuditConfig message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlServerAuditConfig
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlServerAuditConfig;
+
+                    /**
+                     * Creates a plain object from a SqlServerAuditConfig message. Also converts values to other types if specified.
+                     * @param message SqlServerAuditConfig
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlServerAuditConfig, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlServerAuditConfig to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** SqlBackendType enum. */
+                enum SqlBackendType {
+                    SQL_BACKEND_TYPE_UNSPECIFIED = 0,
+                    FIRST_GEN = 1,
+                    SECOND_GEN = 2,
+                    EXTERNAL = 3
+                }
+
+                /** SqlIpAddressType enum. */
+                enum SqlIpAddressType {
+                    SQL_IP_ADDRESS_TYPE_UNSPECIFIED = 0,
+                    PRIMARY = 1,
+                    OUTGOING = 2,
+                    PRIVATE = 3,
+                    MIGRATED_1ST_GEN = 4
+                }
+
+                /** SqlDatabaseVersion enum. */
+                enum SqlDatabaseVersion {
+                    SQL_DATABASE_VERSION_UNSPECIFIED = 0,
+                    MYSQL_5_1 = 2,
+                    MYSQL_5_5 = 3,
+                    MYSQL_5_6 = 5,
+                    MYSQL_5_7 = 6,
+                    POSTGRES_9_6 = 9,
+                    POSTGRES_11 = 10,
+                    SQLSERVER_2017_STANDARD = 11,
+                    SQLSERVER_2017_ENTERPRISE = 14,
+                    SQLSERVER_2017_EXPRESS = 15,
+                    SQLSERVER_2017_WEB = 16,
+                    POSTGRES_10 = 18,
+                    POSTGRES_12 = 19,
+                    POSTGRES_13 = 23,
+                    SQLSERVER_2019_STANDARD = 26,
+                    SQLSERVER_2019_ENTERPRISE = 27,
+                    SQLSERVER_2019_EXPRESS = 28,
+                    SQLSERVER_2019_WEB = 29
+                }
+
+                /** SqlPricingPlan enum. */
+                enum SqlPricingPlan {
+                    SQL_PRICING_PLAN_UNSPECIFIED = 0,
+                    PACKAGE = 1,
+                    PER_USE = 2
+                }
+
+                /** SqlReplicationType enum. */
+                enum SqlReplicationType {
+                    SQL_REPLICATION_TYPE_UNSPECIFIED = 0,
+                    SYNCHRONOUS = 1,
+                    ASYNCHRONOUS = 2
+                }
+
+                /** SqlDataDiskType enum. */
+                enum SqlDataDiskType {
+                    SQL_DATA_DISK_TYPE_UNSPECIFIED = 0,
+                    PD_SSD = 1,
+                    PD_HDD = 2,
+                    OBSOLETE_LOCAL_SSD = 3
+                }
+
+                /** SqlAvailabilityType enum. */
+                enum SqlAvailabilityType {
+                    SQL_AVAILABILITY_TYPE_UNSPECIFIED = 0,
+                    ZONAL = 1,
+                    REGIONAL = 2
+                }
+
+                /** SqlUpdateTrack enum. */
+                enum SqlUpdateTrack {
+                    SQL_UPDATE_TRACK_UNSPECIFIED = 0,
+                    canary = 1,
+                    stable = 2
+                }
+
+                /** Represents a SqlConnectService */
+                class SqlConnectService extends $protobuf.rpc.Service {
+
+                    /**
+                     * Constructs a new SqlConnectService service.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     */
+                    constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                    /**
+                     * Creates new SqlConnectService service using the specified rpc implementation.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     * @returns RPC service. Useful where requests and/or responses are streamed.
+                     */
+                    public static create(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean): SqlConnectService;
+
+                    /**
+                     * Calls GetConnectSettings.
+                     * @param request GetConnectSettingsRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and ConnectSettings
+                     */
+                    public getConnectSettings(request: google.cloud.sql.v1.IGetConnectSettingsRequest, callback: google.cloud.sql.v1.SqlConnectService.GetConnectSettingsCallback): void;
+
+                    /**
+                     * Calls GetConnectSettings.
+                     * @param request GetConnectSettingsRequest message or plain object
+                     * @returns Promise
+                     */
+                    public getConnectSettings(request: google.cloud.sql.v1.IGetConnectSettingsRequest): Promise<google.cloud.sql.v1.ConnectSettings>;
+
+                    /**
+                     * Calls GenerateEphemeralCert.
+                     * @param request GenerateEphemeralCertRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and GenerateEphemeralCertResponse
+                     */
+                    public generateEphemeralCert(request: google.cloud.sql.v1.IGenerateEphemeralCertRequest, callback: google.cloud.sql.v1.SqlConnectService.GenerateEphemeralCertCallback): void;
+
+                    /**
+                     * Calls GenerateEphemeralCert.
+                     * @param request GenerateEphemeralCertRequest message or plain object
+                     * @returns Promise
+                     */
+                    public generateEphemeralCert(request: google.cloud.sql.v1.IGenerateEphemeralCertRequest): Promise<google.cloud.sql.v1.GenerateEphemeralCertResponse>;
+                }
+
+                namespace SqlConnectService {
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlConnectService#getConnectSettings}.
+                     * @param error Error, if any
+                     * @param [response] ConnectSettings
+                     */
+                    type GetConnectSettingsCallback = (error: (Error|null), response?: google.cloud.sql.v1.ConnectSettings) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlConnectService#generateEphemeralCert}.
+                     * @param error Error, if any
+                     * @param [response] GenerateEphemeralCertResponse
+                     */
+                    type GenerateEphemeralCertCallback = (error: (Error|null), response?: google.cloud.sql.v1.GenerateEphemeralCertResponse) => void;
+                }
+
+                /** Properties of a GetConnectSettingsRequest. */
+                interface IGetConnectSettingsRequest {
+
+                    /** GetConnectSettingsRequest instance */
+                    instance?: (string|null);
+
+                    /** GetConnectSettingsRequest project */
+                    project?: (string|null);
+
+                    /** GetConnectSettingsRequest readTime */
+                    readTime?: (google.protobuf.ITimestamp|null);
+                }
+
+                /** Represents a GetConnectSettingsRequest. */
+                class GetConnectSettingsRequest implements IGetConnectSettingsRequest {
+
+                    /**
+                     * Constructs a new GetConnectSettingsRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IGetConnectSettingsRequest);
+
+                    /** GetConnectSettingsRequest instance. */
+                    public instance: string;
+
+                    /** GetConnectSettingsRequest project. */
+                    public project: string;
+
+                    /** GetConnectSettingsRequest readTime. */
+                    public readTime?: (google.protobuf.ITimestamp|null);
+
+                    /**
+                     * Creates a new GetConnectSettingsRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns GetConnectSettingsRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IGetConnectSettingsRequest): google.cloud.sql.v1.GetConnectSettingsRequest;
+
+                    /**
+                     * Encodes the specified GetConnectSettingsRequest message. Does not implicitly {@link google.cloud.sql.v1.GetConnectSettingsRequest.verify|verify} messages.
+                     * @param message GetConnectSettingsRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IGetConnectSettingsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified GetConnectSettingsRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.GetConnectSettingsRequest.verify|verify} messages.
+                     * @param message GetConnectSettingsRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IGetConnectSettingsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a GetConnectSettingsRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns GetConnectSettingsRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.GetConnectSettingsRequest;
+
+                    /**
+                     * Decodes a GetConnectSettingsRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns GetConnectSettingsRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.GetConnectSettingsRequest;
+
+                    /**
+                     * Verifies a GetConnectSettingsRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a GetConnectSettingsRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns GetConnectSettingsRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.GetConnectSettingsRequest;
+
+                    /**
+                     * Creates a plain object from a GetConnectSettingsRequest message. Also converts values to other types if specified.
+                     * @param message GetConnectSettingsRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.GetConnectSettingsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this GetConnectSettingsRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a ConnectSettings. */
+                interface IConnectSettings {
+
+                    /** ConnectSettings kind */
+                    kind?: (string|null);
+
+                    /** ConnectSettings serverCaCert */
+                    serverCaCert?: (google.cloud.sql.v1.ISslCert|null);
+
+                    /** ConnectSettings ipAddresses */
+                    ipAddresses?: (google.cloud.sql.v1.IIpMapping[]|null);
+
+                    /** ConnectSettings region */
+                    region?: (string|null);
+
+                    /** ConnectSettings databaseVersion */
+                    databaseVersion?: (google.cloud.sql.v1.SqlDatabaseVersion|keyof typeof google.cloud.sql.v1.SqlDatabaseVersion|null);
+
+                    /** ConnectSettings backendType */
+                    backendType?: (google.cloud.sql.v1.SqlBackendType|keyof typeof google.cloud.sql.v1.SqlBackendType|null);
+                }
+
+                /** Represents a ConnectSettings. */
+                class ConnectSettings implements IConnectSettings {
+
+                    /**
+                     * Constructs a new ConnectSettings.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IConnectSettings);
+
+                    /** ConnectSettings kind. */
+                    public kind: string;
+
+                    /** ConnectSettings serverCaCert. */
+                    public serverCaCert?: (google.cloud.sql.v1.ISslCert|null);
+
+                    /** ConnectSettings ipAddresses. */
+                    public ipAddresses: google.cloud.sql.v1.IIpMapping[];
+
+                    /** ConnectSettings region. */
+                    public region: string;
+
+                    /** ConnectSettings databaseVersion. */
+                    public databaseVersion: (google.cloud.sql.v1.SqlDatabaseVersion|keyof typeof google.cloud.sql.v1.SqlDatabaseVersion);
+
+                    /** ConnectSettings backendType. */
+                    public backendType: (google.cloud.sql.v1.SqlBackendType|keyof typeof google.cloud.sql.v1.SqlBackendType);
+
+                    /**
+                     * Creates a new ConnectSettings instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns ConnectSettings instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IConnectSettings): google.cloud.sql.v1.ConnectSettings;
+
+                    /**
+                     * Encodes the specified ConnectSettings message. Does not implicitly {@link google.cloud.sql.v1.ConnectSettings.verify|verify} messages.
+                     * @param message ConnectSettings message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IConnectSettings, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified ConnectSettings message, length delimited. Does not implicitly {@link google.cloud.sql.v1.ConnectSettings.verify|verify} messages.
+                     * @param message ConnectSettings message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IConnectSettings, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a ConnectSettings message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns ConnectSettings
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.ConnectSettings;
+
+                    /**
+                     * Decodes a ConnectSettings message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns ConnectSettings
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.ConnectSettings;
+
+                    /**
+                     * Verifies a ConnectSettings message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a ConnectSettings message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns ConnectSettings
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.ConnectSettings;
+
+                    /**
+                     * Creates a plain object from a ConnectSettings message. Also converts values to other types if specified.
+                     * @param message ConnectSettings
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.ConnectSettings, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this ConnectSettings to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a GenerateEphemeralCertRequest. */
+                interface IGenerateEphemeralCertRequest {
+
+                    /** GenerateEphemeralCertRequest instance */
+                    instance?: (string|null);
+
+                    /** GenerateEphemeralCertRequest project */
+                    project?: (string|null);
+
+                    /** GenerateEphemeralCertRequest publicKey */
+                    publicKey?: (string|null);
+
+                    /** GenerateEphemeralCertRequest accessToken */
+                    accessToken?: (string|null);
+
+                    /** GenerateEphemeralCertRequest readTime */
+                    readTime?: (google.protobuf.ITimestamp|null);
+                }
+
+                /** Represents a GenerateEphemeralCertRequest. */
+                class GenerateEphemeralCertRequest implements IGenerateEphemeralCertRequest {
+
+                    /**
+                     * Constructs a new GenerateEphemeralCertRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IGenerateEphemeralCertRequest);
+
+                    /** GenerateEphemeralCertRequest instance. */
+                    public instance: string;
+
+                    /** GenerateEphemeralCertRequest project. */
+                    public project: string;
+
+                    /** GenerateEphemeralCertRequest publicKey. */
+                    public publicKey: string;
+
+                    /** GenerateEphemeralCertRequest accessToken. */
+                    public accessToken: string;
+
+                    /** GenerateEphemeralCertRequest readTime. */
+                    public readTime?: (google.protobuf.ITimestamp|null);
+
+                    /**
+                     * Creates a new GenerateEphemeralCertRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns GenerateEphemeralCertRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IGenerateEphemeralCertRequest): google.cloud.sql.v1.GenerateEphemeralCertRequest;
+
+                    /**
+                     * Encodes the specified GenerateEphemeralCertRequest message. Does not implicitly {@link google.cloud.sql.v1.GenerateEphemeralCertRequest.verify|verify} messages.
+                     * @param message GenerateEphemeralCertRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IGenerateEphemeralCertRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified GenerateEphemeralCertRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.GenerateEphemeralCertRequest.verify|verify} messages.
+                     * @param message GenerateEphemeralCertRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IGenerateEphemeralCertRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a GenerateEphemeralCertRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns GenerateEphemeralCertRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.GenerateEphemeralCertRequest;
+
+                    /**
+                     * Decodes a GenerateEphemeralCertRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns GenerateEphemeralCertRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.GenerateEphemeralCertRequest;
+
+                    /**
+                     * Verifies a GenerateEphemeralCertRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a GenerateEphemeralCertRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns GenerateEphemeralCertRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.GenerateEphemeralCertRequest;
+
+                    /**
+                     * Creates a plain object from a GenerateEphemeralCertRequest message. Also converts values to other types if specified.
+                     * @param message GenerateEphemeralCertRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.GenerateEphemeralCertRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this GenerateEphemeralCertRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a GenerateEphemeralCertResponse. */
+                interface IGenerateEphemeralCertResponse {
+
+                    /** GenerateEphemeralCertResponse ephemeralCert */
+                    ephemeralCert?: (google.cloud.sql.v1.ISslCert|null);
+                }
+
+                /** Represents a GenerateEphemeralCertResponse. */
+                class GenerateEphemeralCertResponse implements IGenerateEphemeralCertResponse {
+
+                    /**
+                     * Constructs a new GenerateEphemeralCertResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IGenerateEphemeralCertResponse);
+
+                    /** GenerateEphemeralCertResponse ephemeralCert. */
+                    public ephemeralCert?: (google.cloud.sql.v1.ISslCert|null);
+
+                    /**
+                     * Creates a new GenerateEphemeralCertResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns GenerateEphemeralCertResponse instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IGenerateEphemeralCertResponse): google.cloud.sql.v1.GenerateEphemeralCertResponse;
+
+                    /**
+                     * Encodes the specified GenerateEphemeralCertResponse message. Does not implicitly {@link google.cloud.sql.v1.GenerateEphemeralCertResponse.verify|verify} messages.
+                     * @param message GenerateEphemeralCertResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IGenerateEphemeralCertResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified GenerateEphemeralCertResponse message, length delimited. Does not implicitly {@link google.cloud.sql.v1.GenerateEphemeralCertResponse.verify|verify} messages.
+                     * @param message GenerateEphemeralCertResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IGenerateEphemeralCertResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a GenerateEphemeralCertResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns GenerateEphemeralCertResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.GenerateEphemeralCertResponse;
+
+                    /**
+                     * Decodes a GenerateEphemeralCertResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns GenerateEphemeralCertResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.GenerateEphemeralCertResponse;
+
+                    /**
+                     * Verifies a GenerateEphemeralCertResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a GenerateEphemeralCertResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns GenerateEphemeralCertResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.GenerateEphemeralCertResponse;
+
+                    /**
+                     * Creates a plain object from a GenerateEphemeralCertResponse message. Also converts values to other types if specified.
+                     * @param message GenerateEphemeralCertResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.GenerateEphemeralCertResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this GenerateEphemeralCertResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Represents a SqlDatabasesService */
+                class SqlDatabasesService extends $protobuf.rpc.Service {
+
+                    /**
+                     * Constructs a new SqlDatabasesService service.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     */
+                    constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                    /**
+                     * Creates new SqlDatabasesService service using the specified rpc implementation.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     * @returns RPC service. Useful where requests and/or responses are streamed.
+                     */
+                    public static create(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean): SqlDatabasesService;
+
+                    /**
+                     * Calls Delete.
+                     * @param request SqlDatabasesDeleteRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public delete(request: google.cloud.sql.v1.ISqlDatabasesDeleteRequest, callback: google.cloud.sql.v1.SqlDatabasesService.DeleteCallback): void;
+
+                    /**
+                     * Calls Delete.
+                     * @param request SqlDatabasesDeleteRequest message or plain object
+                     * @returns Promise
+                     */
+                    public delete(request: google.cloud.sql.v1.ISqlDatabasesDeleteRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls Get.
+                     * @param request SqlDatabasesGetRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Database
+                     */
+                    public get(request: google.cloud.sql.v1.ISqlDatabasesGetRequest, callback: google.cloud.sql.v1.SqlDatabasesService.GetCallback): void;
+
+                    /**
+                     * Calls Get.
+                     * @param request SqlDatabasesGetRequest message or plain object
+                     * @returns Promise
+                     */
+                    public get(request: google.cloud.sql.v1.ISqlDatabasesGetRequest): Promise<google.cloud.sql.v1.Database>;
+
+                    /**
+                     * Calls Insert.
+                     * @param request SqlDatabasesInsertRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public insert(request: google.cloud.sql.v1.ISqlDatabasesInsertRequest, callback: google.cloud.sql.v1.SqlDatabasesService.InsertCallback): void;
+
+                    /**
+                     * Calls Insert.
+                     * @param request SqlDatabasesInsertRequest message or plain object
+                     * @returns Promise
+                     */
+                    public insert(request: google.cloud.sql.v1.ISqlDatabasesInsertRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls List.
+                     * @param request SqlDatabasesListRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and DatabasesListResponse
+                     */
+                    public list(request: google.cloud.sql.v1.ISqlDatabasesListRequest, callback: google.cloud.sql.v1.SqlDatabasesService.ListCallback): void;
+
+                    /**
+                     * Calls List.
+                     * @param request SqlDatabasesListRequest message or plain object
+                     * @returns Promise
+                     */
+                    public list(request: google.cloud.sql.v1.ISqlDatabasesListRequest): Promise<google.cloud.sql.v1.DatabasesListResponse>;
+
+                    /**
+                     * Calls Patch.
+                     * @param request SqlDatabasesUpdateRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public patch(request: google.cloud.sql.v1.ISqlDatabasesUpdateRequest, callback: google.cloud.sql.v1.SqlDatabasesService.PatchCallback): void;
+
+                    /**
+                     * Calls Patch.
+                     * @param request SqlDatabasesUpdateRequest message or plain object
+                     * @returns Promise
+                     */
+                    public patch(request: google.cloud.sql.v1.ISqlDatabasesUpdateRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls Update.
+                     * @param request SqlDatabasesUpdateRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public update(request: google.cloud.sql.v1.ISqlDatabasesUpdateRequest, callback: google.cloud.sql.v1.SqlDatabasesService.UpdateCallback): void;
+
+                    /**
+                     * Calls Update.
+                     * @param request SqlDatabasesUpdateRequest message or plain object
+                     * @returns Promise
+                     */
+                    public update(request: google.cloud.sql.v1.ISqlDatabasesUpdateRequest): Promise<google.cloud.sql.v1.Operation>;
+                }
+
+                namespace SqlDatabasesService {
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlDatabasesService#delete_}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type DeleteCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlDatabasesService#get}.
+                     * @param error Error, if any
+                     * @param [response] Database
+                     */
+                    type GetCallback = (error: (Error|null), response?: google.cloud.sql.v1.Database) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlDatabasesService#insert}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type InsertCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlDatabasesService#list}.
+                     * @param error Error, if any
+                     * @param [response] DatabasesListResponse
+                     */
+                    type ListCallback = (error: (Error|null), response?: google.cloud.sql.v1.DatabasesListResponse) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlDatabasesService#patch}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type PatchCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlDatabasesService#update}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type UpdateCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+                }
+
+                /** Properties of a SqlDatabasesDeleteRequest. */
+                interface ISqlDatabasesDeleteRequest {
+
+                    /** SqlDatabasesDeleteRequest database */
+                    database?: (string|null);
+
+                    /** SqlDatabasesDeleteRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlDatabasesDeleteRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlDatabasesDeleteRequest. */
+                class SqlDatabasesDeleteRequest implements ISqlDatabasesDeleteRequest {
+
+                    /**
+                     * Constructs a new SqlDatabasesDeleteRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlDatabasesDeleteRequest);
+
+                    /** SqlDatabasesDeleteRequest database. */
+                    public database: string;
+
+                    /** SqlDatabasesDeleteRequest instance. */
+                    public instance: string;
+
+                    /** SqlDatabasesDeleteRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlDatabasesDeleteRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlDatabasesDeleteRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlDatabasesDeleteRequest): google.cloud.sql.v1.SqlDatabasesDeleteRequest;
+
+                    /**
+                     * Encodes the specified SqlDatabasesDeleteRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlDatabasesDeleteRequest.verify|verify} messages.
+                     * @param message SqlDatabasesDeleteRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlDatabasesDeleteRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlDatabasesDeleteRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlDatabasesDeleteRequest.verify|verify} messages.
+                     * @param message SqlDatabasesDeleteRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlDatabasesDeleteRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlDatabasesDeleteRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlDatabasesDeleteRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlDatabasesDeleteRequest;
+
+                    /**
+                     * Decodes a SqlDatabasesDeleteRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlDatabasesDeleteRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlDatabasesDeleteRequest;
+
+                    /**
+                     * Verifies a SqlDatabasesDeleteRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlDatabasesDeleteRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlDatabasesDeleteRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlDatabasesDeleteRequest;
+
+                    /**
+                     * Creates a plain object from a SqlDatabasesDeleteRequest message. Also converts values to other types if specified.
+                     * @param message SqlDatabasesDeleteRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlDatabasesDeleteRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlDatabasesDeleteRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlDatabasesGetRequest. */
+                interface ISqlDatabasesGetRequest {
+
+                    /** SqlDatabasesGetRequest database */
+                    database?: (string|null);
+
+                    /** SqlDatabasesGetRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlDatabasesGetRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlDatabasesGetRequest. */
+                class SqlDatabasesGetRequest implements ISqlDatabasesGetRequest {
+
+                    /**
+                     * Constructs a new SqlDatabasesGetRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlDatabasesGetRequest);
+
+                    /** SqlDatabasesGetRequest database. */
+                    public database: string;
+
+                    /** SqlDatabasesGetRequest instance. */
+                    public instance: string;
+
+                    /** SqlDatabasesGetRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlDatabasesGetRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlDatabasesGetRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlDatabasesGetRequest): google.cloud.sql.v1.SqlDatabasesGetRequest;
+
+                    /**
+                     * Encodes the specified SqlDatabasesGetRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlDatabasesGetRequest.verify|verify} messages.
+                     * @param message SqlDatabasesGetRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlDatabasesGetRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlDatabasesGetRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlDatabasesGetRequest.verify|verify} messages.
+                     * @param message SqlDatabasesGetRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlDatabasesGetRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlDatabasesGetRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlDatabasesGetRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlDatabasesGetRequest;
+
+                    /**
+                     * Decodes a SqlDatabasesGetRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlDatabasesGetRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlDatabasesGetRequest;
+
+                    /**
+                     * Verifies a SqlDatabasesGetRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlDatabasesGetRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlDatabasesGetRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlDatabasesGetRequest;
+
+                    /**
+                     * Creates a plain object from a SqlDatabasesGetRequest message. Also converts values to other types if specified.
+                     * @param message SqlDatabasesGetRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlDatabasesGetRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlDatabasesGetRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlDatabasesInsertRequest. */
+                interface ISqlDatabasesInsertRequest {
+
+                    /** SqlDatabasesInsertRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlDatabasesInsertRequest project */
+                    project?: (string|null);
+
+                    /** SqlDatabasesInsertRequest body */
+                    body?: (google.cloud.sql.v1.IDatabase|null);
+                }
+
+                /** Represents a SqlDatabasesInsertRequest. */
+                class SqlDatabasesInsertRequest implements ISqlDatabasesInsertRequest {
+
+                    /**
+                     * Constructs a new SqlDatabasesInsertRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlDatabasesInsertRequest);
+
+                    /** SqlDatabasesInsertRequest instance. */
+                    public instance: string;
+
+                    /** SqlDatabasesInsertRequest project. */
+                    public project: string;
+
+                    /** SqlDatabasesInsertRequest body. */
+                    public body?: (google.cloud.sql.v1.IDatabase|null);
+
+                    /**
+                     * Creates a new SqlDatabasesInsertRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlDatabasesInsertRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlDatabasesInsertRequest): google.cloud.sql.v1.SqlDatabasesInsertRequest;
+
+                    /**
+                     * Encodes the specified SqlDatabasesInsertRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlDatabasesInsertRequest.verify|verify} messages.
+                     * @param message SqlDatabasesInsertRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlDatabasesInsertRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlDatabasesInsertRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlDatabasesInsertRequest.verify|verify} messages.
+                     * @param message SqlDatabasesInsertRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlDatabasesInsertRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlDatabasesInsertRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlDatabasesInsertRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlDatabasesInsertRequest;
+
+                    /**
+                     * Decodes a SqlDatabasesInsertRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlDatabasesInsertRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlDatabasesInsertRequest;
+
+                    /**
+                     * Verifies a SqlDatabasesInsertRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlDatabasesInsertRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlDatabasesInsertRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlDatabasesInsertRequest;
+
+                    /**
+                     * Creates a plain object from a SqlDatabasesInsertRequest message. Also converts values to other types if specified.
+                     * @param message SqlDatabasesInsertRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlDatabasesInsertRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlDatabasesInsertRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlDatabasesListRequest. */
+                interface ISqlDatabasesListRequest {
+
+                    /** SqlDatabasesListRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlDatabasesListRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlDatabasesListRequest. */
+                class SqlDatabasesListRequest implements ISqlDatabasesListRequest {
+
+                    /**
+                     * Constructs a new SqlDatabasesListRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlDatabasesListRequest);
+
+                    /** SqlDatabasesListRequest instance. */
+                    public instance: string;
+
+                    /** SqlDatabasesListRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlDatabasesListRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlDatabasesListRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlDatabasesListRequest): google.cloud.sql.v1.SqlDatabasesListRequest;
+
+                    /**
+                     * Encodes the specified SqlDatabasesListRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlDatabasesListRequest.verify|verify} messages.
+                     * @param message SqlDatabasesListRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlDatabasesListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlDatabasesListRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlDatabasesListRequest.verify|verify} messages.
+                     * @param message SqlDatabasesListRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlDatabasesListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlDatabasesListRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlDatabasesListRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlDatabasesListRequest;
+
+                    /**
+                     * Decodes a SqlDatabasesListRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlDatabasesListRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlDatabasesListRequest;
+
+                    /**
+                     * Verifies a SqlDatabasesListRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlDatabasesListRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlDatabasesListRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlDatabasesListRequest;
+
+                    /**
+                     * Creates a plain object from a SqlDatabasesListRequest message. Also converts values to other types if specified.
+                     * @param message SqlDatabasesListRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlDatabasesListRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlDatabasesListRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlDatabasesUpdateRequest. */
+                interface ISqlDatabasesUpdateRequest {
+
+                    /** SqlDatabasesUpdateRequest database */
+                    database?: (string|null);
+
+                    /** SqlDatabasesUpdateRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlDatabasesUpdateRequest project */
+                    project?: (string|null);
+
+                    /** SqlDatabasesUpdateRequest body */
+                    body?: (google.cloud.sql.v1.IDatabase|null);
+                }
+
+                /** Represents a SqlDatabasesUpdateRequest. */
+                class SqlDatabasesUpdateRequest implements ISqlDatabasesUpdateRequest {
+
+                    /**
+                     * Constructs a new SqlDatabasesUpdateRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlDatabasesUpdateRequest);
+
+                    /** SqlDatabasesUpdateRequest database. */
+                    public database: string;
+
+                    /** SqlDatabasesUpdateRequest instance. */
+                    public instance: string;
+
+                    /** SqlDatabasesUpdateRequest project. */
+                    public project: string;
+
+                    /** SqlDatabasesUpdateRequest body. */
+                    public body?: (google.cloud.sql.v1.IDatabase|null);
+
+                    /**
+                     * Creates a new SqlDatabasesUpdateRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlDatabasesUpdateRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlDatabasesUpdateRequest): google.cloud.sql.v1.SqlDatabasesUpdateRequest;
+
+                    /**
+                     * Encodes the specified SqlDatabasesUpdateRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlDatabasesUpdateRequest.verify|verify} messages.
+                     * @param message SqlDatabasesUpdateRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlDatabasesUpdateRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlDatabasesUpdateRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlDatabasesUpdateRequest.verify|verify} messages.
+                     * @param message SqlDatabasesUpdateRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlDatabasesUpdateRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlDatabasesUpdateRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlDatabasesUpdateRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlDatabasesUpdateRequest;
+
+                    /**
+                     * Decodes a SqlDatabasesUpdateRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlDatabasesUpdateRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlDatabasesUpdateRequest;
+
+                    /**
+                     * Verifies a SqlDatabasesUpdateRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlDatabasesUpdateRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlDatabasesUpdateRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlDatabasesUpdateRequest;
+
+                    /**
+                     * Creates a plain object from a SqlDatabasesUpdateRequest message. Also converts values to other types if specified.
+                     * @param message SqlDatabasesUpdateRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlDatabasesUpdateRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlDatabasesUpdateRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a DatabasesListResponse. */
+                interface IDatabasesListResponse {
+
+                    /** DatabasesListResponse kind */
+                    kind?: (string|null);
+
+                    /** DatabasesListResponse items */
+                    items?: (google.cloud.sql.v1.IDatabase[]|null);
+                }
+
+                /** Represents a DatabasesListResponse. */
+                class DatabasesListResponse implements IDatabasesListResponse {
+
+                    /**
+                     * Constructs a new DatabasesListResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IDatabasesListResponse);
+
+                    /** DatabasesListResponse kind. */
+                    public kind: string;
+
+                    /** DatabasesListResponse items. */
+                    public items: google.cloud.sql.v1.IDatabase[];
+
+                    /**
+                     * Creates a new DatabasesListResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns DatabasesListResponse instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IDatabasesListResponse): google.cloud.sql.v1.DatabasesListResponse;
+
+                    /**
+                     * Encodes the specified DatabasesListResponse message. Does not implicitly {@link google.cloud.sql.v1.DatabasesListResponse.verify|verify} messages.
+                     * @param message DatabasesListResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IDatabasesListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified DatabasesListResponse message, length delimited. Does not implicitly {@link google.cloud.sql.v1.DatabasesListResponse.verify|verify} messages.
+                     * @param message DatabasesListResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IDatabasesListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a DatabasesListResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns DatabasesListResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.DatabasesListResponse;
+
+                    /**
+                     * Decodes a DatabasesListResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns DatabasesListResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.DatabasesListResponse;
+
+                    /**
+                     * Verifies a DatabasesListResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a DatabasesListResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns DatabasesListResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.DatabasesListResponse;
+
+                    /**
+                     * Creates a plain object from a DatabasesListResponse message. Also converts values to other types if specified.
+                     * @param message DatabasesListResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.DatabasesListResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this DatabasesListResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Represents a SqlFlagsService */
+                class SqlFlagsService extends $protobuf.rpc.Service {
+
+                    /**
+                     * Constructs a new SqlFlagsService service.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     */
+                    constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                    /**
+                     * Creates new SqlFlagsService service using the specified rpc implementation.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     * @returns RPC service. Useful where requests and/or responses are streamed.
+                     */
+                    public static create(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean): SqlFlagsService;
+
+                    /**
+                     * Calls List.
+                     * @param request SqlFlagsListRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and FlagsListResponse
+                     */
+                    public list(request: google.cloud.sql.v1.ISqlFlagsListRequest, callback: google.cloud.sql.v1.SqlFlagsService.ListCallback): void;
+
+                    /**
+                     * Calls List.
+                     * @param request SqlFlagsListRequest message or plain object
+                     * @returns Promise
+                     */
+                    public list(request: google.cloud.sql.v1.ISqlFlagsListRequest): Promise<google.cloud.sql.v1.FlagsListResponse>;
+                }
+
+                namespace SqlFlagsService {
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlFlagsService#list}.
+                     * @param error Error, if any
+                     * @param [response] FlagsListResponse
+                     */
+                    type ListCallback = (error: (Error|null), response?: google.cloud.sql.v1.FlagsListResponse) => void;
+                }
+
+                /** Properties of a SqlFlagsListRequest. */
+                interface ISqlFlagsListRequest {
+
+                    /** SqlFlagsListRequest databaseVersion */
+                    databaseVersion?: (string|null);
+                }
+
+                /** Represents a SqlFlagsListRequest. */
+                class SqlFlagsListRequest implements ISqlFlagsListRequest {
+
+                    /**
+                     * Constructs a new SqlFlagsListRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlFlagsListRequest);
+
+                    /** SqlFlagsListRequest databaseVersion. */
+                    public databaseVersion: string;
+
+                    /**
+                     * Creates a new SqlFlagsListRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlFlagsListRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlFlagsListRequest): google.cloud.sql.v1.SqlFlagsListRequest;
+
+                    /**
+                     * Encodes the specified SqlFlagsListRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlFlagsListRequest.verify|verify} messages.
+                     * @param message SqlFlagsListRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlFlagsListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlFlagsListRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlFlagsListRequest.verify|verify} messages.
+                     * @param message SqlFlagsListRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlFlagsListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlFlagsListRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlFlagsListRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlFlagsListRequest;
+
+                    /**
+                     * Decodes a SqlFlagsListRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlFlagsListRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlFlagsListRequest;
+
+                    /**
+                     * Verifies a SqlFlagsListRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlFlagsListRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlFlagsListRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlFlagsListRequest;
+
+                    /**
+                     * Creates a plain object from a SqlFlagsListRequest message. Also converts values to other types if specified.
+                     * @param message SqlFlagsListRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlFlagsListRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlFlagsListRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a FlagsListResponse. */
+                interface IFlagsListResponse {
+
+                    /** FlagsListResponse kind */
+                    kind?: (string|null);
+
+                    /** FlagsListResponse items */
+                    items?: (google.cloud.sql.v1.IFlag[]|null);
+                }
+
+                /** Represents a FlagsListResponse. */
+                class FlagsListResponse implements IFlagsListResponse {
+
+                    /**
+                     * Constructs a new FlagsListResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IFlagsListResponse);
+
+                    /** FlagsListResponse kind. */
+                    public kind: string;
+
+                    /** FlagsListResponse items. */
+                    public items: google.cloud.sql.v1.IFlag[];
+
+                    /**
+                     * Creates a new FlagsListResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns FlagsListResponse instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IFlagsListResponse): google.cloud.sql.v1.FlagsListResponse;
+
+                    /**
+                     * Encodes the specified FlagsListResponse message. Does not implicitly {@link google.cloud.sql.v1.FlagsListResponse.verify|verify} messages.
+                     * @param message FlagsListResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IFlagsListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified FlagsListResponse message, length delimited. Does not implicitly {@link google.cloud.sql.v1.FlagsListResponse.verify|verify} messages.
+                     * @param message FlagsListResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IFlagsListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a FlagsListResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns FlagsListResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.FlagsListResponse;
+
+                    /**
+                     * Decodes a FlagsListResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns FlagsListResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.FlagsListResponse;
+
+                    /**
+                     * Verifies a FlagsListResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a FlagsListResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns FlagsListResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.FlagsListResponse;
+
+                    /**
+                     * Creates a plain object from a FlagsListResponse message. Also converts values to other types if specified.
+                     * @param message FlagsListResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.FlagsListResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this FlagsListResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a Flag. */
+                interface IFlag {
+
+                    /** Flag name */
+                    name?: (string|null);
+
+                    /** Flag type */
+                    type?: (google.cloud.sql.v1.SqlFlagType|keyof typeof google.cloud.sql.v1.SqlFlagType|null);
+
+                    /** Flag appliesTo */
+                    appliesTo?: (google.cloud.sql.v1.SqlDatabaseVersion[]|null);
+
+                    /** Flag allowedStringValues */
+                    allowedStringValues?: (string[]|null);
+
+                    /** Flag minValue */
+                    minValue?: (google.protobuf.IInt64Value|null);
+
+                    /** Flag maxValue */
+                    maxValue?: (google.protobuf.IInt64Value|null);
+
+                    /** Flag requiresRestart */
+                    requiresRestart?: (google.protobuf.IBoolValue|null);
+
+                    /** Flag kind */
+                    kind?: (string|null);
+
+                    /** Flag inBeta */
+                    inBeta?: (google.protobuf.IBoolValue|null);
+
+                    /** Flag allowedIntValues */
+                    allowedIntValues?: ((number|Long|string)[]|null);
+                }
+
+                /** Represents a Flag. */
+                class Flag implements IFlag {
+
+                    /**
+                     * Constructs a new Flag.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IFlag);
+
+                    /** Flag name. */
+                    public name: string;
+
+                    /** Flag type. */
+                    public type: (google.cloud.sql.v1.SqlFlagType|keyof typeof google.cloud.sql.v1.SqlFlagType);
+
+                    /** Flag appliesTo. */
+                    public appliesTo: google.cloud.sql.v1.SqlDatabaseVersion[];
+
+                    /** Flag allowedStringValues. */
+                    public allowedStringValues: string[];
+
+                    /** Flag minValue. */
+                    public minValue?: (google.protobuf.IInt64Value|null);
+
+                    /** Flag maxValue. */
+                    public maxValue?: (google.protobuf.IInt64Value|null);
+
+                    /** Flag requiresRestart. */
+                    public requiresRestart?: (google.protobuf.IBoolValue|null);
+
+                    /** Flag kind. */
+                    public kind: string;
+
+                    /** Flag inBeta. */
+                    public inBeta?: (google.protobuf.IBoolValue|null);
+
+                    /** Flag allowedIntValues. */
+                    public allowedIntValues: (number|Long|string)[];
+
+                    /**
+                     * Creates a new Flag instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns Flag instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IFlag): google.cloud.sql.v1.Flag;
+
+                    /**
+                     * Encodes the specified Flag message. Does not implicitly {@link google.cloud.sql.v1.Flag.verify|verify} messages.
+                     * @param message Flag message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IFlag, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified Flag message, length delimited. Does not implicitly {@link google.cloud.sql.v1.Flag.verify|verify} messages.
+                     * @param message Flag message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IFlag, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a Flag message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns Flag
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.Flag;
+
+                    /**
+                     * Decodes a Flag message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns Flag
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.Flag;
+
+                    /**
+                     * Verifies a Flag message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a Flag message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns Flag
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.Flag;
+
+                    /**
+                     * Creates a plain object from a Flag message. Also converts values to other types if specified.
+                     * @param message Flag
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.Flag, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this Flag to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** SqlFlagType enum. */
+                enum SqlFlagType {
+                    SQL_FLAG_TYPE_UNSPECIFIED = 0,
+                    BOOLEAN = 1,
+                    STRING = 2,
+                    INTEGER = 3,
+                    NONE = 4,
+                    MYSQL_TIMEZONE_OFFSET = 5,
+                    FLOAT = 6,
+                    REPEATED_STRING = 7
+                }
+
+                /** Represents a SqlInstanceNamesService */
+                class SqlInstanceNamesService extends $protobuf.rpc.Service {
+
+                    /**
+                     * Constructs a new SqlInstanceNamesService service.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     */
+                    constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                    /**
+                     * Creates new SqlInstanceNamesService service using the specified rpc implementation.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     * @returns RPC service. Useful where requests and/or responses are streamed.
+                     */
+                    public static create(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean): SqlInstanceNamesService;
+                }
+
+                /** Represents a SqlInstancesService */
+                class SqlInstancesService extends $protobuf.rpc.Service {
+
+                    /**
+                     * Constructs a new SqlInstancesService service.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     */
+                    constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                    /**
+                     * Creates new SqlInstancesService service using the specified rpc implementation.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     * @returns RPC service. Useful where requests and/or responses are streamed.
+                     */
+                    public static create(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean): SqlInstancesService;
+
+                    /**
+                     * Calls AddServerCa.
+                     * @param request SqlInstancesAddServerCaRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public addServerCa(request: google.cloud.sql.v1.ISqlInstancesAddServerCaRequest, callback: google.cloud.sql.v1.SqlInstancesService.AddServerCaCallback): void;
+
+                    /**
+                     * Calls AddServerCa.
+                     * @param request SqlInstancesAddServerCaRequest message or plain object
+                     * @returns Promise
+                     */
+                    public addServerCa(request: google.cloud.sql.v1.ISqlInstancesAddServerCaRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls Clone.
+                     * @param request SqlInstancesCloneRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public clone(request: google.cloud.sql.v1.ISqlInstancesCloneRequest, callback: google.cloud.sql.v1.SqlInstancesService.CloneCallback): void;
+
+                    /**
+                     * Calls Clone.
+                     * @param request SqlInstancesCloneRequest message or plain object
+                     * @returns Promise
+                     */
+                    public clone(request: google.cloud.sql.v1.ISqlInstancesCloneRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls Delete.
+                     * @param request SqlInstancesDeleteRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public delete(request: google.cloud.sql.v1.ISqlInstancesDeleteRequest, callback: google.cloud.sql.v1.SqlInstancesService.DeleteCallback): void;
+
+                    /**
+                     * Calls Delete.
+                     * @param request SqlInstancesDeleteRequest message or plain object
+                     * @returns Promise
+                     */
+                    public delete(request: google.cloud.sql.v1.ISqlInstancesDeleteRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls DemoteMaster.
+                     * @param request SqlInstancesDemoteMasterRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public demoteMaster(request: google.cloud.sql.v1.ISqlInstancesDemoteMasterRequest, callback: google.cloud.sql.v1.SqlInstancesService.DemoteMasterCallback): void;
+
+                    /**
+                     * Calls DemoteMaster.
+                     * @param request SqlInstancesDemoteMasterRequest message or plain object
+                     * @returns Promise
+                     */
+                    public demoteMaster(request: google.cloud.sql.v1.ISqlInstancesDemoteMasterRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls Export.
+                     * @param request SqlInstancesExportRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public export(request: google.cloud.sql.v1.ISqlInstancesExportRequest, callback: google.cloud.sql.v1.SqlInstancesService.ExportCallback): void;
+
+                    /**
+                     * Calls Export.
+                     * @param request SqlInstancesExportRequest message or plain object
+                     * @returns Promise
+                     */
+                    public export(request: google.cloud.sql.v1.ISqlInstancesExportRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls Failover.
+                     * @param request SqlInstancesFailoverRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public failover(request: google.cloud.sql.v1.ISqlInstancesFailoverRequest, callback: google.cloud.sql.v1.SqlInstancesService.FailoverCallback): void;
+
+                    /**
+                     * Calls Failover.
+                     * @param request SqlInstancesFailoverRequest message or plain object
+                     * @returns Promise
+                     */
+                    public failover(request: google.cloud.sql.v1.ISqlInstancesFailoverRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls Get.
+                     * @param request SqlInstancesGetRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and DatabaseInstance
+                     */
+                    public get(request: google.cloud.sql.v1.ISqlInstancesGetRequest, callback: google.cloud.sql.v1.SqlInstancesService.GetCallback): void;
+
+                    /**
+                     * Calls Get.
+                     * @param request SqlInstancesGetRequest message or plain object
+                     * @returns Promise
+                     */
+                    public get(request: google.cloud.sql.v1.ISqlInstancesGetRequest): Promise<google.cloud.sql.v1.DatabaseInstance>;
+
+                    /**
+                     * Calls Import.
+                     * @param request SqlInstancesImportRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public import(request: google.cloud.sql.v1.ISqlInstancesImportRequest, callback: google.cloud.sql.v1.SqlInstancesService.ImportCallback): void;
+
+                    /**
+                     * Calls Import.
+                     * @param request SqlInstancesImportRequest message or plain object
+                     * @returns Promise
+                     */
+                    public import(request: google.cloud.sql.v1.ISqlInstancesImportRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls Insert.
+                     * @param request SqlInstancesInsertRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public insert(request: google.cloud.sql.v1.ISqlInstancesInsertRequest, callback: google.cloud.sql.v1.SqlInstancesService.InsertCallback): void;
+
+                    /**
+                     * Calls Insert.
+                     * @param request SqlInstancesInsertRequest message or plain object
+                     * @returns Promise
+                     */
+                    public insert(request: google.cloud.sql.v1.ISqlInstancesInsertRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls List.
+                     * @param request SqlInstancesListRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and InstancesListResponse
+                     */
+                    public list(request: google.cloud.sql.v1.ISqlInstancesListRequest, callback: google.cloud.sql.v1.SqlInstancesService.ListCallback): void;
+
+                    /**
+                     * Calls List.
+                     * @param request SqlInstancesListRequest message or plain object
+                     * @returns Promise
+                     */
+                    public list(request: google.cloud.sql.v1.ISqlInstancesListRequest): Promise<google.cloud.sql.v1.InstancesListResponse>;
+
+                    /**
+                     * Calls ListServerCas.
+                     * @param request SqlInstancesListServerCasRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and InstancesListServerCasResponse
+                     */
+                    public listServerCas(request: google.cloud.sql.v1.ISqlInstancesListServerCasRequest, callback: google.cloud.sql.v1.SqlInstancesService.ListServerCasCallback): void;
+
+                    /**
+                     * Calls ListServerCas.
+                     * @param request SqlInstancesListServerCasRequest message or plain object
+                     * @returns Promise
+                     */
+                    public listServerCas(request: google.cloud.sql.v1.ISqlInstancesListServerCasRequest): Promise<google.cloud.sql.v1.InstancesListServerCasResponse>;
+
+                    /**
+                     * Calls Patch.
+                     * @param request SqlInstancesPatchRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public patch(request: google.cloud.sql.v1.ISqlInstancesPatchRequest, callback: google.cloud.sql.v1.SqlInstancesService.PatchCallback): void;
+
+                    /**
+                     * Calls Patch.
+                     * @param request SqlInstancesPatchRequest message or plain object
+                     * @returns Promise
+                     */
+                    public patch(request: google.cloud.sql.v1.ISqlInstancesPatchRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls PromoteReplica.
+                     * @param request SqlInstancesPromoteReplicaRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public promoteReplica(request: google.cloud.sql.v1.ISqlInstancesPromoteReplicaRequest, callback: google.cloud.sql.v1.SqlInstancesService.PromoteReplicaCallback): void;
+
+                    /**
+                     * Calls PromoteReplica.
+                     * @param request SqlInstancesPromoteReplicaRequest message or plain object
+                     * @returns Promise
+                     */
+                    public promoteReplica(request: google.cloud.sql.v1.ISqlInstancesPromoteReplicaRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls ResetSslConfig.
+                     * @param request SqlInstancesResetSslConfigRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public resetSslConfig(request: google.cloud.sql.v1.ISqlInstancesResetSslConfigRequest, callback: google.cloud.sql.v1.SqlInstancesService.ResetSslConfigCallback): void;
+
+                    /**
+                     * Calls ResetSslConfig.
+                     * @param request SqlInstancesResetSslConfigRequest message or plain object
+                     * @returns Promise
+                     */
+                    public resetSslConfig(request: google.cloud.sql.v1.ISqlInstancesResetSslConfigRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls Restart.
+                     * @param request SqlInstancesRestartRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public restart(request: google.cloud.sql.v1.ISqlInstancesRestartRequest, callback: google.cloud.sql.v1.SqlInstancesService.RestartCallback): void;
+
+                    /**
+                     * Calls Restart.
+                     * @param request SqlInstancesRestartRequest message or plain object
+                     * @returns Promise
+                     */
+                    public restart(request: google.cloud.sql.v1.ISqlInstancesRestartRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls RestoreBackup.
+                     * @param request SqlInstancesRestoreBackupRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public restoreBackup(request: google.cloud.sql.v1.ISqlInstancesRestoreBackupRequest, callback: google.cloud.sql.v1.SqlInstancesService.RestoreBackupCallback): void;
+
+                    /**
+                     * Calls RestoreBackup.
+                     * @param request SqlInstancesRestoreBackupRequest message or plain object
+                     * @returns Promise
+                     */
+                    public restoreBackup(request: google.cloud.sql.v1.ISqlInstancesRestoreBackupRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls RotateServerCa.
+                     * @param request SqlInstancesRotateServerCaRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public rotateServerCa(request: google.cloud.sql.v1.ISqlInstancesRotateServerCaRequest, callback: google.cloud.sql.v1.SqlInstancesService.RotateServerCaCallback): void;
+
+                    /**
+                     * Calls RotateServerCa.
+                     * @param request SqlInstancesRotateServerCaRequest message or plain object
+                     * @returns Promise
+                     */
+                    public rotateServerCa(request: google.cloud.sql.v1.ISqlInstancesRotateServerCaRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls StartReplica.
+                     * @param request SqlInstancesStartReplicaRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public startReplica(request: google.cloud.sql.v1.ISqlInstancesStartReplicaRequest, callback: google.cloud.sql.v1.SqlInstancesService.StartReplicaCallback): void;
+
+                    /**
+                     * Calls StartReplica.
+                     * @param request SqlInstancesStartReplicaRequest message or plain object
+                     * @returns Promise
+                     */
+                    public startReplica(request: google.cloud.sql.v1.ISqlInstancesStartReplicaRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls StopReplica.
+                     * @param request SqlInstancesStopReplicaRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public stopReplica(request: google.cloud.sql.v1.ISqlInstancesStopReplicaRequest, callback: google.cloud.sql.v1.SqlInstancesService.StopReplicaCallback): void;
+
+                    /**
+                     * Calls StopReplica.
+                     * @param request SqlInstancesStopReplicaRequest message or plain object
+                     * @returns Promise
+                     */
+                    public stopReplica(request: google.cloud.sql.v1.ISqlInstancesStopReplicaRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls TruncateLog.
+                     * @param request SqlInstancesTruncateLogRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public truncateLog(request: google.cloud.sql.v1.ISqlInstancesTruncateLogRequest, callback: google.cloud.sql.v1.SqlInstancesService.TruncateLogCallback): void;
+
+                    /**
+                     * Calls TruncateLog.
+                     * @param request SqlInstancesTruncateLogRequest message or plain object
+                     * @returns Promise
+                     */
+                    public truncateLog(request: google.cloud.sql.v1.ISqlInstancesTruncateLogRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls Update.
+                     * @param request SqlInstancesUpdateRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public update(request: google.cloud.sql.v1.ISqlInstancesUpdateRequest, callback: google.cloud.sql.v1.SqlInstancesService.UpdateCallback): void;
+
+                    /**
+                     * Calls Update.
+                     * @param request SqlInstancesUpdateRequest message or plain object
+                     * @returns Promise
+                     */
+                    public update(request: google.cloud.sql.v1.ISqlInstancesUpdateRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls CreateEphemeral.
+                     * @param request SqlInstancesCreateEphemeralCertRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and SslCert
+                     */
+                    public createEphemeral(request: google.cloud.sql.v1.ISqlInstancesCreateEphemeralCertRequest, callback: google.cloud.sql.v1.SqlInstancesService.CreateEphemeralCallback): void;
+
+                    /**
+                     * Calls CreateEphemeral.
+                     * @param request SqlInstancesCreateEphemeralCertRequest message or plain object
+                     * @returns Promise
+                     */
+                    public createEphemeral(request: google.cloud.sql.v1.ISqlInstancesCreateEphemeralCertRequest): Promise<google.cloud.sql.v1.SslCert>;
+
+                    /**
+                     * Calls RescheduleMaintenance.
+                     * @param request SqlInstancesRescheduleMaintenanceRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public rescheduleMaintenance(request: google.cloud.sql.v1.ISqlInstancesRescheduleMaintenanceRequest, callback: google.cloud.sql.v1.SqlInstancesService.RescheduleMaintenanceCallback): void;
+
+                    /**
+                     * Calls RescheduleMaintenance.
+                     * @param request SqlInstancesRescheduleMaintenanceRequest message or plain object
+                     * @returns Promise
+                     */
+                    public rescheduleMaintenance(request: google.cloud.sql.v1.ISqlInstancesRescheduleMaintenanceRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls VerifyExternalSyncSettings.
+                     * @param request SqlInstancesVerifyExternalSyncSettingsRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and SqlInstancesVerifyExternalSyncSettingsResponse
+                     */
+                    public verifyExternalSyncSettings(request: google.cloud.sql.v1.ISqlInstancesVerifyExternalSyncSettingsRequest, callback: google.cloud.sql.v1.SqlInstancesService.VerifyExternalSyncSettingsCallback): void;
+
+                    /**
+                     * Calls VerifyExternalSyncSettings.
+                     * @param request SqlInstancesVerifyExternalSyncSettingsRequest message or plain object
+                     * @returns Promise
+                     */
+                    public verifyExternalSyncSettings(request: google.cloud.sql.v1.ISqlInstancesVerifyExternalSyncSettingsRequest): Promise<google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsResponse>;
+
+                    /**
+                     * Calls StartExternalSync.
+                     * @param request SqlInstancesStartExternalSyncRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public startExternalSync(request: google.cloud.sql.v1.ISqlInstancesStartExternalSyncRequest, callback: google.cloud.sql.v1.SqlInstancesService.StartExternalSyncCallback): void;
+
+                    /**
+                     * Calls StartExternalSync.
+                     * @param request SqlInstancesStartExternalSyncRequest message or plain object
+                     * @returns Promise
+                     */
+                    public startExternalSync(request: google.cloud.sql.v1.ISqlInstancesStartExternalSyncRequest): Promise<google.cloud.sql.v1.Operation>;
+                }
+
+                namespace SqlInstancesService {
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#addServerCa}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type AddServerCaCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#clone}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type CloneCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#delete_}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type DeleteCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#demoteMaster}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type DemoteMasterCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#export_}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type ExportCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#failover}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type FailoverCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#get}.
+                     * @param error Error, if any
+                     * @param [response] DatabaseInstance
+                     */
+                    type GetCallback = (error: (Error|null), response?: google.cloud.sql.v1.DatabaseInstance) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#import_}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type ImportCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#insert}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type InsertCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#list}.
+                     * @param error Error, if any
+                     * @param [response] InstancesListResponse
+                     */
+                    type ListCallback = (error: (Error|null), response?: google.cloud.sql.v1.InstancesListResponse) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#listServerCas}.
+                     * @param error Error, if any
+                     * @param [response] InstancesListServerCasResponse
+                     */
+                    type ListServerCasCallback = (error: (Error|null), response?: google.cloud.sql.v1.InstancesListServerCasResponse) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#patch}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type PatchCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#promoteReplica}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type PromoteReplicaCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#resetSslConfig}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type ResetSslConfigCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#restart}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type RestartCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#restoreBackup}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type RestoreBackupCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#rotateServerCa}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type RotateServerCaCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#startReplica}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type StartReplicaCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#stopReplica}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type StopReplicaCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#truncateLog}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type TruncateLogCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#update}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type UpdateCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#createEphemeral}.
+                     * @param error Error, if any
+                     * @param [response] SslCert
+                     */
+                    type CreateEphemeralCallback = (error: (Error|null), response?: google.cloud.sql.v1.SslCert) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#rescheduleMaintenance}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type RescheduleMaintenanceCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#verifyExternalSyncSettings}.
+                     * @param error Error, if any
+                     * @param [response] SqlInstancesVerifyExternalSyncSettingsResponse
+                     */
+                    type VerifyExternalSyncSettingsCallback = (error: (Error|null), response?: google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsResponse) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlInstancesService#startExternalSync}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type StartExternalSyncCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+                }
+
+                /** Properties of a SqlInstancesAddServerCaRequest. */
+                interface ISqlInstancesAddServerCaRequest {
+
+                    /** SqlInstancesAddServerCaRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesAddServerCaRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlInstancesAddServerCaRequest. */
+                class SqlInstancesAddServerCaRequest implements ISqlInstancesAddServerCaRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesAddServerCaRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesAddServerCaRequest);
+
+                    /** SqlInstancesAddServerCaRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesAddServerCaRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlInstancesAddServerCaRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesAddServerCaRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesAddServerCaRequest): google.cloud.sql.v1.SqlInstancesAddServerCaRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesAddServerCaRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesAddServerCaRequest.verify|verify} messages.
+                     * @param message SqlInstancesAddServerCaRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesAddServerCaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesAddServerCaRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesAddServerCaRequest.verify|verify} messages.
+                     * @param message SqlInstancesAddServerCaRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesAddServerCaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesAddServerCaRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesAddServerCaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesAddServerCaRequest;
+
+                    /**
+                     * Decodes a SqlInstancesAddServerCaRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesAddServerCaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesAddServerCaRequest;
+
+                    /**
+                     * Verifies a SqlInstancesAddServerCaRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesAddServerCaRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesAddServerCaRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesAddServerCaRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesAddServerCaRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesAddServerCaRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesAddServerCaRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesAddServerCaRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesCloneRequest. */
+                interface ISqlInstancesCloneRequest {
+
+                    /** SqlInstancesCloneRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesCloneRequest project */
+                    project?: (string|null);
+
+                    /** SqlInstancesCloneRequest body */
+                    body?: (google.cloud.sql.v1.IInstancesCloneRequest|null);
+                }
+
+                /** Represents a SqlInstancesCloneRequest. */
+                class SqlInstancesCloneRequest implements ISqlInstancesCloneRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesCloneRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesCloneRequest);
+
+                    /** SqlInstancesCloneRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesCloneRequest project. */
+                    public project: string;
+
+                    /** SqlInstancesCloneRequest body. */
+                    public body?: (google.cloud.sql.v1.IInstancesCloneRequest|null);
+
+                    /**
+                     * Creates a new SqlInstancesCloneRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesCloneRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesCloneRequest): google.cloud.sql.v1.SqlInstancesCloneRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesCloneRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesCloneRequest.verify|verify} messages.
+                     * @param message SqlInstancesCloneRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesCloneRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesCloneRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesCloneRequest.verify|verify} messages.
+                     * @param message SqlInstancesCloneRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesCloneRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesCloneRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesCloneRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesCloneRequest;
+
+                    /**
+                     * Decodes a SqlInstancesCloneRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesCloneRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesCloneRequest;
+
+                    /**
+                     * Verifies a SqlInstancesCloneRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesCloneRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesCloneRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesCloneRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesCloneRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesCloneRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesCloneRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesCloneRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesDeleteRequest. */
+                interface ISqlInstancesDeleteRequest {
+
+                    /** SqlInstancesDeleteRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesDeleteRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlInstancesDeleteRequest. */
+                class SqlInstancesDeleteRequest implements ISqlInstancesDeleteRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesDeleteRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesDeleteRequest);
+
+                    /** SqlInstancesDeleteRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesDeleteRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlInstancesDeleteRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesDeleteRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesDeleteRequest): google.cloud.sql.v1.SqlInstancesDeleteRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesDeleteRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesDeleteRequest.verify|verify} messages.
+                     * @param message SqlInstancesDeleteRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesDeleteRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesDeleteRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesDeleteRequest.verify|verify} messages.
+                     * @param message SqlInstancesDeleteRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesDeleteRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesDeleteRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesDeleteRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesDeleteRequest;
+
+                    /**
+                     * Decodes a SqlInstancesDeleteRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesDeleteRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesDeleteRequest;
+
+                    /**
+                     * Verifies a SqlInstancesDeleteRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesDeleteRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesDeleteRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesDeleteRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesDeleteRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesDeleteRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesDeleteRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesDeleteRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesDemoteMasterRequest. */
+                interface ISqlInstancesDemoteMasterRequest {
+
+                    /** SqlInstancesDemoteMasterRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesDemoteMasterRequest project */
+                    project?: (string|null);
+
+                    /** SqlInstancesDemoteMasterRequest body */
+                    body?: (google.cloud.sql.v1.IInstancesDemoteMasterRequest|null);
+                }
+
+                /** Represents a SqlInstancesDemoteMasterRequest. */
+                class SqlInstancesDemoteMasterRequest implements ISqlInstancesDemoteMasterRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesDemoteMasterRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesDemoteMasterRequest);
+
+                    /** SqlInstancesDemoteMasterRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesDemoteMasterRequest project. */
+                    public project: string;
+
+                    /** SqlInstancesDemoteMasterRequest body. */
+                    public body?: (google.cloud.sql.v1.IInstancesDemoteMasterRequest|null);
+
+                    /**
+                     * Creates a new SqlInstancesDemoteMasterRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesDemoteMasterRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesDemoteMasterRequest): google.cloud.sql.v1.SqlInstancesDemoteMasterRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesDemoteMasterRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesDemoteMasterRequest.verify|verify} messages.
+                     * @param message SqlInstancesDemoteMasterRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesDemoteMasterRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesDemoteMasterRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesDemoteMasterRequest.verify|verify} messages.
+                     * @param message SqlInstancesDemoteMasterRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesDemoteMasterRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesDemoteMasterRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesDemoteMasterRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesDemoteMasterRequest;
+
+                    /**
+                     * Decodes a SqlInstancesDemoteMasterRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesDemoteMasterRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesDemoteMasterRequest;
+
+                    /**
+                     * Verifies a SqlInstancesDemoteMasterRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesDemoteMasterRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesDemoteMasterRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesDemoteMasterRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesDemoteMasterRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesDemoteMasterRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesDemoteMasterRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesDemoteMasterRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesExportRequest. */
+                interface ISqlInstancesExportRequest {
+
+                    /** SqlInstancesExportRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesExportRequest project */
+                    project?: (string|null);
+
+                    /** SqlInstancesExportRequest body */
+                    body?: (google.cloud.sql.v1.IInstancesExportRequest|null);
+                }
+
+                /** Represents a SqlInstancesExportRequest. */
+                class SqlInstancesExportRequest implements ISqlInstancesExportRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesExportRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesExportRequest);
+
+                    /** SqlInstancesExportRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesExportRequest project. */
+                    public project: string;
+
+                    /** SqlInstancesExportRequest body. */
+                    public body?: (google.cloud.sql.v1.IInstancesExportRequest|null);
+
+                    /**
+                     * Creates a new SqlInstancesExportRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesExportRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesExportRequest): google.cloud.sql.v1.SqlInstancesExportRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesExportRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesExportRequest.verify|verify} messages.
+                     * @param message SqlInstancesExportRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesExportRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesExportRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesExportRequest.verify|verify} messages.
+                     * @param message SqlInstancesExportRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesExportRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesExportRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesExportRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesExportRequest;
+
+                    /**
+                     * Decodes a SqlInstancesExportRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesExportRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesExportRequest;
+
+                    /**
+                     * Verifies a SqlInstancesExportRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesExportRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesExportRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesExportRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesExportRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesExportRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesExportRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesExportRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesFailoverRequest. */
+                interface ISqlInstancesFailoverRequest {
+
+                    /** SqlInstancesFailoverRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesFailoverRequest project */
+                    project?: (string|null);
+
+                    /** SqlInstancesFailoverRequest body */
+                    body?: (google.cloud.sql.v1.IInstancesFailoverRequest|null);
+                }
+
+                /** Represents a SqlInstancesFailoverRequest. */
+                class SqlInstancesFailoverRequest implements ISqlInstancesFailoverRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesFailoverRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesFailoverRequest);
+
+                    /** SqlInstancesFailoverRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesFailoverRequest project. */
+                    public project: string;
+
+                    /** SqlInstancesFailoverRequest body. */
+                    public body?: (google.cloud.sql.v1.IInstancesFailoverRequest|null);
+
+                    /**
+                     * Creates a new SqlInstancesFailoverRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesFailoverRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesFailoverRequest): google.cloud.sql.v1.SqlInstancesFailoverRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesFailoverRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesFailoverRequest.verify|verify} messages.
+                     * @param message SqlInstancesFailoverRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesFailoverRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesFailoverRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesFailoverRequest.verify|verify} messages.
+                     * @param message SqlInstancesFailoverRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesFailoverRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesFailoverRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesFailoverRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesFailoverRequest;
+
+                    /**
+                     * Decodes a SqlInstancesFailoverRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesFailoverRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesFailoverRequest;
+
+                    /**
+                     * Verifies a SqlInstancesFailoverRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesFailoverRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesFailoverRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesFailoverRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesFailoverRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesFailoverRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesFailoverRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesFailoverRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesGetRequest. */
+                interface ISqlInstancesGetRequest {
+
+                    /** SqlInstancesGetRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesGetRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlInstancesGetRequest. */
+                class SqlInstancesGetRequest implements ISqlInstancesGetRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesGetRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesGetRequest);
+
+                    /** SqlInstancesGetRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesGetRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlInstancesGetRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesGetRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesGetRequest): google.cloud.sql.v1.SqlInstancesGetRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesGetRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesGetRequest.verify|verify} messages.
+                     * @param message SqlInstancesGetRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesGetRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesGetRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesGetRequest.verify|verify} messages.
+                     * @param message SqlInstancesGetRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesGetRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesGetRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesGetRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesGetRequest;
+
+                    /**
+                     * Decodes a SqlInstancesGetRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesGetRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesGetRequest;
+
+                    /**
+                     * Verifies a SqlInstancesGetRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesGetRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesGetRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesGetRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesGetRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesGetRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesGetRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesGetRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesImportRequest. */
+                interface ISqlInstancesImportRequest {
+
+                    /** SqlInstancesImportRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesImportRequest project */
+                    project?: (string|null);
+
+                    /** SqlInstancesImportRequest body */
+                    body?: (google.cloud.sql.v1.IInstancesImportRequest|null);
+                }
+
+                /** Represents a SqlInstancesImportRequest. */
+                class SqlInstancesImportRequest implements ISqlInstancesImportRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesImportRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesImportRequest);
+
+                    /** SqlInstancesImportRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesImportRequest project. */
+                    public project: string;
+
+                    /** SqlInstancesImportRequest body. */
+                    public body?: (google.cloud.sql.v1.IInstancesImportRequest|null);
+
+                    /**
+                     * Creates a new SqlInstancesImportRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesImportRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesImportRequest): google.cloud.sql.v1.SqlInstancesImportRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesImportRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesImportRequest.verify|verify} messages.
+                     * @param message SqlInstancesImportRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesImportRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesImportRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesImportRequest.verify|verify} messages.
+                     * @param message SqlInstancesImportRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesImportRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesImportRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesImportRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesImportRequest;
+
+                    /**
+                     * Decodes a SqlInstancesImportRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesImportRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesImportRequest;
+
+                    /**
+                     * Verifies a SqlInstancesImportRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesImportRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesImportRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesImportRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesImportRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesImportRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesImportRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesImportRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesInsertRequest. */
+                interface ISqlInstancesInsertRequest {
+
+                    /** SqlInstancesInsertRequest project */
+                    project?: (string|null);
+
+                    /** SqlInstancesInsertRequest body */
+                    body?: (google.cloud.sql.v1.IDatabaseInstance|null);
+                }
+
+                /** Represents a SqlInstancesInsertRequest. */
+                class SqlInstancesInsertRequest implements ISqlInstancesInsertRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesInsertRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesInsertRequest);
+
+                    /** SqlInstancesInsertRequest project. */
+                    public project: string;
+
+                    /** SqlInstancesInsertRequest body. */
+                    public body?: (google.cloud.sql.v1.IDatabaseInstance|null);
+
+                    /**
+                     * Creates a new SqlInstancesInsertRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesInsertRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesInsertRequest): google.cloud.sql.v1.SqlInstancesInsertRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesInsertRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesInsertRequest.verify|verify} messages.
+                     * @param message SqlInstancesInsertRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesInsertRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesInsertRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesInsertRequest.verify|verify} messages.
+                     * @param message SqlInstancesInsertRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesInsertRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesInsertRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesInsertRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesInsertRequest;
+
+                    /**
+                     * Decodes a SqlInstancesInsertRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesInsertRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesInsertRequest;
+
+                    /**
+                     * Verifies a SqlInstancesInsertRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesInsertRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesInsertRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesInsertRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesInsertRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesInsertRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesInsertRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesInsertRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesListRequest. */
+                interface ISqlInstancesListRequest {
+
+                    /** SqlInstancesListRequest filter */
+                    filter?: (string|null);
+
+                    /** SqlInstancesListRequest maxResults */
+                    maxResults?: (number|null);
+
+                    /** SqlInstancesListRequest pageToken */
+                    pageToken?: (string|null);
+
+                    /** SqlInstancesListRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlInstancesListRequest. */
+                class SqlInstancesListRequest implements ISqlInstancesListRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesListRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesListRequest);
+
+                    /** SqlInstancesListRequest filter. */
+                    public filter: string;
+
+                    /** SqlInstancesListRequest maxResults. */
+                    public maxResults: number;
+
+                    /** SqlInstancesListRequest pageToken. */
+                    public pageToken: string;
+
+                    /** SqlInstancesListRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlInstancesListRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesListRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesListRequest): google.cloud.sql.v1.SqlInstancesListRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesListRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesListRequest.verify|verify} messages.
+                     * @param message SqlInstancesListRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesListRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesListRequest.verify|verify} messages.
+                     * @param message SqlInstancesListRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesListRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesListRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesListRequest;
+
+                    /**
+                     * Decodes a SqlInstancesListRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesListRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesListRequest;
+
+                    /**
+                     * Verifies a SqlInstancesListRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesListRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesListRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesListRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesListRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesListRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesListRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesListRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesListServerCasRequest. */
+                interface ISqlInstancesListServerCasRequest {
+
+                    /** SqlInstancesListServerCasRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesListServerCasRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlInstancesListServerCasRequest. */
+                class SqlInstancesListServerCasRequest implements ISqlInstancesListServerCasRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesListServerCasRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesListServerCasRequest);
+
+                    /** SqlInstancesListServerCasRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesListServerCasRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlInstancesListServerCasRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesListServerCasRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesListServerCasRequest): google.cloud.sql.v1.SqlInstancesListServerCasRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesListServerCasRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesListServerCasRequest.verify|verify} messages.
+                     * @param message SqlInstancesListServerCasRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesListServerCasRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesListServerCasRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesListServerCasRequest.verify|verify} messages.
+                     * @param message SqlInstancesListServerCasRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesListServerCasRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesListServerCasRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesListServerCasRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesListServerCasRequest;
+
+                    /**
+                     * Decodes a SqlInstancesListServerCasRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesListServerCasRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesListServerCasRequest;
+
+                    /**
+                     * Verifies a SqlInstancesListServerCasRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesListServerCasRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesListServerCasRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesListServerCasRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesListServerCasRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesListServerCasRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesListServerCasRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesListServerCasRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesPatchRequest. */
+                interface ISqlInstancesPatchRequest {
+
+                    /** SqlInstancesPatchRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesPatchRequest project */
+                    project?: (string|null);
+
+                    /** SqlInstancesPatchRequest body */
+                    body?: (google.cloud.sql.v1.IDatabaseInstance|null);
+                }
+
+                /** Represents a SqlInstancesPatchRequest. */
+                class SqlInstancesPatchRequest implements ISqlInstancesPatchRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesPatchRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesPatchRequest);
+
+                    /** SqlInstancesPatchRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesPatchRequest project. */
+                    public project: string;
+
+                    /** SqlInstancesPatchRequest body. */
+                    public body?: (google.cloud.sql.v1.IDatabaseInstance|null);
+
+                    /**
+                     * Creates a new SqlInstancesPatchRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesPatchRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesPatchRequest): google.cloud.sql.v1.SqlInstancesPatchRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesPatchRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesPatchRequest.verify|verify} messages.
+                     * @param message SqlInstancesPatchRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesPatchRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesPatchRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesPatchRequest.verify|verify} messages.
+                     * @param message SqlInstancesPatchRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesPatchRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesPatchRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesPatchRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesPatchRequest;
+
+                    /**
+                     * Decodes a SqlInstancesPatchRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesPatchRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesPatchRequest;
+
+                    /**
+                     * Verifies a SqlInstancesPatchRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesPatchRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesPatchRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesPatchRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesPatchRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesPatchRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesPatchRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesPatchRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesPromoteReplicaRequest. */
+                interface ISqlInstancesPromoteReplicaRequest {
+
+                    /** SqlInstancesPromoteReplicaRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesPromoteReplicaRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlInstancesPromoteReplicaRequest. */
+                class SqlInstancesPromoteReplicaRequest implements ISqlInstancesPromoteReplicaRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesPromoteReplicaRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesPromoteReplicaRequest);
+
+                    /** SqlInstancesPromoteReplicaRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesPromoteReplicaRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlInstancesPromoteReplicaRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesPromoteReplicaRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesPromoteReplicaRequest): google.cloud.sql.v1.SqlInstancesPromoteReplicaRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesPromoteReplicaRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesPromoteReplicaRequest.verify|verify} messages.
+                     * @param message SqlInstancesPromoteReplicaRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesPromoteReplicaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesPromoteReplicaRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesPromoteReplicaRequest.verify|verify} messages.
+                     * @param message SqlInstancesPromoteReplicaRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesPromoteReplicaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesPromoteReplicaRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesPromoteReplicaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesPromoteReplicaRequest;
+
+                    /**
+                     * Decodes a SqlInstancesPromoteReplicaRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesPromoteReplicaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesPromoteReplicaRequest;
+
+                    /**
+                     * Verifies a SqlInstancesPromoteReplicaRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesPromoteReplicaRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesPromoteReplicaRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesPromoteReplicaRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesPromoteReplicaRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesPromoteReplicaRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesPromoteReplicaRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesPromoteReplicaRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesResetSslConfigRequest. */
+                interface ISqlInstancesResetSslConfigRequest {
+
+                    /** SqlInstancesResetSslConfigRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesResetSslConfigRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlInstancesResetSslConfigRequest. */
+                class SqlInstancesResetSslConfigRequest implements ISqlInstancesResetSslConfigRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesResetSslConfigRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesResetSslConfigRequest);
+
+                    /** SqlInstancesResetSslConfigRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesResetSslConfigRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlInstancesResetSslConfigRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesResetSslConfigRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesResetSslConfigRequest): google.cloud.sql.v1.SqlInstancesResetSslConfigRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesResetSslConfigRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesResetSslConfigRequest.verify|verify} messages.
+                     * @param message SqlInstancesResetSslConfigRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesResetSslConfigRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesResetSslConfigRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesResetSslConfigRequest.verify|verify} messages.
+                     * @param message SqlInstancesResetSslConfigRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesResetSslConfigRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesResetSslConfigRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesResetSslConfigRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesResetSslConfigRequest;
+
+                    /**
+                     * Decodes a SqlInstancesResetSslConfigRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesResetSslConfigRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesResetSslConfigRequest;
+
+                    /**
+                     * Verifies a SqlInstancesResetSslConfigRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesResetSslConfigRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesResetSslConfigRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesResetSslConfigRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesResetSslConfigRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesResetSslConfigRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesResetSslConfigRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesResetSslConfigRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesRestartRequest. */
+                interface ISqlInstancesRestartRequest {
+
+                    /** SqlInstancesRestartRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesRestartRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlInstancesRestartRequest. */
+                class SqlInstancesRestartRequest implements ISqlInstancesRestartRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesRestartRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesRestartRequest);
+
+                    /** SqlInstancesRestartRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesRestartRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlInstancesRestartRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesRestartRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesRestartRequest): google.cloud.sql.v1.SqlInstancesRestartRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesRestartRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesRestartRequest.verify|verify} messages.
+                     * @param message SqlInstancesRestartRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesRestartRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesRestartRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesRestartRequest.verify|verify} messages.
+                     * @param message SqlInstancesRestartRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesRestartRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesRestartRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesRestartRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesRestartRequest;
+
+                    /**
+                     * Decodes a SqlInstancesRestartRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesRestartRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesRestartRequest;
+
+                    /**
+                     * Verifies a SqlInstancesRestartRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesRestartRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesRestartRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesRestartRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesRestartRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesRestartRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesRestartRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesRestartRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesRestoreBackupRequest. */
+                interface ISqlInstancesRestoreBackupRequest {
+
+                    /** SqlInstancesRestoreBackupRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesRestoreBackupRequest project */
+                    project?: (string|null);
+
+                    /** SqlInstancesRestoreBackupRequest body */
+                    body?: (google.cloud.sql.v1.IInstancesRestoreBackupRequest|null);
+                }
+
+                /** Represents a SqlInstancesRestoreBackupRequest. */
+                class SqlInstancesRestoreBackupRequest implements ISqlInstancesRestoreBackupRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesRestoreBackupRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesRestoreBackupRequest);
+
+                    /** SqlInstancesRestoreBackupRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesRestoreBackupRequest project. */
+                    public project: string;
+
+                    /** SqlInstancesRestoreBackupRequest body. */
+                    public body?: (google.cloud.sql.v1.IInstancesRestoreBackupRequest|null);
+
+                    /**
+                     * Creates a new SqlInstancesRestoreBackupRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesRestoreBackupRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesRestoreBackupRequest): google.cloud.sql.v1.SqlInstancesRestoreBackupRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesRestoreBackupRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesRestoreBackupRequest.verify|verify} messages.
+                     * @param message SqlInstancesRestoreBackupRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesRestoreBackupRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesRestoreBackupRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesRestoreBackupRequest.verify|verify} messages.
+                     * @param message SqlInstancesRestoreBackupRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesRestoreBackupRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesRestoreBackupRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesRestoreBackupRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesRestoreBackupRequest;
+
+                    /**
+                     * Decodes a SqlInstancesRestoreBackupRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesRestoreBackupRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesRestoreBackupRequest;
+
+                    /**
+                     * Verifies a SqlInstancesRestoreBackupRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesRestoreBackupRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesRestoreBackupRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesRestoreBackupRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesRestoreBackupRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesRestoreBackupRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesRestoreBackupRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesRestoreBackupRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesRotateServerCaRequest. */
+                interface ISqlInstancesRotateServerCaRequest {
+
+                    /** SqlInstancesRotateServerCaRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesRotateServerCaRequest project */
+                    project?: (string|null);
+
+                    /** SqlInstancesRotateServerCaRequest body */
+                    body?: (google.cloud.sql.v1.IInstancesRotateServerCaRequest|null);
+                }
+
+                /** Represents a SqlInstancesRotateServerCaRequest. */
+                class SqlInstancesRotateServerCaRequest implements ISqlInstancesRotateServerCaRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesRotateServerCaRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesRotateServerCaRequest);
+
+                    /** SqlInstancesRotateServerCaRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesRotateServerCaRequest project. */
+                    public project: string;
+
+                    /** SqlInstancesRotateServerCaRequest body. */
+                    public body?: (google.cloud.sql.v1.IInstancesRotateServerCaRequest|null);
+
+                    /**
+                     * Creates a new SqlInstancesRotateServerCaRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesRotateServerCaRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesRotateServerCaRequest): google.cloud.sql.v1.SqlInstancesRotateServerCaRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesRotateServerCaRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesRotateServerCaRequest.verify|verify} messages.
+                     * @param message SqlInstancesRotateServerCaRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesRotateServerCaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesRotateServerCaRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesRotateServerCaRequest.verify|verify} messages.
+                     * @param message SqlInstancesRotateServerCaRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesRotateServerCaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesRotateServerCaRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesRotateServerCaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesRotateServerCaRequest;
+
+                    /**
+                     * Decodes a SqlInstancesRotateServerCaRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesRotateServerCaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesRotateServerCaRequest;
+
+                    /**
+                     * Verifies a SqlInstancesRotateServerCaRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesRotateServerCaRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesRotateServerCaRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesRotateServerCaRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesRotateServerCaRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesRotateServerCaRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesRotateServerCaRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesRotateServerCaRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesStartReplicaRequest. */
+                interface ISqlInstancesStartReplicaRequest {
+
+                    /** SqlInstancesStartReplicaRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesStartReplicaRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlInstancesStartReplicaRequest. */
+                class SqlInstancesStartReplicaRequest implements ISqlInstancesStartReplicaRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesStartReplicaRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesStartReplicaRequest);
+
+                    /** SqlInstancesStartReplicaRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesStartReplicaRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlInstancesStartReplicaRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesStartReplicaRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesStartReplicaRequest): google.cloud.sql.v1.SqlInstancesStartReplicaRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesStartReplicaRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesStartReplicaRequest.verify|verify} messages.
+                     * @param message SqlInstancesStartReplicaRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesStartReplicaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesStartReplicaRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesStartReplicaRequest.verify|verify} messages.
+                     * @param message SqlInstancesStartReplicaRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesStartReplicaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesStartReplicaRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesStartReplicaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesStartReplicaRequest;
+
+                    /**
+                     * Decodes a SqlInstancesStartReplicaRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesStartReplicaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesStartReplicaRequest;
+
+                    /**
+                     * Verifies a SqlInstancesStartReplicaRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesStartReplicaRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesStartReplicaRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesStartReplicaRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesStartReplicaRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesStartReplicaRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesStartReplicaRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesStartReplicaRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesStopReplicaRequest. */
+                interface ISqlInstancesStopReplicaRequest {
+
+                    /** SqlInstancesStopReplicaRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesStopReplicaRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlInstancesStopReplicaRequest. */
+                class SqlInstancesStopReplicaRequest implements ISqlInstancesStopReplicaRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesStopReplicaRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesStopReplicaRequest);
+
+                    /** SqlInstancesStopReplicaRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesStopReplicaRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlInstancesStopReplicaRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesStopReplicaRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesStopReplicaRequest): google.cloud.sql.v1.SqlInstancesStopReplicaRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesStopReplicaRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesStopReplicaRequest.verify|verify} messages.
+                     * @param message SqlInstancesStopReplicaRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesStopReplicaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesStopReplicaRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesStopReplicaRequest.verify|verify} messages.
+                     * @param message SqlInstancesStopReplicaRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesStopReplicaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesStopReplicaRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesStopReplicaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesStopReplicaRequest;
+
+                    /**
+                     * Decodes a SqlInstancesStopReplicaRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesStopReplicaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesStopReplicaRequest;
+
+                    /**
+                     * Verifies a SqlInstancesStopReplicaRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesStopReplicaRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesStopReplicaRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesStopReplicaRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesStopReplicaRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesStopReplicaRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesStopReplicaRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesStopReplicaRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesTruncateLogRequest. */
+                interface ISqlInstancesTruncateLogRequest {
+
+                    /** SqlInstancesTruncateLogRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesTruncateLogRequest project */
+                    project?: (string|null);
+
+                    /** SqlInstancesTruncateLogRequest body */
+                    body?: (google.cloud.sql.v1.IInstancesTruncateLogRequest|null);
+                }
+
+                /** Represents a SqlInstancesTruncateLogRequest. */
+                class SqlInstancesTruncateLogRequest implements ISqlInstancesTruncateLogRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesTruncateLogRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesTruncateLogRequest);
+
+                    /** SqlInstancesTruncateLogRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesTruncateLogRequest project. */
+                    public project: string;
+
+                    /** SqlInstancesTruncateLogRequest body. */
+                    public body?: (google.cloud.sql.v1.IInstancesTruncateLogRequest|null);
+
+                    /**
+                     * Creates a new SqlInstancesTruncateLogRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesTruncateLogRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesTruncateLogRequest): google.cloud.sql.v1.SqlInstancesTruncateLogRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesTruncateLogRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesTruncateLogRequest.verify|verify} messages.
+                     * @param message SqlInstancesTruncateLogRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesTruncateLogRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesTruncateLogRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesTruncateLogRequest.verify|verify} messages.
+                     * @param message SqlInstancesTruncateLogRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesTruncateLogRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesTruncateLogRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesTruncateLogRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesTruncateLogRequest;
+
+                    /**
+                     * Decodes a SqlInstancesTruncateLogRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesTruncateLogRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesTruncateLogRequest;
+
+                    /**
+                     * Verifies a SqlInstancesTruncateLogRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesTruncateLogRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesTruncateLogRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesTruncateLogRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesTruncateLogRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesTruncateLogRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesTruncateLogRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesTruncateLogRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesUpdateRequest. */
+                interface ISqlInstancesUpdateRequest {
+
+                    /** SqlInstancesUpdateRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesUpdateRequest project */
+                    project?: (string|null);
+
+                    /** SqlInstancesUpdateRequest body */
+                    body?: (google.cloud.sql.v1.IDatabaseInstance|null);
+                }
+
+                /** Represents a SqlInstancesUpdateRequest. */
+                class SqlInstancesUpdateRequest implements ISqlInstancesUpdateRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesUpdateRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesUpdateRequest);
+
+                    /** SqlInstancesUpdateRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesUpdateRequest project. */
+                    public project: string;
+
+                    /** SqlInstancesUpdateRequest body. */
+                    public body?: (google.cloud.sql.v1.IDatabaseInstance|null);
+
+                    /**
+                     * Creates a new SqlInstancesUpdateRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesUpdateRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesUpdateRequest): google.cloud.sql.v1.SqlInstancesUpdateRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesUpdateRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesUpdateRequest.verify|verify} messages.
+                     * @param message SqlInstancesUpdateRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesUpdateRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesUpdateRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesUpdateRequest.verify|verify} messages.
+                     * @param message SqlInstancesUpdateRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesUpdateRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesUpdateRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesUpdateRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesUpdateRequest;
+
+                    /**
+                     * Decodes a SqlInstancesUpdateRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesUpdateRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesUpdateRequest;
+
+                    /**
+                     * Verifies a SqlInstancesUpdateRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesUpdateRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesUpdateRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesUpdateRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesUpdateRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesUpdateRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesUpdateRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesUpdateRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesRescheduleMaintenanceRequest. */
+                interface ISqlInstancesRescheduleMaintenanceRequest {
+
+                    /** SqlInstancesRescheduleMaintenanceRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesRescheduleMaintenanceRequest project */
+                    project?: (string|null);
+
+                    /** SqlInstancesRescheduleMaintenanceRequest body */
+                    body?: (google.cloud.sql.v1.ISqlInstancesRescheduleMaintenanceRequestBody|null);
+                }
+
+                /** Represents a SqlInstancesRescheduleMaintenanceRequest. */
+                class SqlInstancesRescheduleMaintenanceRequest implements ISqlInstancesRescheduleMaintenanceRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesRescheduleMaintenanceRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesRescheduleMaintenanceRequest);
+
+                    /** SqlInstancesRescheduleMaintenanceRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesRescheduleMaintenanceRequest project. */
+                    public project: string;
+
+                    /** SqlInstancesRescheduleMaintenanceRequest body. */
+                    public body?: (google.cloud.sql.v1.ISqlInstancesRescheduleMaintenanceRequestBody|null);
+
+                    /**
+                     * Creates a new SqlInstancesRescheduleMaintenanceRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesRescheduleMaintenanceRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesRescheduleMaintenanceRequest): google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesRescheduleMaintenanceRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequest.verify|verify} messages.
+                     * @param message SqlInstancesRescheduleMaintenanceRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesRescheduleMaintenanceRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesRescheduleMaintenanceRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequest.verify|verify} messages.
+                     * @param message SqlInstancesRescheduleMaintenanceRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesRescheduleMaintenanceRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesRescheduleMaintenanceRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesRescheduleMaintenanceRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequest;
+
+                    /**
+                     * Decodes a SqlInstancesRescheduleMaintenanceRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesRescheduleMaintenanceRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequest;
+
+                    /**
+                     * Verifies a SqlInstancesRescheduleMaintenanceRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesRescheduleMaintenanceRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesRescheduleMaintenanceRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesRescheduleMaintenanceRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesRescheduleMaintenanceRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesRescheduleMaintenanceRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesVerifyExternalSyncSettingsRequest. */
+                interface ISqlInstancesVerifyExternalSyncSettingsRequest {
+
+                    /** SqlInstancesVerifyExternalSyncSettingsRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesVerifyExternalSyncSettingsRequest project */
+                    project?: (string|null);
+
+                    /** SqlInstancesVerifyExternalSyncSettingsRequest verifyConnectionOnly */
+                    verifyConnectionOnly?: (boolean|null);
+
+                    /** SqlInstancesVerifyExternalSyncSettingsRequest syncMode */
+                    syncMode?: (google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsRequest.ExternalSyncMode|keyof typeof google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsRequest.ExternalSyncMode|null);
+
+                    /** SqlInstancesVerifyExternalSyncSettingsRequest verifyReplicationOnly */
+                    verifyReplicationOnly?: (boolean|null);
+
+                    /** SqlInstancesVerifyExternalSyncSettingsRequest mysqlSyncConfig */
+                    mysqlSyncConfig?: (google.cloud.sql.v1.IMySqlSyncConfig|null);
+                }
+
+                /** Represents a SqlInstancesVerifyExternalSyncSettingsRequest. */
+                class SqlInstancesVerifyExternalSyncSettingsRequest implements ISqlInstancesVerifyExternalSyncSettingsRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesVerifyExternalSyncSettingsRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesVerifyExternalSyncSettingsRequest);
+
+                    /** SqlInstancesVerifyExternalSyncSettingsRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesVerifyExternalSyncSettingsRequest project. */
+                    public project: string;
+
+                    /** SqlInstancesVerifyExternalSyncSettingsRequest verifyConnectionOnly. */
+                    public verifyConnectionOnly: boolean;
+
+                    /** SqlInstancesVerifyExternalSyncSettingsRequest syncMode. */
+                    public syncMode: (google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsRequest.ExternalSyncMode|keyof typeof google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsRequest.ExternalSyncMode);
+
+                    /** SqlInstancesVerifyExternalSyncSettingsRequest verifyReplicationOnly. */
+                    public verifyReplicationOnly: boolean;
+
+                    /** SqlInstancesVerifyExternalSyncSettingsRequest mysqlSyncConfig. */
+                    public mysqlSyncConfig?: (google.cloud.sql.v1.IMySqlSyncConfig|null);
+
+                    /** SqlInstancesVerifyExternalSyncSettingsRequest syncConfig. */
+                    public syncConfig?: "mysqlSyncConfig";
+
+                    /**
+                     * Creates a new SqlInstancesVerifyExternalSyncSettingsRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesVerifyExternalSyncSettingsRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesVerifyExternalSyncSettingsRequest): google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesVerifyExternalSyncSettingsRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsRequest.verify|verify} messages.
+                     * @param message SqlInstancesVerifyExternalSyncSettingsRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesVerifyExternalSyncSettingsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesVerifyExternalSyncSettingsRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsRequest.verify|verify} messages.
+                     * @param message SqlInstancesVerifyExternalSyncSettingsRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesVerifyExternalSyncSettingsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesVerifyExternalSyncSettingsRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesVerifyExternalSyncSettingsRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsRequest;
+
+                    /**
+                     * Decodes a SqlInstancesVerifyExternalSyncSettingsRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesVerifyExternalSyncSettingsRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsRequest;
+
+                    /**
+                     * Verifies a SqlInstancesVerifyExternalSyncSettingsRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesVerifyExternalSyncSettingsRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesVerifyExternalSyncSettingsRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesVerifyExternalSyncSettingsRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesVerifyExternalSyncSettingsRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesVerifyExternalSyncSettingsRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                namespace SqlInstancesVerifyExternalSyncSettingsRequest {
+
+                    /** ExternalSyncMode enum. */
+                    enum ExternalSyncMode {
+                        EXTERNAL_SYNC_MODE_UNSPECIFIED = 0,
+                        ONLINE = 1,
+                        OFFLINE = 2
+                    }
+                }
+
+                /** Properties of a SqlInstancesStartExternalSyncRequest. */
+                interface ISqlInstancesStartExternalSyncRequest {
+
+                    /** SqlInstancesStartExternalSyncRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesStartExternalSyncRequest project */
+                    project?: (string|null);
+
+                    /** SqlInstancesStartExternalSyncRequest syncMode */
+                    syncMode?: (google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsRequest.ExternalSyncMode|keyof typeof google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsRequest.ExternalSyncMode|null);
+
+                    /** SqlInstancesStartExternalSyncRequest skipVerification */
+                    skipVerification?: (boolean|null);
+
+                    /** SqlInstancesStartExternalSyncRequest mysqlSyncConfig */
+                    mysqlSyncConfig?: (google.cloud.sql.v1.IMySqlSyncConfig|null);
+                }
+
+                /** Represents a SqlInstancesStartExternalSyncRequest. */
+                class SqlInstancesStartExternalSyncRequest implements ISqlInstancesStartExternalSyncRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesStartExternalSyncRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesStartExternalSyncRequest);
+
+                    /** SqlInstancesStartExternalSyncRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesStartExternalSyncRequest project. */
+                    public project: string;
+
+                    /** SqlInstancesStartExternalSyncRequest syncMode. */
+                    public syncMode: (google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsRequest.ExternalSyncMode|keyof typeof google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsRequest.ExternalSyncMode);
+
+                    /** SqlInstancesStartExternalSyncRequest skipVerification. */
+                    public skipVerification: boolean;
+
+                    /** SqlInstancesStartExternalSyncRequest mysqlSyncConfig. */
+                    public mysqlSyncConfig?: (google.cloud.sql.v1.IMySqlSyncConfig|null);
+
+                    /** SqlInstancesStartExternalSyncRequest syncConfig. */
+                    public syncConfig?: "mysqlSyncConfig";
+
+                    /**
+                     * Creates a new SqlInstancesStartExternalSyncRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesStartExternalSyncRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesStartExternalSyncRequest): google.cloud.sql.v1.SqlInstancesStartExternalSyncRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesStartExternalSyncRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesStartExternalSyncRequest.verify|verify} messages.
+                     * @param message SqlInstancesStartExternalSyncRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesStartExternalSyncRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesStartExternalSyncRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesStartExternalSyncRequest.verify|verify} messages.
+                     * @param message SqlInstancesStartExternalSyncRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesStartExternalSyncRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesStartExternalSyncRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesStartExternalSyncRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesStartExternalSyncRequest;
+
+                    /**
+                     * Decodes a SqlInstancesStartExternalSyncRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesStartExternalSyncRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesStartExternalSyncRequest;
+
+                    /**
+                     * Verifies a SqlInstancesStartExternalSyncRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesStartExternalSyncRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesStartExternalSyncRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesStartExternalSyncRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesStartExternalSyncRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesStartExternalSyncRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesStartExternalSyncRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesStartExternalSyncRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesCreateEphemeralCertRequest. */
+                interface ISqlInstancesCreateEphemeralCertRequest {
+
+                    /** SqlInstancesCreateEphemeralCertRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlInstancesCreateEphemeralCertRequest project */
+                    project?: (string|null);
+
+                    /** SqlInstancesCreateEphemeralCertRequest body */
+                    body?: (google.cloud.sql.v1.ISslCertsCreateEphemeralRequest|null);
+                }
+
+                /** Represents a SqlInstancesCreateEphemeralCertRequest. */
+                class SqlInstancesCreateEphemeralCertRequest implements ISqlInstancesCreateEphemeralCertRequest {
+
+                    /**
+                     * Constructs a new SqlInstancesCreateEphemeralCertRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesCreateEphemeralCertRequest);
+
+                    /** SqlInstancesCreateEphemeralCertRequest instance. */
+                    public instance: string;
+
+                    /** SqlInstancesCreateEphemeralCertRequest project. */
+                    public project: string;
+
+                    /** SqlInstancesCreateEphemeralCertRequest body. */
+                    public body?: (google.cloud.sql.v1.ISslCertsCreateEphemeralRequest|null);
+
+                    /**
+                     * Creates a new SqlInstancesCreateEphemeralCertRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesCreateEphemeralCertRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesCreateEphemeralCertRequest): google.cloud.sql.v1.SqlInstancesCreateEphemeralCertRequest;
+
+                    /**
+                     * Encodes the specified SqlInstancesCreateEphemeralCertRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesCreateEphemeralCertRequest.verify|verify} messages.
+                     * @param message SqlInstancesCreateEphemeralCertRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesCreateEphemeralCertRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesCreateEphemeralCertRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesCreateEphemeralCertRequest.verify|verify} messages.
+                     * @param message SqlInstancesCreateEphemeralCertRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesCreateEphemeralCertRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesCreateEphemeralCertRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesCreateEphemeralCertRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesCreateEphemeralCertRequest;
+
+                    /**
+                     * Decodes a SqlInstancesCreateEphemeralCertRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesCreateEphemeralCertRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesCreateEphemeralCertRequest;
+
+                    /**
+                     * Verifies a SqlInstancesCreateEphemeralCertRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesCreateEphemeralCertRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesCreateEphemeralCertRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesCreateEphemeralCertRequest;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesCreateEphemeralCertRequest message. Also converts values to other types if specified.
+                     * @param message SqlInstancesCreateEphemeralCertRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesCreateEphemeralCertRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesCreateEphemeralCertRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an InstancesCloneRequest. */
+                interface IInstancesCloneRequest {
+
+                    /** InstancesCloneRequest cloneContext */
+                    cloneContext?: (google.cloud.sql.v1.ICloneContext|null);
+                }
+
+                /** Represents an InstancesCloneRequest. */
+                class InstancesCloneRequest implements IInstancesCloneRequest {
+
+                    /**
+                     * Constructs a new InstancesCloneRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IInstancesCloneRequest);
+
+                    /** InstancesCloneRequest cloneContext. */
+                    public cloneContext?: (google.cloud.sql.v1.ICloneContext|null);
+
+                    /**
+                     * Creates a new InstancesCloneRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns InstancesCloneRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IInstancesCloneRequest): google.cloud.sql.v1.InstancesCloneRequest;
+
+                    /**
+                     * Encodes the specified InstancesCloneRequest message. Does not implicitly {@link google.cloud.sql.v1.InstancesCloneRequest.verify|verify} messages.
+                     * @param message InstancesCloneRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IInstancesCloneRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified InstancesCloneRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.InstancesCloneRequest.verify|verify} messages.
+                     * @param message InstancesCloneRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IInstancesCloneRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an InstancesCloneRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns InstancesCloneRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.InstancesCloneRequest;
+
+                    /**
+                     * Decodes an InstancesCloneRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns InstancesCloneRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.InstancesCloneRequest;
+
+                    /**
+                     * Verifies an InstancesCloneRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an InstancesCloneRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns InstancesCloneRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.InstancesCloneRequest;
+
+                    /**
+                     * Creates a plain object from an InstancesCloneRequest message. Also converts values to other types if specified.
+                     * @param message InstancesCloneRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.InstancesCloneRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this InstancesCloneRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an InstancesDemoteMasterRequest. */
+                interface IInstancesDemoteMasterRequest {
+
+                    /** InstancesDemoteMasterRequest demoteMasterContext */
+                    demoteMasterContext?: (google.cloud.sql.v1.IDemoteMasterContext|null);
+                }
+
+                /** Represents an InstancesDemoteMasterRequest. */
+                class InstancesDemoteMasterRequest implements IInstancesDemoteMasterRequest {
+
+                    /**
+                     * Constructs a new InstancesDemoteMasterRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IInstancesDemoteMasterRequest);
+
+                    /** InstancesDemoteMasterRequest demoteMasterContext. */
+                    public demoteMasterContext?: (google.cloud.sql.v1.IDemoteMasterContext|null);
+
+                    /**
+                     * Creates a new InstancesDemoteMasterRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns InstancesDemoteMasterRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IInstancesDemoteMasterRequest): google.cloud.sql.v1.InstancesDemoteMasterRequest;
+
+                    /**
+                     * Encodes the specified InstancesDemoteMasterRequest message. Does not implicitly {@link google.cloud.sql.v1.InstancesDemoteMasterRequest.verify|verify} messages.
+                     * @param message InstancesDemoteMasterRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IInstancesDemoteMasterRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified InstancesDemoteMasterRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.InstancesDemoteMasterRequest.verify|verify} messages.
+                     * @param message InstancesDemoteMasterRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IInstancesDemoteMasterRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an InstancesDemoteMasterRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns InstancesDemoteMasterRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.InstancesDemoteMasterRequest;
+
+                    /**
+                     * Decodes an InstancesDemoteMasterRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns InstancesDemoteMasterRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.InstancesDemoteMasterRequest;
+
+                    /**
+                     * Verifies an InstancesDemoteMasterRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an InstancesDemoteMasterRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns InstancesDemoteMasterRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.InstancesDemoteMasterRequest;
+
+                    /**
+                     * Creates a plain object from an InstancesDemoteMasterRequest message. Also converts values to other types if specified.
+                     * @param message InstancesDemoteMasterRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.InstancesDemoteMasterRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this InstancesDemoteMasterRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an InstancesExportRequest. */
+                interface IInstancesExportRequest {
+
+                    /** InstancesExportRequest exportContext */
+                    exportContext?: (google.cloud.sql.v1.IExportContext|null);
+                }
+
+                /** Represents an InstancesExportRequest. */
+                class InstancesExportRequest implements IInstancesExportRequest {
+
+                    /**
+                     * Constructs a new InstancesExportRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IInstancesExportRequest);
+
+                    /** InstancesExportRequest exportContext. */
+                    public exportContext?: (google.cloud.sql.v1.IExportContext|null);
+
+                    /**
+                     * Creates a new InstancesExportRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns InstancesExportRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IInstancesExportRequest): google.cloud.sql.v1.InstancesExportRequest;
+
+                    /**
+                     * Encodes the specified InstancesExportRequest message. Does not implicitly {@link google.cloud.sql.v1.InstancesExportRequest.verify|verify} messages.
+                     * @param message InstancesExportRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IInstancesExportRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified InstancesExportRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.InstancesExportRequest.verify|verify} messages.
+                     * @param message InstancesExportRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IInstancesExportRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an InstancesExportRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns InstancesExportRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.InstancesExportRequest;
+
+                    /**
+                     * Decodes an InstancesExportRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns InstancesExportRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.InstancesExportRequest;
+
+                    /**
+                     * Verifies an InstancesExportRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an InstancesExportRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns InstancesExportRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.InstancesExportRequest;
+
+                    /**
+                     * Creates a plain object from an InstancesExportRequest message. Also converts values to other types if specified.
+                     * @param message InstancesExportRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.InstancesExportRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this InstancesExportRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an InstancesFailoverRequest. */
+                interface IInstancesFailoverRequest {
+
+                    /** InstancesFailoverRequest failoverContext */
+                    failoverContext?: (google.cloud.sql.v1.IFailoverContext|null);
+                }
+
+                /** Represents an InstancesFailoverRequest. */
+                class InstancesFailoverRequest implements IInstancesFailoverRequest {
+
+                    /**
+                     * Constructs a new InstancesFailoverRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IInstancesFailoverRequest);
+
+                    /** InstancesFailoverRequest failoverContext. */
+                    public failoverContext?: (google.cloud.sql.v1.IFailoverContext|null);
+
+                    /**
+                     * Creates a new InstancesFailoverRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns InstancesFailoverRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IInstancesFailoverRequest): google.cloud.sql.v1.InstancesFailoverRequest;
+
+                    /**
+                     * Encodes the specified InstancesFailoverRequest message. Does not implicitly {@link google.cloud.sql.v1.InstancesFailoverRequest.verify|verify} messages.
+                     * @param message InstancesFailoverRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IInstancesFailoverRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified InstancesFailoverRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.InstancesFailoverRequest.verify|verify} messages.
+                     * @param message InstancesFailoverRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IInstancesFailoverRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an InstancesFailoverRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns InstancesFailoverRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.InstancesFailoverRequest;
+
+                    /**
+                     * Decodes an InstancesFailoverRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns InstancesFailoverRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.InstancesFailoverRequest;
+
+                    /**
+                     * Verifies an InstancesFailoverRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an InstancesFailoverRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns InstancesFailoverRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.InstancesFailoverRequest;
+
+                    /**
+                     * Creates a plain object from an InstancesFailoverRequest message. Also converts values to other types if specified.
+                     * @param message InstancesFailoverRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.InstancesFailoverRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this InstancesFailoverRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SslCertsCreateEphemeralRequest. */
+                interface ISslCertsCreateEphemeralRequest {
+
+                    /** SslCertsCreateEphemeralRequest publicKey */
+                    publicKey?: (string|null);
+
+                    /** SslCertsCreateEphemeralRequest accessToken */
+                    accessToken?: (string|null);
+                }
+
+                /** Represents a SslCertsCreateEphemeralRequest. */
+                class SslCertsCreateEphemeralRequest implements ISslCertsCreateEphemeralRequest {
+
+                    /**
+                     * Constructs a new SslCertsCreateEphemeralRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISslCertsCreateEphemeralRequest);
+
+                    /** SslCertsCreateEphemeralRequest publicKey. */
+                    public publicKey: string;
+
+                    /** SslCertsCreateEphemeralRequest accessToken. */
+                    public accessToken: string;
+
+                    /**
+                     * Creates a new SslCertsCreateEphemeralRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SslCertsCreateEphemeralRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISslCertsCreateEphemeralRequest): google.cloud.sql.v1.SslCertsCreateEphemeralRequest;
+
+                    /**
+                     * Encodes the specified SslCertsCreateEphemeralRequest message. Does not implicitly {@link google.cloud.sql.v1.SslCertsCreateEphemeralRequest.verify|verify} messages.
+                     * @param message SslCertsCreateEphemeralRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISslCertsCreateEphemeralRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SslCertsCreateEphemeralRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SslCertsCreateEphemeralRequest.verify|verify} messages.
+                     * @param message SslCertsCreateEphemeralRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISslCertsCreateEphemeralRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SslCertsCreateEphemeralRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SslCertsCreateEphemeralRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SslCertsCreateEphemeralRequest;
+
+                    /**
+                     * Decodes a SslCertsCreateEphemeralRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SslCertsCreateEphemeralRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SslCertsCreateEphemeralRequest;
+
+                    /**
+                     * Verifies a SslCertsCreateEphemeralRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SslCertsCreateEphemeralRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SslCertsCreateEphemeralRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SslCertsCreateEphemeralRequest;
+
+                    /**
+                     * Creates a plain object from a SslCertsCreateEphemeralRequest message. Also converts values to other types if specified.
+                     * @param message SslCertsCreateEphemeralRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SslCertsCreateEphemeralRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SslCertsCreateEphemeralRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an InstancesImportRequest. */
+                interface IInstancesImportRequest {
+
+                    /** InstancesImportRequest importContext */
+                    importContext?: (google.cloud.sql.v1.IImportContext|null);
+                }
+
+                /** Represents an InstancesImportRequest. */
+                class InstancesImportRequest implements IInstancesImportRequest {
+
+                    /**
+                     * Constructs a new InstancesImportRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IInstancesImportRequest);
+
+                    /** InstancesImportRequest importContext. */
+                    public importContext?: (google.cloud.sql.v1.IImportContext|null);
+
+                    /**
+                     * Creates a new InstancesImportRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns InstancesImportRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IInstancesImportRequest): google.cloud.sql.v1.InstancesImportRequest;
+
+                    /**
+                     * Encodes the specified InstancesImportRequest message. Does not implicitly {@link google.cloud.sql.v1.InstancesImportRequest.verify|verify} messages.
+                     * @param message InstancesImportRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IInstancesImportRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified InstancesImportRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.InstancesImportRequest.verify|verify} messages.
+                     * @param message InstancesImportRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IInstancesImportRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an InstancesImportRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns InstancesImportRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.InstancesImportRequest;
+
+                    /**
+                     * Decodes an InstancesImportRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns InstancesImportRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.InstancesImportRequest;
+
+                    /**
+                     * Verifies an InstancesImportRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an InstancesImportRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns InstancesImportRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.InstancesImportRequest;
+
+                    /**
+                     * Creates a plain object from an InstancesImportRequest message. Also converts values to other types if specified.
+                     * @param message InstancesImportRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.InstancesImportRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this InstancesImportRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an InstancesListResponse. */
+                interface IInstancesListResponse {
+
+                    /** InstancesListResponse kind */
+                    kind?: (string|null);
+
+                    /** InstancesListResponse warnings */
+                    warnings?: (google.cloud.sql.v1.IApiWarning[]|null);
+
+                    /** InstancesListResponse items */
+                    items?: (google.cloud.sql.v1.IDatabaseInstance[]|null);
+
+                    /** InstancesListResponse nextPageToken */
+                    nextPageToken?: (string|null);
+                }
+
+                /** Represents an InstancesListResponse. */
+                class InstancesListResponse implements IInstancesListResponse {
+
+                    /**
+                     * Constructs a new InstancesListResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IInstancesListResponse);
+
+                    /** InstancesListResponse kind. */
+                    public kind: string;
+
+                    /** InstancesListResponse warnings. */
+                    public warnings: google.cloud.sql.v1.IApiWarning[];
+
+                    /** InstancesListResponse items. */
+                    public items: google.cloud.sql.v1.IDatabaseInstance[];
+
+                    /** InstancesListResponse nextPageToken. */
+                    public nextPageToken: string;
+
+                    /**
+                     * Creates a new InstancesListResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns InstancesListResponse instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IInstancesListResponse): google.cloud.sql.v1.InstancesListResponse;
+
+                    /**
+                     * Encodes the specified InstancesListResponse message. Does not implicitly {@link google.cloud.sql.v1.InstancesListResponse.verify|verify} messages.
+                     * @param message InstancesListResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IInstancesListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified InstancesListResponse message, length delimited. Does not implicitly {@link google.cloud.sql.v1.InstancesListResponse.verify|verify} messages.
+                     * @param message InstancesListResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IInstancesListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an InstancesListResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns InstancesListResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.InstancesListResponse;
+
+                    /**
+                     * Decodes an InstancesListResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns InstancesListResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.InstancesListResponse;
+
+                    /**
+                     * Verifies an InstancesListResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an InstancesListResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns InstancesListResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.InstancesListResponse;
+
+                    /**
+                     * Creates a plain object from an InstancesListResponse message. Also converts values to other types if specified.
+                     * @param message InstancesListResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.InstancesListResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this InstancesListResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an InstancesListServerCasResponse. */
+                interface IInstancesListServerCasResponse {
+
+                    /** InstancesListServerCasResponse certs */
+                    certs?: (google.cloud.sql.v1.ISslCert[]|null);
+
+                    /** InstancesListServerCasResponse activeVersion */
+                    activeVersion?: (string|null);
+
+                    /** InstancesListServerCasResponse kind */
+                    kind?: (string|null);
+                }
+
+                /** Represents an InstancesListServerCasResponse. */
+                class InstancesListServerCasResponse implements IInstancesListServerCasResponse {
+
+                    /**
+                     * Constructs a new InstancesListServerCasResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IInstancesListServerCasResponse);
+
+                    /** InstancesListServerCasResponse certs. */
+                    public certs: google.cloud.sql.v1.ISslCert[];
+
+                    /** InstancesListServerCasResponse activeVersion. */
+                    public activeVersion: string;
+
+                    /** InstancesListServerCasResponse kind. */
+                    public kind: string;
+
+                    /**
+                     * Creates a new InstancesListServerCasResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns InstancesListServerCasResponse instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IInstancesListServerCasResponse): google.cloud.sql.v1.InstancesListServerCasResponse;
+
+                    /**
+                     * Encodes the specified InstancesListServerCasResponse message. Does not implicitly {@link google.cloud.sql.v1.InstancesListServerCasResponse.verify|verify} messages.
+                     * @param message InstancesListServerCasResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IInstancesListServerCasResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified InstancesListServerCasResponse message, length delimited. Does not implicitly {@link google.cloud.sql.v1.InstancesListServerCasResponse.verify|verify} messages.
+                     * @param message InstancesListServerCasResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IInstancesListServerCasResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an InstancesListServerCasResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns InstancesListServerCasResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.InstancesListServerCasResponse;
+
+                    /**
+                     * Decodes an InstancesListServerCasResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns InstancesListServerCasResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.InstancesListServerCasResponse;
+
+                    /**
+                     * Verifies an InstancesListServerCasResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an InstancesListServerCasResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns InstancesListServerCasResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.InstancesListServerCasResponse;
+
+                    /**
+                     * Creates a plain object from an InstancesListServerCasResponse message. Also converts values to other types if specified.
+                     * @param message InstancesListServerCasResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.InstancesListServerCasResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this InstancesListServerCasResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an InstancesRestoreBackupRequest. */
+                interface IInstancesRestoreBackupRequest {
+
+                    /** InstancesRestoreBackupRequest restoreBackupContext */
+                    restoreBackupContext?: (google.cloud.sql.v1.IRestoreBackupContext|null);
+                }
+
+                /** Represents an InstancesRestoreBackupRequest. */
+                class InstancesRestoreBackupRequest implements IInstancesRestoreBackupRequest {
+
+                    /**
+                     * Constructs a new InstancesRestoreBackupRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IInstancesRestoreBackupRequest);
+
+                    /** InstancesRestoreBackupRequest restoreBackupContext. */
+                    public restoreBackupContext?: (google.cloud.sql.v1.IRestoreBackupContext|null);
+
+                    /**
+                     * Creates a new InstancesRestoreBackupRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns InstancesRestoreBackupRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IInstancesRestoreBackupRequest): google.cloud.sql.v1.InstancesRestoreBackupRequest;
+
+                    /**
+                     * Encodes the specified InstancesRestoreBackupRequest message. Does not implicitly {@link google.cloud.sql.v1.InstancesRestoreBackupRequest.verify|verify} messages.
+                     * @param message InstancesRestoreBackupRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IInstancesRestoreBackupRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified InstancesRestoreBackupRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.InstancesRestoreBackupRequest.verify|verify} messages.
+                     * @param message InstancesRestoreBackupRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IInstancesRestoreBackupRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an InstancesRestoreBackupRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns InstancesRestoreBackupRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.InstancesRestoreBackupRequest;
+
+                    /**
+                     * Decodes an InstancesRestoreBackupRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns InstancesRestoreBackupRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.InstancesRestoreBackupRequest;
+
+                    /**
+                     * Verifies an InstancesRestoreBackupRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an InstancesRestoreBackupRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns InstancesRestoreBackupRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.InstancesRestoreBackupRequest;
+
+                    /**
+                     * Creates a plain object from an InstancesRestoreBackupRequest message. Also converts values to other types if specified.
+                     * @param message InstancesRestoreBackupRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.InstancesRestoreBackupRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this InstancesRestoreBackupRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an InstancesRotateServerCaRequest. */
+                interface IInstancesRotateServerCaRequest {
+
+                    /** InstancesRotateServerCaRequest rotateServerCaContext */
+                    rotateServerCaContext?: (google.cloud.sql.v1.IRotateServerCaContext|null);
+                }
+
+                /** Represents an InstancesRotateServerCaRequest. */
+                class InstancesRotateServerCaRequest implements IInstancesRotateServerCaRequest {
+
+                    /**
+                     * Constructs a new InstancesRotateServerCaRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IInstancesRotateServerCaRequest);
+
+                    /** InstancesRotateServerCaRequest rotateServerCaContext. */
+                    public rotateServerCaContext?: (google.cloud.sql.v1.IRotateServerCaContext|null);
+
+                    /**
+                     * Creates a new InstancesRotateServerCaRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns InstancesRotateServerCaRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IInstancesRotateServerCaRequest): google.cloud.sql.v1.InstancesRotateServerCaRequest;
+
+                    /**
+                     * Encodes the specified InstancesRotateServerCaRequest message. Does not implicitly {@link google.cloud.sql.v1.InstancesRotateServerCaRequest.verify|verify} messages.
+                     * @param message InstancesRotateServerCaRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IInstancesRotateServerCaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified InstancesRotateServerCaRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.InstancesRotateServerCaRequest.verify|verify} messages.
+                     * @param message InstancesRotateServerCaRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IInstancesRotateServerCaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an InstancesRotateServerCaRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns InstancesRotateServerCaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.InstancesRotateServerCaRequest;
+
+                    /**
+                     * Decodes an InstancesRotateServerCaRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns InstancesRotateServerCaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.InstancesRotateServerCaRequest;
+
+                    /**
+                     * Verifies an InstancesRotateServerCaRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an InstancesRotateServerCaRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns InstancesRotateServerCaRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.InstancesRotateServerCaRequest;
+
+                    /**
+                     * Creates a plain object from an InstancesRotateServerCaRequest message. Also converts values to other types if specified.
+                     * @param message InstancesRotateServerCaRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.InstancesRotateServerCaRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this InstancesRotateServerCaRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an InstancesTruncateLogRequest. */
+                interface IInstancesTruncateLogRequest {
+
+                    /** InstancesTruncateLogRequest truncateLogContext */
+                    truncateLogContext?: (google.cloud.sql.v1.ITruncateLogContext|null);
+                }
+
+                /** Represents an InstancesTruncateLogRequest. */
+                class InstancesTruncateLogRequest implements IInstancesTruncateLogRequest {
+
+                    /**
+                     * Constructs a new InstancesTruncateLogRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IInstancesTruncateLogRequest);
+
+                    /** InstancesTruncateLogRequest truncateLogContext. */
+                    public truncateLogContext?: (google.cloud.sql.v1.ITruncateLogContext|null);
+
+                    /**
+                     * Creates a new InstancesTruncateLogRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns InstancesTruncateLogRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IInstancesTruncateLogRequest): google.cloud.sql.v1.InstancesTruncateLogRequest;
+
+                    /**
+                     * Encodes the specified InstancesTruncateLogRequest message. Does not implicitly {@link google.cloud.sql.v1.InstancesTruncateLogRequest.verify|verify} messages.
+                     * @param message InstancesTruncateLogRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IInstancesTruncateLogRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified InstancesTruncateLogRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.InstancesTruncateLogRequest.verify|verify} messages.
+                     * @param message InstancesTruncateLogRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IInstancesTruncateLogRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an InstancesTruncateLogRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns InstancesTruncateLogRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.InstancesTruncateLogRequest;
+
+                    /**
+                     * Decodes an InstancesTruncateLogRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns InstancesTruncateLogRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.InstancesTruncateLogRequest;
+
+                    /**
+                     * Verifies an InstancesTruncateLogRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an InstancesTruncateLogRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns InstancesTruncateLogRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.InstancesTruncateLogRequest;
+
+                    /**
+                     * Creates a plain object from an InstancesTruncateLogRequest message. Also converts values to other types if specified.
+                     * @param message InstancesTruncateLogRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.InstancesTruncateLogRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this InstancesTruncateLogRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlInstancesVerifyExternalSyncSettingsResponse. */
+                interface ISqlInstancesVerifyExternalSyncSettingsResponse {
+
+                    /** SqlInstancesVerifyExternalSyncSettingsResponse kind */
+                    kind?: (string|null);
+
+                    /** SqlInstancesVerifyExternalSyncSettingsResponse errors */
+                    errors?: (google.cloud.sql.v1.ISqlExternalSyncSettingError[]|null);
+
+                    /** SqlInstancesVerifyExternalSyncSettingsResponse warnings */
+                    warnings?: (google.cloud.sql.v1.ISqlExternalSyncSettingError[]|null);
+                }
+
+                /** Represents a SqlInstancesVerifyExternalSyncSettingsResponse. */
+                class SqlInstancesVerifyExternalSyncSettingsResponse implements ISqlInstancesVerifyExternalSyncSettingsResponse {
+
+                    /**
+                     * Constructs a new SqlInstancesVerifyExternalSyncSettingsResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesVerifyExternalSyncSettingsResponse);
+
+                    /** SqlInstancesVerifyExternalSyncSettingsResponse kind. */
+                    public kind: string;
+
+                    /** SqlInstancesVerifyExternalSyncSettingsResponse errors. */
+                    public errors: google.cloud.sql.v1.ISqlExternalSyncSettingError[];
+
+                    /** SqlInstancesVerifyExternalSyncSettingsResponse warnings. */
+                    public warnings: google.cloud.sql.v1.ISqlExternalSyncSettingError[];
+
+                    /**
+                     * Creates a new SqlInstancesVerifyExternalSyncSettingsResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesVerifyExternalSyncSettingsResponse instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesVerifyExternalSyncSettingsResponse): google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsResponse;
+
+                    /**
+                     * Encodes the specified SqlInstancesVerifyExternalSyncSettingsResponse message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsResponse.verify|verify} messages.
+                     * @param message SqlInstancesVerifyExternalSyncSettingsResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesVerifyExternalSyncSettingsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesVerifyExternalSyncSettingsResponse message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsResponse.verify|verify} messages.
+                     * @param message SqlInstancesVerifyExternalSyncSettingsResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesVerifyExternalSyncSettingsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesVerifyExternalSyncSettingsResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesVerifyExternalSyncSettingsResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsResponse;
+
+                    /**
+                     * Decodes a SqlInstancesVerifyExternalSyncSettingsResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesVerifyExternalSyncSettingsResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsResponse;
+
+                    /**
+                     * Verifies a SqlInstancesVerifyExternalSyncSettingsResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesVerifyExternalSyncSettingsResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesVerifyExternalSyncSettingsResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsResponse;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesVerifyExternalSyncSettingsResponse message. Also converts values to other types if specified.
+                     * @param message SqlInstancesVerifyExternalSyncSettingsResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesVerifyExternalSyncSettingsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesVerifyExternalSyncSettingsResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a CloneContext. */
+                interface ICloneContext {
+
+                    /** CloneContext kind */
+                    kind?: (string|null);
+
+                    /** CloneContext pitrTimestampMs */
+                    pitrTimestampMs?: (number|Long|string|null);
+
+                    /** CloneContext destinationInstanceName */
+                    destinationInstanceName?: (string|null);
+
+                    /** CloneContext binLogCoordinates */
+                    binLogCoordinates?: (google.cloud.sql.v1.IBinLogCoordinates|null);
+
+                    /** CloneContext pointInTime */
+                    pointInTime?: (google.protobuf.ITimestamp|null);
+                }
+
+                /** Represents a CloneContext. */
+                class CloneContext implements ICloneContext {
+
+                    /**
+                     * Constructs a new CloneContext.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ICloneContext);
+
+                    /** CloneContext kind. */
+                    public kind: string;
+
+                    /** CloneContext pitrTimestampMs. */
+                    public pitrTimestampMs: (number|Long|string);
+
+                    /** CloneContext destinationInstanceName. */
+                    public destinationInstanceName: string;
+
+                    /** CloneContext binLogCoordinates. */
+                    public binLogCoordinates?: (google.cloud.sql.v1.IBinLogCoordinates|null);
+
+                    /** CloneContext pointInTime. */
+                    public pointInTime?: (google.protobuf.ITimestamp|null);
+
+                    /**
+                     * Creates a new CloneContext instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns CloneContext instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ICloneContext): google.cloud.sql.v1.CloneContext;
+
+                    /**
+                     * Encodes the specified CloneContext message. Does not implicitly {@link google.cloud.sql.v1.CloneContext.verify|verify} messages.
+                     * @param message CloneContext message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ICloneContext, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified CloneContext message, length delimited. Does not implicitly {@link google.cloud.sql.v1.CloneContext.verify|verify} messages.
+                     * @param message CloneContext message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ICloneContext, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a CloneContext message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns CloneContext
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.CloneContext;
+
+                    /**
+                     * Decodes a CloneContext message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns CloneContext
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.CloneContext;
+
+                    /**
+                     * Verifies a CloneContext message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a CloneContext message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns CloneContext
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.CloneContext;
+
+                    /**
+                     * Creates a plain object from a CloneContext message. Also converts values to other types if specified.
+                     * @param message CloneContext
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.CloneContext, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this CloneContext to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a BinLogCoordinates. */
+                interface IBinLogCoordinates {
+
+                    /** BinLogCoordinates binLogFileName */
+                    binLogFileName?: (string|null);
+
+                    /** BinLogCoordinates binLogPosition */
+                    binLogPosition?: (number|Long|string|null);
+
+                    /** BinLogCoordinates kind */
+                    kind?: (string|null);
+                }
+
+                /** Represents a BinLogCoordinates. */
+                class BinLogCoordinates implements IBinLogCoordinates {
+
+                    /**
+                     * Constructs a new BinLogCoordinates.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IBinLogCoordinates);
+
+                    /** BinLogCoordinates binLogFileName. */
+                    public binLogFileName: string;
+
+                    /** BinLogCoordinates binLogPosition. */
+                    public binLogPosition: (number|Long|string);
+
+                    /** BinLogCoordinates kind. */
+                    public kind: string;
+
+                    /**
+                     * Creates a new BinLogCoordinates instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns BinLogCoordinates instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IBinLogCoordinates): google.cloud.sql.v1.BinLogCoordinates;
+
+                    /**
+                     * Encodes the specified BinLogCoordinates message. Does not implicitly {@link google.cloud.sql.v1.BinLogCoordinates.verify|verify} messages.
+                     * @param message BinLogCoordinates message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IBinLogCoordinates, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified BinLogCoordinates message, length delimited. Does not implicitly {@link google.cloud.sql.v1.BinLogCoordinates.verify|verify} messages.
+                     * @param message BinLogCoordinates message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IBinLogCoordinates, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a BinLogCoordinates message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns BinLogCoordinates
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.BinLogCoordinates;
+
+                    /**
+                     * Decodes a BinLogCoordinates message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns BinLogCoordinates
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.BinLogCoordinates;
+
+                    /**
+                     * Verifies a BinLogCoordinates message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a BinLogCoordinates message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns BinLogCoordinates
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.BinLogCoordinates;
+
+                    /**
+                     * Creates a plain object from a BinLogCoordinates message. Also converts values to other types if specified.
+                     * @param message BinLogCoordinates
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.BinLogCoordinates, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this BinLogCoordinates to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a DatabaseInstance. */
+                interface IDatabaseInstance {
+
+                    /** DatabaseInstance kind */
+                    kind?: (string|null);
+
+                    /** DatabaseInstance state */
+                    state?: (google.cloud.sql.v1.DatabaseInstance.SqlInstanceState|keyof typeof google.cloud.sql.v1.DatabaseInstance.SqlInstanceState|null);
+
+                    /** DatabaseInstance databaseVersion */
+                    databaseVersion?: (google.cloud.sql.v1.SqlDatabaseVersion|keyof typeof google.cloud.sql.v1.SqlDatabaseVersion|null);
+
+                    /** DatabaseInstance settings */
+                    settings?: (google.cloud.sql.v1.ISettings|null);
+
+                    /** DatabaseInstance etag */
+                    etag?: (string|null);
+
+                    /** DatabaseInstance failoverReplica */
+                    failoverReplica?: (google.cloud.sql.v1.DatabaseInstance.ISqlFailoverReplica|null);
+
+                    /** DatabaseInstance masterInstanceName */
+                    masterInstanceName?: (string|null);
+
+                    /** DatabaseInstance replicaNames */
+                    replicaNames?: (string[]|null);
+
+                    /** DatabaseInstance maxDiskSize */
+                    maxDiskSize?: (google.protobuf.IInt64Value|null);
+
+                    /** DatabaseInstance currentDiskSize */
+                    currentDiskSize?: (google.protobuf.IInt64Value|null);
+
+                    /** DatabaseInstance ipAddresses */
+                    ipAddresses?: (google.cloud.sql.v1.IIpMapping[]|null);
+
+                    /** DatabaseInstance serverCaCert */
+                    serverCaCert?: (google.cloud.sql.v1.ISslCert|null);
+
+                    /** DatabaseInstance instanceType */
+                    instanceType?: (google.cloud.sql.v1.SqlInstanceType|keyof typeof google.cloud.sql.v1.SqlInstanceType|null);
+
+                    /** DatabaseInstance project */
+                    project?: (string|null);
+
+                    /** DatabaseInstance ipv6Address */
+                    ipv6Address?: (string|null);
+
+                    /** DatabaseInstance serviceAccountEmailAddress */
+                    serviceAccountEmailAddress?: (string|null);
+
+                    /** DatabaseInstance onPremisesConfiguration */
+                    onPremisesConfiguration?: (google.cloud.sql.v1.IOnPremisesConfiguration|null);
+
+                    /** DatabaseInstance replicaConfiguration */
+                    replicaConfiguration?: (google.cloud.sql.v1.IReplicaConfiguration|null);
+
+                    /** DatabaseInstance backendType */
+                    backendType?: (google.cloud.sql.v1.SqlBackendType|keyof typeof google.cloud.sql.v1.SqlBackendType|null);
+
+                    /** DatabaseInstance selfLink */
+                    selfLink?: (string|null);
+
+                    /** DatabaseInstance suspensionReason */
+                    suspensionReason?: (google.cloud.sql.v1.SqlSuspensionReason[]|null);
+
+                    /** DatabaseInstance connectionName */
+                    connectionName?: (string|null);
+
+                    /** DatabaseInstance name */
+                    name?: (string|null);
+
+                    /** DatabaseInstance region */
+                    region?: (string|null);
+
+                    /** DatabaseInstance gceZone */
+                    gceZone?: (string|null);
+
+                    /** DatabaseInstance secondaryGceZone */
+                    secondaryGceZone?: (string|null);
+
+                    /** DatabaseInstance diskEncryptionConfiguration */
+                    diskEncryptionConfiguration?: (google.cloud.sql.v1.IDiskEncryptionConfiguration|null);
+
+                    /** DatabaseInstance diskEncryptionStatus */
+                    diskEncryptionStatus?: (google.cloud.sql.v1.IDiskEncryptionStatus|null);
+
+                    /** DatabaseInstance rootPassword */
+                    rootPassword?: (string|null);
+
+                    /** DatabaseInstance scheduledMaintenance */
+                    scheduledMaintenance?: (google.cloud.sql.v1.DatabaseInstance.ISqlScheduledMaintenance|null);
+
+                    /** DatabaseInstance satisfiesPzs */
+                    satisfiesPzs?: (google.protobuf.IBoolValue|null);
+
+                    /** DatabaseInstance outOfDiskReport */
+                    outOfDiskReport?: (google.cloud.sql.v1.DatabaseInstance.ISqlOutOfDiskReport|null);
+
+                    /** DatabaseInstance createTime */
+                    createTime?: (google.protobuf.ITimestamp|null);
+                }
+
+                /** Represents a DatabaseInstance. */
+                class DatabaseInstance implements IDatabaseInstance {
+
+                    /**
+                     * Constructs a new DatabaseInstance.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IDatabaseInstance);
+
+                    /** DatabaseInstance kind. */
+                    public kind: string;
+
+                    /** DatabaseInstance state. */
+                    public state: (google.cloud.sql.v1.DatabaseInstance.SqlInstanceState|keyof typeof google.cloud.sql.v1.DatabaseInstance.SqlInstanceState);
+
+                    /** DatabaseInstance databaseVersion. */
+                    public databaseVersion: (google.cloud.sql.v1.SqlDatabaseVersion|keyof typeof google.cloud.sql.v1.SqlDatabaseVersion);
+
+                    /** DatabaseInstance settings. */
+                    public settings?: (google.cloud.sql.v1.ISettings|null);
+
+                    /** DatabaseInstance etag. */
+                    public etag: string;
+
+                    /** DatabaseInstance failoverReplica. */
+                    public failoverReplica?: (google.cloud.sql.v1.DatabaseInstance.ISqlFailoverReplica|null);
+
+                    /** DatabaseInstance masterInstanceName. */
+                    public masterInstanceName: string;
+
+                    /** DatabaseInstance replicaNames. */
+                    public replicaNames: string[];
+
+                    /** DatabaseInstance maxDiskSize. */
+                    public maxDiskSize?: (google.protobuf.IInt64Value|null);
+
+                    /** DatabaseInstance currentDiskSize. */
+                    public currentDiskSize?: (google.protobuf.IInt64Value|null);
+
+                    /** DatabaseInstance ipAddresses. */
+                    public ipAddresses: google.cloud.sql.v1.IIpMapping[];
+
+                    /** DatabaseInstance serverCaCert. */
+                    public serverCaCert?: (google.cloud.sql.v1.ISslCert|null);
+
+                    /** DatabaseInstance instanceType. */
+                    public instanceType: (google.cloud.sql.v1.SqlInstanceType|keyof typeof google.cloud.sql.v1.SqlInstanceType);
+
+                    /** DatabaseInstance project. */
+                    public project: string;
+
+                    /** DatabaseInstance ipv6Address. */
+                    public ipv6Address: string;
+
+                    /** DatabaseInstance serviceAccountEmailAddress. */
+                    public serviceAccountEmailAddress: string;
+
+                    /** DatabaseInstance onPremisesConfiguration. */
+                    public onPremisesConfiguration?: (google.cloud.sql.v1.IOnPremisesConfiguration|null);
+
+                    /** DatabaseInstance replicaConfiguration. */
+                    public replicaConfiguration?: (google.cloud.sql.v1.IReplicaConfiguration|null);
+
+                    /** DatabaseInstance backendType. */
+                    public backendType: (google.cloud.sql.v1.SqlBackendType|keyof typeof google.cloud.sql.v1.SqlBackendType);
+
+                    /** DatabaseInstance selfLink. */
+                    public selfLink: string;
+
+                    /** DatabaseInstance suspensionReason. */
+                    public suspensionReason: google.cloud.sql.v1.SqlSuspensionReason[];
+
+                    /** DatabaseInstance connectionName. */
+                    public connectionName: string;
+
+                    /** DatabaseInstance name. */
+                    public name: string;
+
+                    /** DatabaseInstance region. */
+                    public region: string;
+
+                    /** DatabaseInstance gceZone. */
+                    public gceZone: string;
+
+                    /** DatabaseInstance secondaryGceZone. */
+                    public secondaryGceZone: string;
+
+                    /** DatabaseInstance diskEncryptionConfiguration. */
+                    public diskEncryptionConfiguration?: (google.cloud.sql.v1.IDiskEncryptionConfiguration|null);
+
+                    /** DatabaseInstance diskEncryptionStatus. */
+                    public diskEncryptionStatus?: (google.cloud.sql.v1.IDiskEncryptionStatus|null);
+
+                    /** DatabaseInstance rootPassword. */
+                    public rootPassword: string;
+
+                    /** DatabaseInstance scheduledMaintenance. */
+                    public scheduledMaintenance?: (google.cloud.sql.v1.DatabaseInstance.ISqlScheduledMaintenance|null);
+
+                    /** DatabaseInstance satisfiesPzs. */
+                    public satisfiesPzs?: (google.protobuf.IBoolValue|null);
+
+                    /** DatabaseInstance outOfDiskReport. */
+                    public outOfDiskReport?: (google.cloud.sql.v1.DatabaseInstance.ISqlOutOfDiskReport|null);
+
+                    /** DatabaseInstance createTime. */
+                    public createTime?: (google.protobuf.ITimestamp|null);
+
+                    /** DatabaseInstance _outOfDiskReport. */
+                    public _outOfDiskReport?: "outOfDiskReport";
+
+                    /**
+                     * Creates a new DatabaseInstance instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns DatabaseInstance instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IDatabaseInstance): google.cloud.sql.v1.DatabaseInstance;
+
+                    /**
+                     * Encodes the specified DatabaseInstance message. Does not implicitly {@link google.cloud.sql.v1.DatabaseInstance.verify|verify} messages.
+                     * @param message DatabaseInstance message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IDatabaseInstance, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified DatabaseInstance message, length delimited. Does not implicitly {@link google.cloud.sql.v1.DatabaseInstance.verify|verify} messages.
+                     * @param message DatabaseInstance message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IDatabaseInstance, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a DatabaseInstance message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns DatabaseInstance
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.DatabaseInstance;
+
+                    /**
+                     * Decodes a DatabaseInstance message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns DatabaseInstance
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.DatabaseInstance;
+
+                    /**
+                     * Verifies a DatabaseInstance message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a DatabaseInstance message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns DatabaseInstance
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.DatabaseInstance;
+
+                    /**
+                     * Creates a plain object from a DatabaseInstance message. Also converts values to other types if specified.
+                     * @param message DatabaseInstance
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.DatabaseInstance, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this DatabaseInstance to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                namespace DatabaseInstance {
+
+                    /** Properties of a SqlFailoverReplica. */
+                    interface ISqlFailoverReplica {
+
+                        /** SqlFailoverReplica name */
+                        name?: (string|null);
+
+                        /** SqlFailoverReplica available */
+                        available?: (google.protobuf.IBoolValue|null);
+                    }
+
+                    /** Represents a SqlFailoverReplica. */
+                    class SqlFailoverReplica implements ISqlFailoverReplica {
+
+                        /**
+                         * Constructs a new SqlFailoverReplica.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: google.cloud.sql.v1.DatabaseInstance.ISqlFailoverReplica);
+
+                        /** SqlFailoverReplica name. */
+                        public name: string;
+
+                        /** SqlFailoverReplica available. */
+                        public available?: (google.protobuf.IBoolValue|null);
+
+                        /**
+                         * Creates a new SqlFailoverReplica instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns SqlFailoverReplica instance
+                         */
+                        public static create(properties?: google.cloud.sql.v1.DatabaseInstance.ISqlFailoverReplica): google.cloud.sql.v1.DatabaseInstance.SqlFailoverReplica;
+
+                        /**
+                         * Encodes the specified SqlFailoverReplica message. Does not implicitly {@link google.cloud.sql.v1.DatabaseInstance.SqlFailoverReplica.verify|verify} messages.
+                         * @param message SqlFailoverReplica message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: google.cloud.sql.v1.DatabaseInstance.ISqlFailoverReplica, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified SqlFailoverReplica message, length delimited. Does not implicitly {@link google.cloud.sql.v1.DatabaseInstance.SqlFailoverReplica.verify|verify} messages.
+                         * @param message SqlFailoverReplica message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: google.cloud.sql.v1.DatabaseInstance.ISqlFailoverReplica, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a SqlFailoverReplica message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns SqlFailoverReplica
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.DatabaseInstance.SqlFailoverReplica;
+
+                        /**
+                         * Decodes a SqlFailoverReplica message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns SqlFailoverReplica
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.DatabaseInstance.SqlFailoverReplica;
+
+                        /**
+                         * Verifies a SqlFailoverReplica message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a SqlFailoverReplica message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns SqlFailoverReplica
+                         */
+                        public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.DatabaseInstance.SqlFailoverReplica;
+
+                        /**
+                         * Creates a plain object from a SqlFailoverReplica message. Also converts values to other types if specified.
+                         * @param message SqlFailoverReplica
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: google.cloud.sql.v1.DatabaseInstance.SqlFailoverReplica, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this SqlFailoverReplica to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+                    }
+
+                    /** Properties of a SqlScheduledMaintenance. */
+                    interface ISqlScheduledMaintenance {
+
+                        /** SqlScheduledMaintenance startTime */
+                        startTime?: (google.protobuf.ITimestamp|null);
+
+                        /** SqlScheduledMaintenance canDefer */
+                        canDefer?: (boolean|null);
+
+                        /** SqlScheduledMaintenance canReschedule */
+                        canReschedule?: (boolean|null);
+
+                        /** SqlScheduledMaintenance scheduleDeadlineTime */
+                        scheduleDeadlineTime?: (google.protobuf.ITimestamp|null);
+                    }
+
+                    /** Represents a SqlScheduledMaintenance. */
+                    class SqlScheduledMaintenance implements ISqlScheduledMaintenance {
+
+                        /**
+                         * Constructs a new SqlScheduledMaintenance.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: google.cloud.sql.v1.DatabaseInstance.ISqlScheduledMaintenance);
+
+                        /** SqlScheduledMaintenance startTime. */
+                        public startTime?: (google.protobuf.ITimestamp|null);
+
+                        /** SqlScheduledMaintenance canDefer. */
+                        public canDefer: boolean;
+
+                        /** SqlScheduledMaintenance canReschedule. */
+                        public canReschedule: boolean;
+
+                        /** SqlScheduledMaintenance scheduleDeadlineTime. */
+                        public scheduleDeadlineTime?: (google.protobuf.ITimestamp|null);
+
+                        /** SqlScheduledMaintenance _scheduleDeadlineTime. */
+                        public _scheduleDeadlineTime?: "scheduleDeadlineTime";
+
+                        /**
+                         * Creates a new SqlScheduledMaintenance instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns SqlScheduledMaintenance instance
+                         */
+                        public static create(properties?: google.cloud.sql.v1.DatabaseInstance.ISqlScheduledMaintenance): google.cloud.sql.v1.DatabaseInstance.SqlScheduledMaintenance;
+
+                        /**
+                         * Encodes the specified SqlScheduledMaintenance message. Does not implicitly {@link google.cloud.sql.v1.DatabaseInstance.SqlScheduledMaintenance.verify|verify} messages.
+                         * @param message SqlScheduledMaintenance message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: google.cloud.sql.v1.DatabaseInstance.ISqlScheduledMaintenance, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified SqlScheduledMaintenance message, length delimited. Does not implicitly {@link google.cloud.sql.v1.DatabaseInstance.SqlScheduledMaintenance.verify|verify} messages.
+                         * @param message SqlScheduledMaintenance message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: google.cloud.sql.v1.DatabaseInstance.ISqlScheduledMaintenance, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a SqlScheduledMaintenance message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns SqlScheduledMaintenance
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.DatabaseInstance.SqlScheduledMaintenance;
+
+                        /**
+                         * Decodes a SqlScheduledMaintenance message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns SqlScheduledMaintenance
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.DatabaseInstance.SqlScheduledMaintenance;
+
+                        /**
+                         * Verifies a SqlScheduledMaintenance message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a SqlScheduledMaintenance message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns SqlScheduledMaintenance
+                         */
+                        public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.DatabaseInstance.SqlScheduledMaintenance;
+
+                        /**
+                         * Creates a plain object from a SqlScheduledMaintenance message. Also converts values to other types if specified.
+                         * @param message SqlScheduledMaintenance
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: google.cloud.sql.v1.DatabaseInstance.SqlScheduledMaintenance, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this SqlScheduledMaintenance to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+                    }
+
+                    /** Properties of a SqlOutOfDiskReport. */
+                    interface ISqlOutOfDiskReport {
+
+                        /** SqlOutOfDiskReport sqlOutOfDiskState */
+                        sqlOutOfDiskState?: (google.cloud.sql.v1.DatabaseInstance.SqlOutOfDiskReport.SqlOutOfDiskState|keyof typeof google.cloud.sql.v1.DatabaseInstance.SqlOutOfDiskReport.SqlOutOfDiskState|null);
+
+                        /** SqlOutOfDiskReport sqlMinRecommendedIncreaseSizeGb */
+                        sqlMinRecommendedIncreaseSizeGb?: (number|null);
+                    }
+
+                    /** Represents a SqlOutOfDiskReport. */
+                    class SqlOutOfDiskReport implements ISqlOutOfDiskReport {
+
+                        /**
+                         * Constructs a new SqlOutOfDiskReport.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: google.cloud.sql.v1.DatabaseInstance.ISqlOutOfDiskReport);
+
+                        /** SqlOutOfDiskReport sqlOutOfDiskState. */
+                        public sqlOutOfDiskState?: (google.cloud.sql.v1.DatabaseInstance.SqlOutOfDiskReport.SqlOutOfDiskState|keyof typeof google.cloud.sql.v1.DatabaseInstance.SqlOutOfDiskReport.SqlOutOfDiskState|null);
+
+                        /** SqlOutOfDiskReport sqlMinRecommendedIncreaseSizeGb. */
+                        public sqlMinRecommendedIncreaseSizeGb?: (number|null);
+
+                        /** SqlOutOfDiskReport _sqlOutOfDiskState. */
+                        public _sqlOutOfDiskState?: "sqlOutOfDiskState";
+
+                        /** SqlOutOfDiskReport _sqlMinRecommendedIncreaseSizeGb. */
+                        public _sqlMinRecommendedIncreaseSizeGb?: "sqlMinRecommendedIncreaseSizeGb";
+
+                        /**
+                         * Creates a new SqlOutOfDiskReport instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns SqlOutOfDiskReport instance
+                         */
+                        public static create(properties?: google.cloud.sql.v1.DatabaseInstance.ISqlOutOfDiskReport): google.cloud.sql.v1.DatabaseInstance.SqlOutOfDiskReport;
+
+                        /**
+                         * Encodes the specified SqlOutOfDiskReport message. Does not implicitly {@link google.cloud.sql.v1.DatabaseInstance.SqlOutOfDiskReport.verify|verify} messages.
+                         * @param message SqlOutOfDiskReport message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: google.cloud.sql.v1.DatabaseInstance.ISqlOutOfDiskReport, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified SqlOutOfDiskReport message, length delimited. Does not implicitly {@link google.cloud.sql.v1.DatabaseInstance.SqlOutOfDiskReport.verify|verify} messages.
+                         * @param message SqlOutOfDiskReport message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: google.cloud.sql.v1.DatabaseInstance.ISqlOutOfDiskReport, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a SqlOutOfDiskReport message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns SqlOutOfDiskReport
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.DatabaseInstance.SqlOutOfDiskReport;
+
+                        /**
+                         * Decodes a SqlOutOfDiskReport message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns SqlOutOfDiskReport
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.DatabaseInstance.SqlOutOfDiskReport;
+
+                        /**
+                         * Verifies a SqlOutOfDiskReport message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a SqlOutOfDiskReport message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns SqlOutOfDiskReport
+                         */
+                        public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.DatabaseInstance.SqlOutOfDiskReport;
+
+                        /**
+                         * Creates a plain object from a SqlOutOfDiskReport message. Also converts values to other types if specified.
+                         * @param message SqlOutOfDiskReport
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: google.cloud.sql.v1.DatabaseInstance.SqlOutOfDiskReport, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this SqlOutOfDiskReport to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+                    }
+
+                    namespace SqlOutOfDiskReport {
+
+                        /** SqlOutOfDiskState enum. */
+                        enum SqlOutOfDiskState {
+                            SQL_OUT_OF_DISK_STATE_UNSPECIFIED = 0,
+                            NORMAL = 1,
+                            SOFT_SHUTDOWN = 2
+                        }
+                    }
+
+                    /** SqlInstanceState enum. */
+                    enum SqlInstanceState {
+                        SQL_INSTANCE_STATE_UNSPECIFIED = 0,
+                        RUNNABLE = 1,
+                        SUSPENDED = 2,
+                        PENDING_DELETE = 3,
+                        PENDING_CREATE = 4,
+                        MAINTENANCE = 5,
+                        FAILED = 6,
+                        ONLINE_MAINTENANCE = 7
+                    }
+                }
+
+                /** Properties of a SqlInstancesRescheduleMaintenanceRequestBody. */
+                interface ISqlInstancesRescheduleMaintenanceRequestBody {
+
+                    /** SqlInstancesRescheduleMaintenanceRequestBody reschedule */
+                    reschedule?: (google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody.IReschedule|null);
+                }
+
+                /** Represents a SqlInstancesRescheduleMaintenanceRequestBody. */
+                class SqlInstancesRescheduleMaintenanceRequestBody implements ISqlInstancesRescheduleMaintenanceRequestBody {
+
+                    /**
+                     * Constructs a new SqlInstancesRescheduleMaintenanceRequestBody.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlInstancesRescheduleMaintenanceRequestBody);
+
+                    /** SqlInstancesRescheduleMaintenanceRequestBody reschedule. */
+                    public reschedule?: (google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody.IReschedule|null);
+
+                    /**
+                     * Creates a new SqlInstancesRescheduleMaintenanceRequestBody instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlInstancesRescheduleMaintenanceRequestBody instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlInstancesRescheduleMaintenanceRequestBody): google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody;
+
+                    /**
+                     * Encodes the specified SqlInstancesRescheduleMaintenanceRequestBody message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody.verify|verify} messages.
+                     * @param message SqlInstancesRescheduleMaintenanceRequestBody message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlInstancesRescheduleMaintenanceRequestBody, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlInstancesRescheduleMaintenanceRequestBody message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody.verify|verify} messages.
+                     * @param message SqlInstancesRescheduleMaintenanceRequestBody message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlInstancesRescheduleMaintenanceRequestBody, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlInstancesRescheduleMaintenanceRequestBody message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlInstancesRescheduleMaintenanceRequestBody
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody;
+
+                    /**
+                     * Decodes a SqlInstancesRescheduleMaintenanceRequestBody message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlInstancesRescheduleMaintenanceRequestBody
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody;
+
+                    /**
+                     * Verifies a SqlInstancesRescheduleMaintenanceRequestBody message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlInstancesRescheduleMaintenanceRequestBody message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlInstancesRescheduleMaintenanceRequestBody
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody;
+
+                    /**
+                     * Creates a plain object from a SqlInstancesRescheduleMaintenanceRequestBody message. Also converts values to other types if specified.
+                     * @param message SqlInstancesRescheduleMaintenanceRequestBody
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlInstancesRescheduleMaintenanceRequestBody to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                namespace SqlInstancesRescheduleMaintenanceRequestBody {
+
+                    /** Properties of a Reschedule. */
+                    interface IReschedule {
+
+                        /** Reschedule rescheduleType */
+                        rescheduleType?: (google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody.RescheduleType|keyof typeof google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody.RescheduleType|null);
+
+                        /** Reschedule scheduleTime */
+                        scheduleTime?: (google.protobuf.ITimestamp|null);
+                    }
+
+                    /** Represents a Reschedule. */
+                    class Reschedule implements IReschedule {
+
+                        /**
+                         * Constructs a new Reschedule.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody.IReschedule);
+
+                        /** Reschedule rescheduleType. */
+                        public rescheduleType: (google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody.RescheduleType|keyof typeof google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody.RescheduleType);
+
+                        /** Reschedule scheduleTime. */
+                        public scheduleTime?: (google.protobuf.ITimestamp|null);
+
+                        /**
+                         * Creates a new Reschedule instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns Reschedule instance
+                         */
+                        public static create(properties?: google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody.IReschedule): google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody.Reschedule;
+
+                        /**
+                         * Encodes the specified Reschedule message. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody.Reschedule.verify|verify} messages.
+                         * @param message Reschedule message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody.IReschedule, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified Reschedule message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody.Reschedule.verify|verify} messages.
+                         * @param message Reschedule message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody.IReschedule, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a Reschedule message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns Reschedule
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody.Reschedule;
+
+                        /**
+                         * Decodes a Reschedule message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns Reschedule
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody.Reschedule;
+
+                        /**
+                         * Verifies a Reschedule message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a Reschedule message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns Reschedule
+                         */
+                        public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody.Reschedule;
+
+                        /**
+                         * Creates a plain object from a Reschedule message. Also converts values to other types if specified.
+                         * @param message Reschedule
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: google.cloud.sql.v1.SqlInstancesRescheduleMaintenanceRequestBody.Reschedule, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this Reschedule to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+                    }
+
+                    /** RescheduleType enum. */
+                    enum RescheduleType {
+                        RESCHEDULE_TYPE_UNSPECIFIED = 0,
+                        IMMEDIATE = 1,
+                        NEXT_AVAILABLE_WINDOW = 2,
+                        SPECIFIC_TIME = 3
+                    }
+                }
+
+                /** Properties of a DemoteMasterContext. */
+                interface IDemoteMasterContext {
+
+                    /** DemoteMasterContext kind */
+                    kind?: (string|null);
+
+                    /** DemoteMasterContext verifyGtidConsistency */
+                    verifyGtidConsistency?: (google.protobuf.IBoolValue|null);
+
+                    /** DemoteMasterContext masterInstanceName */
+                    masterInstanceName?: (string|null);
+
+                    /** DemoteMasterContext replicaConfiguration */
+                    replicaConfiguration?: (google.cloud.sql.v1.IDemoteMasterConfiguration|null);
+
+                    /** DemoteMasterContext skipReplicationSetup */
+                    skipReplicationSetup?: (boolean|null);
+                }
+
+                /** Represents a DemoteMasterContext. */
+                class DemoteMasterContext implements IDemoteMasterContext {
+
+                    /**
+                     * Constructs a new DemoteMasterContext.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IDemoteMasterContext);
+
+                    /** DemoteMasterContext kind. */
+                    public kind: string;
+
+                    /** DemoteMasterContext verifyGtidConsistency. */
+                    public verifyGtidConsistency?: (google.protobuf.IBoolValue|null);
+
+                    /** DemoteMasterContext masterInstanceName. */
+                    public masterInstanceName: string;
+
+                    /** DemoteMasterContext replicaConfiguration. */
+                    public replicaConfiguration?: (google.cloud.sql.v1.IDemoteMasterConfiguration|null);
+
+                    /** DemoteMasterContext skipReplicationSetup. */
+                    public skipReplicationSetup: boolean;
+
+                    /**
+                     * Creates a new DemoteMasterContext instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns DemoteMasterContext instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IDemoteMasterContext): google.cloud.sql.v1.DemoteMasterContext;
+
+                    /**
+                     * Encodes the specified DemoteMasterContext message. Does not implicitly {@link google.cloud.sql.v1.DemoteMasterContext.verify|verify} messages.
+                     * @param message DemoteMasterContext message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IDemoteMasterContext, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified DemoteMasterContext message, length delimited. Does not implicitly {@link google.cloud.sql.v1.DemoteMasterContext.verify|verify} messages.
+                     * @param message DemoteMasterContext message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IDemoteMasterContext, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a DemoteMasterContext message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns DemoteMasterContext
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.DemoteMasterContext;
+
+                    /**
+                     * Decodes a DemoteMasterContext message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns DemoteMasterContext
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.DemoteMasterContext;
+
+                    /**
+                     * Verifies a DemoteMasterContext message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a DemoteMasterContext message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns DemoteMasterContext
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.DemoteMasterContext;
+
+                    /**
+                     * Creates a plain object from a DemoteMasterContext message. Also converts values to other types if specified.
+                     * @param message DemoteMasterContext
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.DemoteMasterContext, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this DemoteMasterContext to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a FailoverContext. */
+                interface IFailoverContext {
+
+                    /** FailoverContext settingsVersion */
+                    settingsVersion?: (number|Long|string|null);
+
+                    /** FailoverContext kind */
+                    kind?: (string|null);
+                }
+
+                /** Represents a FailoverContext. */
+                class FailoverContext implements IFailoverContext {
+
+                    /**
+                     * Constructs a new FailoverContext.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IFailoverContext);
+
+                    /** FailoverContext settingsVersion. */
+                    public settingsVersion: (number|Long|string);
+
+                    /** FailoverContext kind. */
+                    public kind: string;
+
+                    /**
+                     * Creates a new FailoverContext instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns FailoverContext instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IFailoverContext): google.cloud.sql.v1.FailoverContext;
+
+                    /**
+                     * Encodes the specified FailoverContext message. Does not implicitly {@link google.cloud.sql.v1.FailoverContext.verify|verify} messages.
+                     * @param message FailoverContext message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IFailoverContext, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified FailoverContext message, length delimited. Does not implicitly {@link google.cloud.sql.v1.FailoverContext.verify|verify} messages.
+                     * @param message FailoverContext message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IFailoverContext, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a FailoverContext message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns FailoverContext
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.FailoverContext;
+
+                    /**
+                     * Decodes a FailoverContext message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns FailoverContext
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.FailoverContext;
+
+                    /**
+                     * Verifies a FailoverContext message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a FailoverContext message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns FailoverContext
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.FailoverContext;
+
+                    /**
+                     * Creates a plain object from a FailoverContext message. Also converts values to other types if specified.
+                     * @param message FailoverContext
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.FailoverContext, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this FailoverContext to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a RestoreBackupContext. */
+                interface IRestoreBackupContext {
+
+                    /** RestoreBackupContext kind */
+                    kind?: (string|null);
+
+                    /** RestoreBackupContext backupRunId */
+                    backupRunId?: (number|Long|string|null);
+
+                    /** RestoreBackupContext instanceId */
+                    instanceId?: (string|null);
+
+                    /** RestoreBackupContext project */
+                    project?: (string|null);
+                }
+
+                /** Represents a RestoreBackupContext. */
+                class RestoreBackupContext implements IRestoreBackupContext {
+
+                    /**
+                     * Constructs a new RestoreBackupContext.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IRestoreBackupContext);
+
+                    /** RestoreBackupContext kind. */
+                    public kind: string;
+
+                    /** RestoreBackupContext backupRunId. */
+                    public backupRunId: (number|Long|string);
+
+                    /** RestoreBackupContext instanceId. */
+                    public instanceId: string;
+
+                    /** RestoreBackupContext project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new RestoreBackupContext instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns RestoreBackupContext instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IRestoreBackupContext): google.cloud.sql.v1.RestoreBackupContext;
+
+                    /**
+                     * Encodes the specified RestoreBackupContext message. Does not implicitly {@link google.cloud.sql.v1.RestoreBackupContext.verify|verify} messages.
+                     * @param message RestoreBackupContext message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IRestoreBackupContext, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified RestoreBackupContext message, length delimited. Does not implicitly {@link google.cloud.sql.v1.RestoreBackupContext.verify|verify} messages.
+                     * @param message RestoreBackupContext message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IRestoreBackupContext, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a RestoreBackupContext message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns RestoreBackupContext
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.RestoreBackupContext;
+
+                    /**
+                     * Decodes a RestoreBackupContext message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns RestoreBackupContext
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.RestoreBackupContext;
+
+                    /**
+                     * Verifies a RestoreBackupContext message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a RestoreBackupContext message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns RestoreBackupContext
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.RestoreBackupContext;
+
+                    /**
+                     * Creates a plain object from a RestoreBackupContext message. Also converts values to other types if specified.
+                     * @param message RestoreBackupContext
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.RestoreBackupContext, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this RestoreBackupContext to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a RotateServerCaContext. */
+                interface IRotateServerCaContext {
+
+                    /** RotateServerCaContext kind */
+                    kind?: (string|null);
+
+                    /** RotateServerCaContext nextVersion */
+                    nextVersion?: (string|null);
+                }
+
+                /** Represents a RotateServerCaContext. */
+                class RotateServerCaContext implements IRotateServerCaContext {
+
+                    /**
+                     * Constructs a new RotateServerCaContext.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IRotateServerCaContext);
+
+                    /** RotateServerCaContext kind. */
+                    public kind: string;
+
+                    /** RotateServerCaContext nextVersion. */
+                    public nextVersion: string;
+
+                    /**
+                     * Creates a new RotateServerCaContext instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns RotateServerCaContext instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IRotateServerCaContext): google.cloud.sql.v1.RotateServerCaContext;
+
+                    /**
+                     * Encodes the specified RotateServerCaContext message. Does not implicitly {@link google.cloud.sql.v1.RotateServerCaContext.verify|verify} messages.
+                     * @param message RotateServerCaContext message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IRotateServerCaContext, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified RotateServerCaContext message, length delimited. Does not implicitly {@link google.cloud.sql.v1.RotateServerCaContext.verify|verify} messages.
+                     * @param message RotateServerCaContext message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IRotateServerCaContext, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a RotateServerCaContext message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns RotateServerCaContext
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.RotateServerCaContext;
+
+                    /**
+                     * Decodes a RotateServerCaContext message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns RotateServerCaContext
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.RotateServerCaContext;
+
+                    /**
+                     * Verifies a RotateServerCaContext message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a RotateServerCaContext message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns RotateServerCaContext
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.RotateServerCaContext;
+
+                    /**
+                     * Creates a plain object from a RotateServerCaContext message. Also converts values to other types if specified.
+                     * @param message RotateServerCaContext
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.RotateServerCaContext, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this RotateServerCaContext to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a TruncateLogContext. */
+                interface ITruncateLogContext {
+
+                    /** TruncateLogContext kind */
+                    kind?: (string|null);
+
+                    /** TruncateLogContext logType */
+                    logType?: (string|null);
+                }
+
+                /** Represents a TruncateLogContext. */
+                class TruncateLogContext implements ITruncateLogContext {
+
+                    /**
+                     * Constructs a new TruncateLogContext.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ITruncateLogContext);
+
+                    /** TruncateLogContext kind. */
+                    public kind: string;
+
+                    /** TruncateLogContext logType. */
+                    public logType: string;
+
+                    /**
+                     * Creates a new TruncateLogContext instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns TruncateLogContext instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ITruncateLogContext): google.cloud.sql.v1.TruncateLogContext;
+
+                    /**
+                     * Encodes the specified TruncateLogContext message. Does not implicitly {@link google.cloud.sql.v1.TruncateLogContext.verify|verify} messages.
+                     * @param message TruncateLogContext message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ITruncateLogContext, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified TruncateLogContext message, length delimited. Does not implicitly {@link google.cloud.sql.v1.TruncateLogContext.verify|verify} messages.
+                     * @param message TruncateLogContext message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ITruncateLogContext, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a TruncateLogContext message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns TruncateLogContext
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.TruncateLogContext;
+
+                    /**
+                     * Decodes a TruncateLogContext message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns TruncateLogContext
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.TruncateLogContext;
+
+                    /**
+                     * Verifies a TruncateLogContext message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a TruncateLogContext message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns TruncateLogContext
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.TruncateLogContext;
+
+                    /**
+                     * Creates a plain object from a TruncateLogContext message. Also converts values to other types if specified.
+                     * @param message TruncateLogContext
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.TruncateLogContext, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this TruncateLogContext to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlExternalSyncSettingError. */
+                interface ISqlExternalSyncSettingError {
+
+                    /** SqlExternalSyncSettingError kind */
+                    kind?: (string|null);
+
+                    /** SqlExternalSyncSettingError type */
+                    type?: (google.cloud.sql.v1.SqlExternalSyncSettingError.SqlExternalSyncSettingErrorType|keyof typeof google.cloud.sql.v1.SqlExternalSyncSettingError.SqlExternalSyncSettingErrorType|null);
+
+                    /** SqlExternalSyncSettingError detail */
+                    detail?: (string|null);
+                }
+
+                /** Represents a SqlExternalSyncSettingError. */
+                class SqlExternalSyncSettingError implements ISqlExternalSyncSettingError {
+
+                    /**
+                     * Constructs a new SqlExternalSyncSettingError.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlExternalSyncSettingError);
+
+                    /** SqlExternalSyncSettingError kind. */
+                    public kind: string;
+
+                    /** SqlExternalSyncSettingError type. */
+                    public type: (google.cloud.sql.v1.SqlExternalSyncSettingError.SqlExternalSyncSettingErrorType|keyof typeof google.cloud.sql.v1.SqlExternalSyncSettingError.SqlExternalSyncSettingErrorType);
+
+                    /** SqlExternalSyncSettingError detail. */
+                    public detail: string;
+
+                    /**
+                     * Creates a new SqlExternalSyncSettingError instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlExternalSyncSettingError instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlExternalSyncSettingError): google.cloud.sql.v1.SqlExternalSyncSettingError;
+
+                    /**
+                     * Encodes the specified SqlExternalSyncSettingError message. Does not implicitly {@link google.cloud.sql.v1.SqlExternalSyncSettingError.verify|verify} messages.
+                     * @param message SqlExternalSyncSettingError message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlExternalSyncSettingError, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlExternalSyncSettingError message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlExternalSyncSettingError.verify|verify} messages.
+                     * @param message SqlExternalSyncSettingError message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlExternalSyncSettingError, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlExternalSyncSettingError message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlExternalSyncSettingError
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlExternalSyncSettingError;
+
+                    /**
+                     * Decodes a SqlExternalSyncSettingError message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlExternalSyncSettingError
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlExternalSyncSettingError;
+
+                    /**
+                     * Verifies a SqlExternalSyncSettingError message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlExternalSyncSettingError message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlExternalSyncSettingError
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlExternalSyncSettingError;
+
+                    /**
+                     * Creates a plain object from a SqlExternalSyncSettingError message. Also converts values to other types if specified.
+                     * @param message SqlExternalSyncSettingError
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlExternalSyncSettingError, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlExternalSyncSettingError to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                namespace SqlExternalSyncSettingError {
+
+                    /** SqlExternalSyncSettingErrorType enum. */
+                    enum SqlExternalSyncSettingErrorType {
+                        SQL_EXTERNAL_SYNC_SETTING_ERROR_TYPE_UNSPECIFIED = 0,
+                        CONNECTION_FAILURE = 1,
+                        BINLOG_NOT_ENABLED = 2,
+                        INCOMPATIBLE_DATABASE_VERSION = 3,
+                        REPLICA_ALREADY_SETUP = 4,
+                        INSUFFICIENT_PRIVILEGE = 5,
+                        UNSUPPORTED_MIGRATION_TYPE = 6,
+                        NO_PGLOGICAL_INSTALLED = 7,
+                        PGLOGICAL_NODE_ALREADY_EXISTS = 8,
+                        INVALID_WAL_LEVEL = 9,
+                        INVALID_SHARED_PRELOAD_LIBRARY = 10,
+                        INSUFFICIENT_MAX_REPLICATION_SLOTS = 11,
+                        INSUFFICIENT_MAX_WAL_SENDERS = 12,
+                        INSUFFICIENT_MAX_WORKER_PROCESSES = 13,
+                        UNSUPPORTED_EXTENSIONS = 14,
+                        INVALID_RDS_LOGICAL_REPLICATION = 15,
+                        INVALID_LOGGING_SETUP = 16,
+                        INVALID_DB_PARAM = 17,
+                        UNSUPPORTED_GTID_MODE = 18,
+                        SQLSERVER_AGENT_NOT_RUNNING = 19,
+                        UNSUPPORTED_TABLE_DEFINITION = 20,
+                        UNSUPPORTED_DEFINER = 21,
+                        SQLSERVER_SERVERNAME_MISMATCH = 22,
+                        PRIMARY_ALREADY_SETUP = 23,
+                        UNSUPPORTED_BINLOG_FORMAT = 24,
+                        BINLOG_RETENTION_SETTING = 25
+                    }
+                }
+
+                /** Properties of an OnPremisesConfiguration. */
+                interface IOnPremisesConfiguration {
+
+                    /** OnPremisesConfiguration hostPort */
+                    hostPort?: (string|null);
+
+                    /** OnPremisesConfiguration kind */
+                    kind?: (string|null);
+
+                    /** OnPremisesConfiguration username */
+                    username?: (string|null);
+
+                    /** OnPremisesConfiguration password */
+                    password?: (string|null);
+
+                    /** OnPremisesConfiguration caCertificate */
+                    caCertificate?: (string|null);
+
+                    /** OnPremisesConfiguration clientCertificate */
+                    clientCertificate?: (string|null);
+
+                    /** OnPremisesConfiguration clientKey */
+                    clientKey?: (string|null);
+
+                    /** OnPremisesConfiguration dumpFilePath */
+                    dumpFilePath?: (string|null);
+
+                    /** OnPremisesConfiguration sourceInstance */
+                    sourceInstance?: (google.cloud.sql.v1.IInstanceReference|null);
+                }
+
+                /** Represents an OnPremisesConfiguration. */
+                class OnPremisesConfiguration implements IOnPremisesConfiguration {
+
+                    /**
+                     * Constructs a new OnPremisesConfiguration.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IOnPremisesConfiguration);
+
+                    /** OnPremisesConfiguration hostPort. */
+                    public hostPort: string;
+
+                    /** OnPremisesConfiguration kind. */
+                    public kind: string;
+
+                    /** OnPremisesConfiguration username. */
+                    public username: string;
+
+                    /** OnPremisesConfiguration password. */
+                    public password: string;
+
+                    /** OnPremisesConfiguration caCertificate. */
+                    public caCertificate: string;
+
+                    /** OnPremisesConfiguration clientCertificate. */
+                    public clientCertificate: string;
+
+                    /** OnPremisesConfiguration clientKey. */
+                    public clientKey: string;
+
+                    /** OnPremisesConfiguration dumpFilePath. */
+                    public dumpFilePath: string;
+
+                    /** OnPremisesConfiguration sourceInstance. */
+                    public sourceInstance?: (google.cloud.sql.v1.IInstanceReference|null);
+
+                    /**
+                     * Creates a new OnPremisesConfiguration instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns OnPremisesConfiguration instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IOnPremisesConfiguration): google.cloud.sql.v1.OnPremisesConfiguration;
+
+                    /**
+                     * Encodes the specified OnPremisesConfiguration message. Does not implicitly {@link google.cloud.sql.v1.OnPremisesConfiguration.verify|verify} messages.
+                     * @param message OnPremisesConfiguration message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IOnPremisesConfiguration, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified OnPremisesConfiguration message, length delimited. Does not implicitly {@link google.cloud.sql.v1.OnPremisesConfiguration.verify|verify} messages.
+                     * @param message OnPremisesConfiguration message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IOnPremisesConfiguration, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an OnPremisesConfiguration message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns OnPremisesConfiguration
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.OnPremisesConfiguration;
+
+                    /**
+                     * Decodes an OnPremisesConfiguration message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns OnPremisesConfiguration
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.OnPremisesConfiguration;
+
+                    /**
+                     * Verifies an OnPremisesConfiguration message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an OnPremisesConfiguration message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns OnPremisesConfiguration
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.OnPremisesConfiguration;
+
+                    /**
+                     * Creates a plain object from an OnPremisesConfiguration message. Also converts values to other types if specified.
+                     * @param message OnPremisesConfiguration
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.OnPremisesConfiguration, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this OnPremisesConfiguration to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a ReplicaConfiguration. */
+                interface IReplicaConfiguration {
+
+                    /** ReplicaConfiguration kind */
+                    kind?: (string|null);
+
+                    /** ReplicaConfiguration mysqlReplicaConfiguration */
+                    mysqlReplicaConfiguration?: (google.cloud.sql.v1.IMySqlReplicaConfiguration|null);
+
+                    /** ReplicaConfiguration failoverTarget */
+                    failoverTarget?: (google.protobuf.IBoolValue|null);
+                }
+
+                /** Represents a ReplicaConfiguration. */
+                class ReplicaConfiguration implements IReplicaConfiguration {
+
+                    /**
+                     * Constructs a new ReplicaConfiguration.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IReplicaConfiguration);
+
+                    /** ReplicaConfiguration kind. */
+                    public kind: string;
+
+                    /** ReplicaConfiguration mysqlReplicaConfiguration. */
+                    public mysqlReplicaConfiguration?: (google.cloud.sql.v1.IMySqlReplicaConfiguration|null);
+
+                    /** ReplicaConfiguration failoverTarget. */
+                    public failoverTarget?: (google.protobuf.IBoolValue|null);
+
+                    /**
+                     * Creates a new ReplicaConfiguration instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns ReplicaConfiguration instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IReplicaConfiguration): google.cloud.sql.v1.ReplicaConfiguration;
+
+                    /**
+                     * Encodes the specified ReplicaConfiguration message. Does not implicitly {@link google.cloud.sql.v1.ReplicaConfiguration.verify|verify} messages.
+                     * @param message ReplicaConfiguration message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IReplicaConfiguration, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified ReplicaConfiguration message, length delimited. Does not implicitly {@link google.cloud.sql.v1.ReplicaConfiguration.verify|verify} messages.
+                     * @param message ReplicaConfiguration message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IReplicaConfiguration, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a ReplicaConfiguration message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns ReplicaConfiguration
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.ReplicaConfiguration;
+
+                    /**
+                     * Decodes a ReplicaConfiguration message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns ReplicaConfiguration
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.ReplicaConfiguration;
+
+                    /**
+                     * Verifies a ReplicaConfiguration message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a ReplicaConfiguration message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns ReplicaConfiguration
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.ReplicaConfiguration;
+
+                    /**
+                     * Creates a plain object from a ReplicaConfiguration message. Also converts values to other types if specified.
+                     * @param message ReplicaConfiguration
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.ReplicaConfiguration, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this ReplicaConfiguration to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** SqlInstanceType enum. */
+                enum SqlInstanceType {
+                    SQL_INSTANCE_TYPE_UNSPECIFIED = 0,
+                    CLOUD_SQL_INSTANCE = 1,
+                    ON_PREMISES_INSTANCE = 2,
+                    READ_REPLICA_INSTANCE = 3
+                }
+
+                /** SqlSuspensionReason enum. */
+                enum SqlSuspensionReason {
+                    SQL_SUSPENSION_REASON_UNSPECIFIED = 0,
+                    BILLING_ISSUE = 2,
+                    LEGAL_ISSUE = 3,
+                    OPERATIONAL_ISSUE = 4,
+                    KMS_KEY_ISSUE = 5
+                }
+
+                /** Represents a SqlOperationsService */
+                class SqlOperationsService extends $protobuf.rpc.Service {
+
+                    /**
+                     * Constructs a new SqlOperationsService service.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     */
+                    constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                    /**
+                     * Creates new SqlOperationsService service using the specified rpc implementation.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     * @returns RPC service. Useful where requests and/or responses are streamed.
+                     */
+                    public static create(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean): SqlOperationsService;
+
+                    /**
+                     * Calls Get.
+                     * @param request SqlOperationsGetRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public get(request: google.cloud.sql.v1.ISqlOperationsGetRequest, callback: google.cloud.sql.v1.SqlOperationsService.GetCallback): void;
+
+                    /**
+                     * Calls Get.
+                     * @param request SqlOperationsGetRequest message or plain object
+                     * @returns Promise
+                     */
+                    public get(request: google.cloud.sql.v1.ISqlOperationsGetRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls List.
+                     * @param request SqlOperationsListRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and OperationsListResponse
+                     */
+                    public list(request: google.cloud.sql.v1.ISqlOperationsListRequest, callback: google.cloud.sql.v1.SqlOperationsService.ListCallback): void;
+
+                    /**
+                     * Calls List.
+                     * @param request SqlOperationsListRequest message or plain object
+                     * @returns Promise
+                     */
+                    public list(request: google.cloud.sql.v1.ISqlOperationsListRequest): Promise<google.cloud.sql.v1.OperationsListResponse>;
+                }
+
+                namespace SqlOperationsService {
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlOperationsService#get}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type GetCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlOperationsService#list}.
+                     * @param error Error, if any
+                     * @param [response] OperationsListResponse
+                     */
+                    type ListCallback = (error: (Error|null), response?: google.cloud.sql.v1.OperationsListResponse) => void;
+                }
+
+                /** Properties of a SqlOperationsGetRequest. */
+                interface ISqlOperationsGetRequest {
+
+                    /** SqlOperationsGetRequest operation */
+                    operation?: (string|null);
+
+                    /** SqlOperationsGetRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlOperationsGetRequest. */
+                class SqlOperationsGetRequest implements ISqlOperationsGetRequest {
+
+                    /**
+                     * Constructs a new SqlOperationsGetRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlOperationsGetRequest);
+
+                    /** SqlOperationsGetRequest operation. */
+                    public operation: string;
+
+                    /** SqlOperationsGetRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlOperationsGetRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlOperationsGetRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlOperationsGetRequest): google.cloud.sql.v1.SqlOperationsGetRequest;
+
+                    /**
+                     * Encodes the specified SqlOperationsGetRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlOperationsGetRequest.verify|verify} messages.
+                     * @param message SqlOperationsGetRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlOperationsGetRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlOperationsGetRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlOperationsGetRequest.verify|verify} messages.
+                     * @param message SqlOperationsGetRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlOperationsGetRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlOperationsGetRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlOperationsGetRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlOperationsGetRequest;
+
+                    /**
+                     * Decodes a SqlOperationsGetRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlOperationsGetRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlOperationsGetRequest;
+
+                    /**
+                     * Verifies a SqlOperationsGetRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlOperationsGetRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlOperationsGetRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlOperationsGetRequest;
+
+                    /**
+                     * Creates a plain object from a SqlOperationsGetRequest message. Also converts values to other types if specified.
+                     * @param message SqlOperationsGetRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlOperationsGetRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlOperationsGetRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlOperationsListRequest. */
+                interface ISqlOperationsListRequest {
+
+                    /** SqlOperationsListRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlOperationsListRequest maxResults */
+                    maxResults?: (number|null);
+
+                    /** SqlOperationsListRequest pageToken */
+                    pageToken?: (string|null);
+
+                    /** SqlOperationsListRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlOperationsListRequest. */
+                class SqlOperationsListRequest implements ISqlOperationsListRequest {
+
+                    /**
+                     * Constructs a new SqlOperationsListRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlOperationsListRequest);
+
+                    /** SqlOperationsListRequest instance. */
+                    public instance: string;
+
+                    /** SqlOperationsListRequest maxResults. */
+                    public maxResults: number;
+
+                    /** SqlOperationsListRequest pageToken. */
+                    public pageToken: string;
+
+                    /** SqlOperationsListRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlOperationsListRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlOperationsListRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlOperationsListRequest): google.cloud.sql.v1.SqlOperationsListRequest;
+
+                    /**
+                     * Encodes the specified SqlOperationsListRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlOperationsListRequest.verify|verify} messages.
+                     * @param message SqlOperationsListRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlOperationsListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlOperationsListRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlOperationsListRequest.verify|verify} messages.
+                     * @param message SqlOperationsListRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlOperationsListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlOperationsListRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlOperationsListRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlOperationsListRequest;
+
+                    /**
+                     * Decodes a SqlOperationsListRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlOperationsListRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlOperationsListRequest;
+
+                    /**
+                     * Verifies a SqlOperationsListRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlOperationsListRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlOperationsListRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlOperationsListRequest;
+
+                    /**
+                     * Creates a plain object from a SqlOperationsListRequest message. Also converts values to other types if specified.
+                     * @param message SqlOperationsListRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlOperationsListRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlOperationsListRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of an OperationsListResponse. */
+                interface IOperationsListResponse {
+
+                    /** OperationsListResponse kind */
+                    kind?: (string|null);
+
+                    /** OperationsListResponse items */
+                    items?: (google.cloud.sql.v1.IOperation[]|null);
+
+                    /** OperationsListResponse nextPageToken */
+                    nextPageToken?: (string|null);
+                }
+
+                /** Represents an OperationsListResponse. */
+                class OperationsListResponse implements IOperationsListResponse {
+
+                    /**
+                     * Constructs a new OperationsListResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IOperationsListResponse);
+
+                    /** OperationsListResponse kind. */
+                    public kind: string;
+
+                    /** OperationsListResponse items. */
+                    public items: google.cloud.sql.v1.IOperation[];
+
+                    /** OperationsListResponse nextPageToken. */
+                    public nextPageToken: string;
+
+                    /**
+                     * Creates a new OperationsListResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns OperationsListResponse instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IOperationsListResponse): google.cloud.sql.v1.OperationsListResponse;
+
+                    /**
+                     * Encodes the specified OperationsListResponse message. Does not implicitly {@link google.cloud.sql.v1.OperationsListResponse.verify|verify} messages.
+                     * @param message OperationsListResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IOperationsListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified OperationsListResponse message, length delimited. Does not implicitly {@link google.cloud.sql.v1.OperationsListResponse.verify|verify} messages.
+                     * @param message OperationsListResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IOperationsListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an OperationsListResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns OperationsListResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.OperationsListResponse;
+
+                    /**
+                     * Decodes an OperationsListResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns OperationsListResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.OperationsListResponse;
+
+                    /**
+                     * Verifies an OperationsListResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an OperationsListResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns OperationsListResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.OperationsListResponse;
+
+                    /**
+                     * Creates a plain object from an OperationsListResponse message. Also converts values to other types if specified.
+                     * @param message OperationsListResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.OperationsListResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this OperationsListResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Represents a SqlSslCertsService */
+                class SqlSslCertsService extends $protobuf.rpc.Service {
+
+                    /**
+                     * Constructs a new SqlSslCertsService service.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     */
+                    constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                    /**
+                     * Creates new SqlSslCertsService service using the specified rpc implementation.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     * @returns RPC service. Useful where requests and/or responses are streamed.
+                     */
+                    public static create(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean): SqlSslCertsService;
+
+                    /**
+                     * Calls Delete.
+                     * @param request SqlSslCertsDeleteRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public delete(request: google.cloud.sql.v1.ISqlSslCertsDeleteRequest, callback: google.cloud.sql.v1.SqlSslCertsService.DeleteCallback): void;
+
+                    /**
+                     * Calls Delete.
+                     * @param request SqlSslCertsDeleteRequest message or plain object
+                     * @returns Promise
+                     */
+                    public delete(request: google.cloud.sql.v1.ISqlSslCertsDeleteRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls Get.
+                     * @param request SqlSslCertsGetRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and SslCert
+                     */
+                    public get(request: google.cloud.sql.v1.ISqlSslCertsGetRequest, callback: google.cloud.sql.v1.SqlSslCertsService.GetCallback): void;
+
+                    /**
+                     * Calls Get.
+                     * @param request SqlSslCertsGetRequest message or plain object
+                     * @returns Promise
+                     */
+                    public get(request: google.cloud.sql.v1.ISqlSslCertsGetRequest): Promise<google.cloud.sql.v1.SslCert>;
+
+                    /**
+                     * Calls Insert.
+                     * @param request SqlSslCertsInsertRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and SslCertsInsertResponse
+                     */
+                    public insert(request: google.cloud.sql.v1.ISqlSslCertsInsertRequest, callback: google.cloud.sql.v1.SqlSslCertsService.InsertCallback): void;
+
+                    /**
+                     * Calls Insert.
+                     * @param request SqlSslCertsInsertRequest message or plain object
+                     * @returns Promise
+                     */
+                    public insert(request: google.cloud.sql.v1.ISqlSslCertsInsertRequest): Promise<google.cloud.sql.v1.SslCertsInsertResponse>;
+
+                    /**
+                     * Calls List.
+                     * @param request SqlSslCertsListRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and SslCertsListResponse
+                     */
+                    public list(request: google.cloud.sql.v1.ISqlSslCertsListRequest, callback: google.cloud.sql.v1.SqlSslCertsService.ListCallback): void;
+
+                    /**
+                     * Calls List.
+                     * @param request SqlSslCertsListRequest message or plain object
+                     * @returns Promise
+                     */
+                    public list(request: google.cloud.sql.v1.ISqlSslCertsListRequest): Promise<google.cloud.sql.v1.SslCertsListResponse>;
+                }
+
+                namespace SqlSslCertsService {
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlSslCertsService#delete_}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type DeleteCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlSslCertsService#get}.
+                     * @param error Error, if any
+                     * @param [response] SslCert
+                     */
+                    type GetCallback = (error: (Error|null), response?: google.cloud.sql.v1.SslCert) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlSslCertsService#insert}.
+                     * @param error Error, if any
+                     * @param [response] SslCertsInsertResponse
+                     */
+                    type InsertCallback = (error: (Error|null), response?: google.cloud.sql.v1.SslCertsInsertResponse) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlSslCertsService#list}.
+                     * @param error Error, if any
+                     * @param [response] SslCertsListResponse
+                     */
+                    type ListCallback = (error: (Error|null), response?: google.cloud.sql.v1.SslCertsListResponse) => void;
+                }
+
+                /** Properties of a SqlSslCertsDeleteRequest. */
+                interface ISqlSslCertsDeleteRequest {
+
+                    /** SqlSslCertsDeleteRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlSslCertsDeleteRequest project */
+                    project?: (string|null);
+
+                    /** SqlSslCertsDeleteRequest sha1Fingerprint */
+                    sha1Fingerprint?: (string|null);
+                }
+
+                /** Represents a SqlSslCertsDeleteRequest. */
+                class SqlSslCertsDeleteRequest implements ISqlSslCertsDeleteRequest {
+
+                    /**
+                     * Constructs a new SqlSslCertsDeleteRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlSslCertsDeleteRequest);
+
+                    /** SqlSslCertsDeleteRequest instance. */
+                    public instance: string;
+
+                    /** SqlSslCertsDeleteRequest project. */
+                    public project: string;
+
+                    /** SqlSslCertsDeleteRequest sha1Fingerprint. */
+                    public sha1Fingerprint: string;
+
+                    /**
+                     * Creates a new SqlSslCertsDeleteRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlSslCertsDeleteRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlSslCertsDeleteRequest): google.cloud.sql.v1.SqlSslCertsDeleteRequest;
+
+                    /**
+                     * Encodes the specified SqlSslCertsDeleteRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlSslCertsDeleteRequest.verify|verify} messages.
+                     * @param message SqlSslCertsDeleteRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlSslCertsDeleteRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlSslCertsDeleteRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlSslCertsDeleteRequest.verify|verify} messages.
+                     * @param message SqlSslCertsDeleteRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlSslCertsDeleteRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlSslCertsDeleteRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlSslCertsDeleteRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlSslCertsDeleteRequest;
+
+                    /**
+                     * Decodes a SqlSslCertsDeleteRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlSslCertsDeleteRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlSslCertsDeleteRequest;
+
+                    /**
+                     * Verifies a SqlSslCertsDeleteRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlSslCertsDeleteRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlSslCertsDeleteRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlSslCertsDeleteRequest;
+
+                    /**
+                     * Creates a plain object from a SqlSslCertsDeleteRequest message. Also converts values to other types if specified.
+                     * @param message SqlSslCertsDeleteRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlSslCertsDeleteRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlSslCertsDeleteRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlSslCertsGetRequest. */
+                interface ISqlSslCertsGetRequest {
+
+                    /** SqlSslCertsGetRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlSslCertsGetRequest project */
+                    project?: (string|null);
+
+                    /** SqlSslCertsGetRequest sha1Fingerprint */
+                    sha1Fingerprint?: (string|null);
+                }
+
+                /** Represents a SqlSslCertsGetRequest. */
+                class SqlSslCertsGetRequest implements ISqlSslCertsGetRequest {
+
+                    /**
+                     * Constructs a new SqlSslCertsGetRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlSslCertsGetRequest);
+
+                    /** SqlSslCertsGetRequest instance. */
+                    public instance: string;
+
+                    /** SqlSslCertsGetRequest project. */
+                    public project: string;
+
+                    /** SqlSslCertsGetRequest sha1Fingerprint. */
+                    public sha1Fingerprint: string;
+
+                    /**
+                     * Creates a new SqlSslCertsGetRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlSslCertsGetRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlSslCertsGetRequest): google.cloud.sql.v1.SqlSslCertsGetRequest;
+
+                    /**
+                     * Encodes the specified SqlSslCertsGetRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlSslCertsGetRequest.verify|verify} messages.
+                     * @param message SqlSslCertsGetRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlSslCertsGetRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlSslCertsGetRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlSslCertsGetRequest.verify|verify} messages.
+                     * @param message SqlSslCertsGetRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlSslCertsGetRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlSslCertsGetRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlSslCertsGetRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlSslCertsGetRequest;
+
+                    /**
+                     * Decodes a SqlSslCertsGetRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlSslCertsGetRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlSslCertsGetRequest;
+
+                    /**
+                     * Verifies a SqlSslCertsGetRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlSslCertsGetRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlSslCertsGetRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlSslCertsGetRequest;
+
+                    /**
+                     * Creates a plain object from a SqlSslCertsGetRequest message. Also converts values to other types if specified.
+                     * @param message SqlSslCertsGetRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlSslCertsGetRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlSslCertsGetRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlSslCertsInsertRequest. */
+                interface ISqlSslCertsInsertRequest {
+
+                    /** SqlSslCertsInsertRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlSslCertsInsertRequest project */
+                    project?: (string|null);
+
+                    /** SqlSslCertsInsertRequest body */
+                    body?: (google.cloud.sql.v1.ISslCertsInsertRequest|null);
+                }
+
+                /** Represents a SqlSslCertsInsertRequest. */
+                class SqlSslCertsInsertRequest implements ISqlSslCertsInsertRequest {
+
+                    /**
+                     * Constructs a new SqlSslCertsInsertRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlSslCertsInsertRequest);
+
+                    /** SqlSslCertsInsertRequest instance. */
+                    public instance: string;
+
+                    /** SqlSslCertsInsertRequest project. */
+                    public project: string;
+
+                    /** SqlSslCertsInsertRequest body. */
+                    public body?: (google.cloud.sql.v1.ISslCertsInsertRequest|null);
+
+                    /**
+                     * Creates a new SqlSslCertsInsertRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlSslCertsInsertRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlSslCertsInsertRequest): google.cloud.sql.v1.SqlSslCertsInsertRequest;
+
+                    /**
+                     * Encodes the specified SqlSslCertsInsertRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlSslCertsInsertRequest.verify|verify} messages.
+                     * @param message SqlSslCertsInsertRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlSslCertsInsertRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlSslCertsInsertRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlSslCertsInsertRequest.verify|verify} messages.
+                     * @param message SqlSslCertsInsertRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlSslCertsInsertRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlSslCertsInsertRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlSslCertsInsertRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlSslCertsInsertRequest;
+
+                    /**
+                     * Decodes a SqlSslCertsInsertRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlSslCertsInsertRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlSslCertsInsertRequest;
+
+                    /**
+                     * Verifies a SqlSslCertsInsertRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlSslCertsInsertRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlSslCertsInsertRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlSslCertsInsertRequest;
+
+                    /**
+                     * Creates a plain object from a SqlSslCertsInsertRequest message. Also converts values to other types if specified.
+                     * @param message SqlSslCertsInsertRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlSslCertsInsertRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlSslCertsInsertRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlSslCertsListRequest. */
+                interface ISqlSslCertsListRequest {
+
+                    /** SqlSslCertsListRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlSslCertsListRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlSslCertsListRequest. */
+                class SqlSslCertsListRequest implements ISqlSslCertsListRequest {
+
+                    /**
+                     * Constructs a new SqlSslCertsListRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlSslCertsListRequest);
+
+                    /** SqlSslCertsListRequest instance. */
+                    public instance: string;
+
+                    /** SqlSslCertsListRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlSslCertsListRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlSslCertsListRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlSslCertsListRequest): google.cloud.sql.v1.SqlSslCertsListRequest;
+
+                    /**
+                     * Encodes the specified SqlSslCertsListRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlSslCertsListRequest.verify|verify} messages.
+                     * @param message SqlSslCertsListRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlSslCertsListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlSslCertsListRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlSslCertsListRequest.verify|verify} messages.
+                     * @param message SqlSslCertsListRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlSslCertsListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlSslCertsListRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlSslCertsListRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlSslCertsListRequest;
+
+                    /**
+                     * Decodes a SqlSslCertsListRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlSslCertsListRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlSslCertsListRequest;
+
+                    /**
+                     * Verifies a SqlSslCertsListRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlSslCertsListRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlSslCertsListRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlSslCertsListRequest;
+
+                    /**
+                     * Creates a plain object from a SqlSslCertsListRequest message. Also converts values to other types if specified.
+                     * @param message SqlSslCertsListRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlSslCertsListRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlSslCertsListRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SslCertsInsertRequest. */
+                interface ISslCertsInsertRequest {
+
+                    /** SslCertsInsertRequest commonName */
+                    commonName?: (string|null);
+                }
+
+                /** Represents a SslCertsInsertRequest. */
+                class SslCertsInsertRequest implements ISslCertsInsertRequest {
+
+                    /**
+                     * Constructs a new SslCertsInsertRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISslCertsInsertRequest);
+
+                    /** SslCertsInsertRequest commonName. */
+                    public commonName: string;
+
+                    /**
+                     * Creates a new SslCertsInsertRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SslCertsInsertRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISslCertsInsertRequest): google.cloud.sql.v1.SslCertsInsertRequest;
+
+                    /**
+                     * Encodes the specified SslCertsInsertRequest message. Does not implicitly {@link google.cloud.sql.v1.SslCertsInsertRequest.verify|verify} messages.
+                     * @param message SslCertsInsertRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISslCertsInsertRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SslCertsInsertRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SslCertsInsertRequest.verify|verify} messages.
+                     * @param message SslCertsInsertRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISslCertsInsertRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SslCertsInsertRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SslCertsInsertRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SslCertsInsertRequest;
+
+                    /**
+                     * Decodes a SslCertsInsertRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SslCertsInsertRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SslCertsInsertRequest;
+
+                    /**
+                     * Verifies a SslCertsInsertRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SslCertsInsertRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SslCertsInsertRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SslCertsInsertRequest;
+
+                    /**
+                     * Creates a plain object from a SslCertsInsertRequest message. Also converts values to other types if specified.
+                     * @param message SslCertsInsertRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SslCertsInsertRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SslCertsInsertRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SslCertsInsertResponse. */
+                interface ISslCertsInsertResponse {
+
+                    /** SslCertsInsertResponse kind */
+                    kind?: (string|null);
+
+                    /** SslCertsInsertResponse operation */
+                    operation?: (google.cloud.sql.v1.IOperation|null);
+
+                    /** SslCertsInsertResponse serverCaCert */
+                    serverCaCert?: (google.cloud.sql.v1.ISslCert|null);
+
+                    /** SslCertsInsertResponse clientCert */
+                    clientCert?: (google.cloud.sql.v1.ISslCertDetail|null);
+                }
+
+                /** Represents a SslCertsInsertResponse. */
+                class SslCertsInsertResponse implements ISslCertsInsertResponse {
+
+                    /**
+                     * Constructs a new SslCertsInsertResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISslCertsInsertResponse);
+
+                    /** SslCertsInsertResponse kind. */
+                    public kind: string;
+
+                    /** SslCertsInsertResponse operation. */
+                    public operation?: (google.cloud.sql.v1.IOperation|null);
+
+                    /** SslCertsInsertResponse serverCaCert. */
+                    public serverCaCert?: (google.cloud.sql.v1.ISslCert|null);
+
+                    /** SslCertsInsertResponse clientCert. */
+                    public clientCert?: (google.cloud.sql.v1.ISslCertDetail|null);
+
+                    /**
+                     * Creates a new SslCertsInsertResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SslCertsInsertResponse instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISslCertsInsertResponse): google.cloud.sql.v1.SslCertsInsertResponse;
+
+                    /**
+                     * Encodes the specified SslCertsInsertResponse message. Does not implicitly {@link google.cloud.sql.v1.SslCertsInsertResponse.verify|verify} messages.
+                     * @param message SslCertsInsertResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISslCertsInsertResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SslCertsInsertResponse message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SslCertsInsertResponse.verify|verify} messages.
+                     * @param message SslCertsInsertResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISslCertsInsertResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SslCertsInsertResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SslCertsInsertResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SslCertsInsertResponse;
+
+                    /**
+                     * Decodes a SslCertsInsertResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SslCertsInsertResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SslCertsInsertResponse;
+
+                    /**
+                     * Verifies a SslCertsInsertResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SslCertsInsertResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SslCertsInsertResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SslCertsInsertResponse;
+
+                    /**
+                     * Creates a plain object from a SslCertsInsertResponse message. Also converts values to other types if specified.
+                     * @param message SslCertsInsertResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SslCertsInsertResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SslCertsInsertResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SslCertsListResponse. */
+                interface ISslCertsListResponse {
+
+                    /** SslCertsListResponse kind */
+                    kind?: (string|null);
+
+                    /** SslCertsListResponse items */
+                    items?: (google.cloud.sql.v1.ISslCert[]|null);
+                }
+
+                /** Represents a SslCertsListResponse. */
+                class SslCertsListResponse implements ISslCertsListResponse {
+
+                    /**
+                     * Constructs a new SslCertsListResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISslCertsListResponse);
+
+                    /** SslCertsListResponse kind. */
+                    public kind: string;
+
+                    /** SslCertsListResponse items. */
+                    public items: google.cloud.sql.v1.ISslCert[];
+
+                    /**
+                     * Creates a new SslCertsListResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SslCertsListResponse instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISslCertsListResponse): google.cloud.sql.v1.SslCertsListResponse;
+
+                    /**
+                     * Encodes the specified SslCertsListResponse message. Does not implicitly {@link google.cloud.sql.v1.SslCertsListResponse.verify|verify} messages.
+                     * @param message SslCertsListResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISslCertsListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SslCertsListResponse message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SslCertsListResponse.verify|verify} messages.
+                     * @param message SslCertsListResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISslCertsListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SslCertsListResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SslCertsListResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SslCertsListResponse;
+
+                    /**
+                     * Decodes a SslCertsListResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SslCertsListResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SslCertsListResponse;
+
+                    /**
+                     * Verifies a SslCertsListResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SslCertsListResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SslCertsListResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SslCertsListResponse;
+
+                    /**
+                     * Creates a plain object from a SslCertsListResponse message. Also converts values to other types if specified.
+                     * @param message SslCertsListResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SslCertsListResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SslCertsListResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Represents a SqlTiersService */
+                class SqlTiersService extends $protobuf.rpc.Service {
+
+                    /**
+                     * Constructs a new SqlTiersService service.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     */
+                    constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                    /**
+                     * Creates new SqlTiersService service using the specified rpc implementation.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     * @returns RPC service. Useful where requests and/or responses are streamed.
+                     */
+                    public static create(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean): SqlTiersService;
+
+                    /**
+                     * Calls List.
+                     * @param request SqlTiersListRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and TiersListResponse
+                     */
+                    public list(request: google.cloud.sql.v1.ISqlTiersListRequest, callback: google.cloud.sql.v1.SqlTiersService.ListCallback): void;
+
+                    /**
+                     * Calls List.
+                     * @param request SqlTiersListRequest message or plain object
+                     * @returns Promise
+                     */
+                    public list(request: google.cloud.sql.v1.ISqlTiersListRequest): Promise<google.cloud.sql.v1.TiersListResponse>;
+                }
+
+                namespace SqlTiersService {
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlTiersService#list}.
+                     * @param error Error, if any
+                     * @param [response] TiersListResponse
+                     */
+                    type ListCallback = (error: (Error|null), response?: google.cloud.sql.v1.TiersListResponse) => void;
+                }
+
+                /** Properties of a SqlTiersListRequest. */
+                interface ISqlTiersListRequest {
+
+                    /** SqlTiersListRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlTiersListRequest. */
+                class SqlTiersListRequest implements ISqlTiersListRequest {
+
+                    /**
+                     * Constructs a new SqlTiersListRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlTiersListRequest);
+
+                    /** SqlTiersListRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlTiersListRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlTiersListRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlTiersListRequest): google.cloud.sql.v1.SqlTiersListRequest;
+
+                    /**
+                     * Encodes the specified SqlTiersListRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlTiersListRequest.verify|verify} messages.
+                     * @param message SqlTiersListRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlTiersListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlTiersListRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlTiersListRequest.verify|verify} messages.
+                     * @param message SqlTiersListRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlTiersListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlTiersListRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlTiersListRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlTiersListRequest;
+
+                    /**
+                     * Decodes a SqlTiersListRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlTiersListRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlTiersListRequest;
+
+                    /**
+                     * Verifies a SqlTiersListRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlTiersListRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlTiersListRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlTiersListRequest;
+
+                    /**
+                     * Creates a plain object from a SqlTiersListRequest message. Also converts values to other types if specified.
+                     * @param message SqlTiersListRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlTiersListRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlTiersListRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a TiersListResponse. */
+                interface ITiersListResponse {
+
+                    /** TiersListResponse kind */
+                    kind?: (string|null);
+
+                    /** TiersListResponse items */
+                    items?: (google.cloud.sql.v1.ITier[]|null);
+                }
+
+                /** Represents a TiersListResponse. */
+                class TiersListResponse implements ITiersListResponse {
+
+                    /**
+                     * Constructs a new TiersListResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ITiersListResponse);
+
+                    /** TiersListResponse kind. */
+                    public kind: string;
+
+                    /** TiersListResponse items. */
+                    public items: google.cloud.sql.v1.ITier[];
+
+                    /**
+                     * Creates a new TiersListResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns TiersListResponse instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ITiersListResponse): google.cloud.sql.v1.TiersListResponse;
+
+                    /**
+                     * Encodes the specified TiersListResponse message. Does not implicitly {@link google.cloud.sql.v1.TiersListResponse.verify|verify} messages.
+                     * @param message TiersListResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ITiersListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified TiersListResponse message, length delimited. Does not implicitly {@link google.cloud.sql.v1.TiersListResponse.verify|verify} messages.
+                     * @param message TiersListResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ITiersListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a TiersListResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns TiersListResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.TiersListResponse;
+
+                    /**
+                     * Decodes a TiersListResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns TiersListResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.TiersListResponse;
+
+                    /**
+                     * Verifies a TiersListResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a TiersListResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns TiersListResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.TiersListResponse;
+
+                    /**
+                     * Creates a plain object from a TiersListResponse message. Also converts values to other types if specified.
+                     * @param message TiersListResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.TiersListResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this TiersListResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a Tier. */
+                interface ITier {
+
+                    /** Tier tier */
+                    tier?: (string|null);
+
+                    /** Tier RAM */
+                    RAM?: (number|Long|string|null);
+
+                    /** Tier kind */
+                    kind?: (string|null);
+
+                    /** Tier Disk_Quota */
+                    Disk_Quota?: (number|Long|string|null);
+
+                    /** Tier region */
+                    region?: (string[]|null);
+                }
+
+                /** Represents a Tier. */
+                class Tier implements ITier {
+
+                    /**
+                     * Constructs a new Tier.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ITier);
+
+                    /** Tier tier. */
+                    public tier: string;
+
+                    /** Tier RAM. */
+                    public RAM: (number|Long|string);
+
+                    /** Tier kind. */
+                    public kind: string;
+
+                    /** Tier Disk_Quota. */
+                    public Disk_Quota: (number|Long|string);
+
+                    /** Tier region. */
+                    public region: string[];
+
+                    /**
+                     * Creates a new Tier instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns Tier instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ITier): google.cloud.sql.v1.Tier;
+
+                    /**
+                     * Encodes the specified Tier message. Does not implicitly {@link google.cloud.sql.v1.Tier.verify|verify} messages.
+                     * @param message Tier message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ITier, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified Tier message, length delimited. Does not implicitly {@link google.cloud.sql.v1.Tier.verify|verify} messages.
+                     * @param message Tier message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ITier, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a Tier message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns Tier
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.Tier;
+
+                    /**
+                     * Decodes a Tier message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns Tier
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.Tier;
+
+                    /**
+                     * Verifies a Tier message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a Tier message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns Tier
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.Tier;
+
+                    /**
+                     * Creates a plain object from a Tier message. Also converts values to other types if specified.
+                     * @param message Tier
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.Tier, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this Tier to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Represents a SqlUsersService */
+                class SqlUsersService extends $protobuf.rpc.Service {
+
+                    /**
+                     * Constructs a new SqlUsersService service.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     */
+                    constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                    /**
+                     * Creates new SqlUsersService service using the specified rpc implementation.
+                     * @param rpcImpl RPC implementation
+                     * @param [requestDelimited=false] Whether requests are length-delimited
+                     * @param [responseDelimited=false] Whether responses are length-delimited
+                     * @returns RPC service. Useful where requests and/or responses are streamed.
+                     */
+                    public static create(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean): SqlUsersService;
+
+                    /**
+                     * Calls Delete.
+                     * @param request SqlUsersDeleteRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public delete(request: google.cloud.sql.v1.ISqlUsersDeleteRequest, callback: google.cloud.sql.v1.SqlUsersService.DeleteCallback): void;
+
+                    /**
+                     * Calls Delete.
+                     * @param request SqlUsersDeleteRequest message or plain object
+                     * @returns Promise
+                     */
+                    public delete(request: google.cloud.sql.v1.ISqlUsersDeleteRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls Insert.
+                     * @param request SqlUsersInsertRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public insert(request: google.cloud.sql.v1.ISqlUsersInsertRequest, callback: google.cloud.sql.v1.SqlUsersService.InsertCallback): void;
+
+                    /**
+                     * Calls Insert.
+                     * @param request SqlUsersInsertRequest message or plain object
+                     * @returns Promise
+                     */
+                    public insert(request: google.cloud.sql.v1.ISqlUsersInsertRequest): Promise<google.cloud.sql.v1.Operation>;
+
+                    /**
+                     * Calls List.
+                     * @param request SqlUsersListRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and UsersListResponse
+                     */
+                    public list(request: google.cloud.sql.v1.ISqlUsersListRequest, callback: google.cloud.sql.v1.SqlUsersService.ListCallback): void;
+
+                    /**
+                     * Calls List.
+                     * @param request SqlUsersListRequest message or plain object
+                     * @returns Promise
+                     */
+                    public list(request: google.cloud.sql.v1.ISqlUsersListRequest): Promise<google.cloud.sql.v1.UsersListResponse>;
+
+                    /**
+                     * Calls Update.
+                     * @param request SqlUsersUpdateRequest message or plain object
+                     * @param callback Node-style callback called with the error, if any, and Operation
+                     */
+                    public update(request: google.cloud.sql.v1.ISqlUsersUpdateRequest, callback: google.cloud.sql.v1.SqlUsersService.UpdateCallback): void;
+
+                    /**
+                     * Calls Update.
+                     * @param request SqlUsersUpdateRequest message or plain object
+                     * @returns Promise
+                     */
+                    public update(request: google.cloud.sql.v1.ISqlUsersUpdateRequest): Promise<google.cloud.sql.v1.Operation>;
+                }
+
+                namespace SqlUsersService {
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlUsersService#delete_}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type DeleteCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlUsersService#insert}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type InsertCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlUsersService#list}.
+                     * @param error Error, if any
+                     * @param [response] UsersListResponse
+                     */
+                    type ListCallback = (error: (Error|null), response?: google.cloud.sql.v1.UsersListResponse) => void;
+
+                    /**
+                     * Callback as used by {@link google.cloud.sql.v1.SqlUsersService#update}.
+                     * @param error Error, if any
+                     * @param [response] Operation
+                     */
+                    type UpdateCallback = (error: (Error|null), response?: google.cloud.sql.v1.Operation) => void;
+                }
+
+                /** Properties of a SqlUsersDeleteRequest. */
+                interface ISqlUsersDeleteRequest {
+
+                    /** SqlUsersDeleteRequest host */
+                    host?: (string|null);
+
+                    /** SqlUsersDeleteRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlUsersDeleteRequest name */
+                    name?: (string|null);
+
+                    /** SqlUsersDeleteRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlUsersDeleteRequest. */
+                class SqlUsersDeleteRequest implements ISqlUsersDeleteRequest {
+
+                    /**
+                     * Constructs a new SqlUsersDeleteRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlUsersDeleteRequest);
+
+                    /** SqlUsersDeleteRequest host. */
+                    public host: string;
+
+                    /** SqlUsersDeleteRequest instance. */
+                    public instance: string;
+
+                    /** SqlUsersDeleteRequest name. */
+                    public name: string;
+
+                    /** SqlUsersDeleteRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlUsersDeleteRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlUsersDeleteRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlUsersDeleteRequest): google.cloud.sql.v1.SqlUsersDeleteRequest;
+
+                    /**
+                     * Encodes the specified SqlUsersDeleteRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlUsersDeleteRequest.verify|verify} messages.
+                     * @param message SqlUsersDeleteRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlUsersDeleteRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlUsersDeleteRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlUsersDeleteRequest.verify|verify} messages.
+                     * @param message SqlUsersDeleteRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlUsersDeleteRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlUsersDeleteRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlUsersDeleteRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlUsersDeleteRequest;
+
+                    /**
+                     * Decodes a SqlUsersDeleteRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlUsersDeleteRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlUsersDeleteRequest;
+
+                    /**
+                     * Verifies a SqlUsersDeleteRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlUsersDeleteRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlUsersDeleteRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlUsersDeleteRequest;
+
+                    /**
+                     * Creates a plain object from a SqlUsersDeleteRequest message. Also converts values to other types if specified.
+                     * @param message SqlUsersDeleteRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlUsersDeleteRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlUsersDeleteRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlUsersInsertRequest. */
+                interface ISqlUsersInsertRequest {
+
+                    /** SqlUsersInsertRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlUsersInsertRequest project */
+                    project?: (string|null);
+
+                    /** SqlUsersInsertRequest body */
+                    body?: (google.cloud.sql.v1.IUser|null);
+                }
+
+                /** Represents a SqlUsersInsertRequest. */
+                class SqlUsersInsertRequest implements ISqlUsersInsertRequest {
+
+                    /**
+                     * Constructs a new SqlUsersInsertRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlUsersInsertRequest);
+
+                    /** SqlUsersInsertRequest instance. */
+                    public instance: string;
+
+                    /** SqlUsersInsertRequest project. */
+                    public project: string;
+
+                    /** SqlUsersInsertRequest body. */
+                    public body?: (google.cloud.sql.v1.IUser|null);
+
+                    /**
+                     * Creates a new SqlUsersInsertRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlUsersInsertRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlUsersInsertRequest): google.cloud.sql.v1.SqlUsersInsertRequest;
+
+                    /**
+                     * Encodes the specified SqlUsersInsertRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlUsersInsertRequest.verify|verify} messages.
+                     * @param message SqlUsersInsertRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlUsersInsertRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlUsersInsertRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlUsersInsertRequest.verify|verify} messages.
+                     * @param message SqlUsersInsertRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlUsersInsertRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlUsersInsertRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlUsersInsertRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlUsersInsertRequest;
+
+                    /**
+                     * Decodes a SqlUsersInsertRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlUsersInsertRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlUsersInsertRequest;
+
+                    /**
+                     * Verifies a SqlUsersInsertRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlUsersInsertRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlUsersInsertRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlUsersInsertRequest;
+
+                    /**
+                     * Creates a plain object from a SqlUsersInsertRequest message. Also converts values to other types if specified.
+                     * @param message SqlUsersInsertRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlUsersInsertRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlUsersInsertRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlUsersListRequest. */
+                interface ISqlUsersListRequest {
+
+                    /** SqlUsersListRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlUsersListRequest project */
+                    project?: (string|null);
+                }
+
+                /** Represents a SqlUsersListRequest. */
+                class SqlUsersListRequest implements ISqlUsersListRequest {
+
+                    /**
+                     * Constructs a new SqlUsersListRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlUsersListRequest);
+
+                    /** SqlUsersListRequest instance. */
+                    public instance: string;
+
+                    /** SqlUsersListRequest project. */
+                    public project: string;
+
+                    /**
+                     * Creates a new SqlUsersListRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlUsersListRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlUsersListRequest): google.cloud.sql.v1.SqlUsersListRequest;
+
+                    /**
+                     * Encodes the specified SqlUsersListRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlUsersListRequest.verify|verify} messages.
+                     * @param message SqlUsersListRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlUsersListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlUsersListRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlUsersListRequest.verify|verify} messages.
+                     * @param message SqlUsersListRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlUsersListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlUsersListRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlUsersListRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlUsersListRequest;
+
+                    /**
+                     * Decodes a SqlUsersListRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlUsersListRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlUsersListRequest;
+
+                    /**
+                     * Verifies a SqlUsersListRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlUsersListRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlUsersListRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlUsersListRequest;
+
+                    /**
+                     * Creates a plain object from a SqlUsersListRequest message. Also converts values to other types if specified.
+                     * @param message SqlUsersListRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlUsersListRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlUsersListRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a SqlUsersUpdateRequest. */
+                interface ISqlUsersUpdateRequest {
+
+                    /** SqlUsersUpdateRequest host */
+                    host?: (string|null);
+
+                    /** SqlUsersUpdateRequest instance */
+                    instance?: (string|null);
+
+                    /** SqlUsersUpdateRequest name */
+                    name?: (string|null);
+
+                    /** SqlUsersUpdateRequest project */
+                    project?: (string|null);
+
+                    /** SqlUsersUpdateRequest body */
+                    body?: (google.cloud.sql.v1.IUser|null);
+                }
+
+                /** Represents a SqlUsersUpdateRequest. */
+                class SqlUsersUpdateRequest implements ISqlUsersUpdateRequest {
+
+                    /**
+                     * Constructs a new SqlUsersUpdateRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlUsersUpdateRequest);
+
+                    /** SqlUsersUpdateRequest host. */
+                    public host: string;
+
+                    /** SqlUsersUpdateRequest instance. */
+                    public instance: string;
+
+                    /** SqlUsersUpdateRequest name. */
+                    public name: string;
+
+                    /** SqlUsersUpdateRequest project. */
+                    public project: string;
+
+                    /** SqlUsersUpdateRequest body. */
+                    public body?: (google.cloud.sql.v1.IUser|null);
+
+                    /**
+                     * Creates a new SqlUsersUpdateRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlUsersUpdateRequest instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlUsersUpdateRequest): google.cloud.sql.v1.SqlUsersUpdateRequest;
+
+                    /**
+                     * Encodes the specified SqlUsersUpdateRequest message. Does not implicitly {@link google.cloud.sql.v1.SqlUsersUpdateRequest.verify|verify} messages.
+                     * @param message SqlUsersUpdateRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlUsersUpdateRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlUsersUpdateRequest message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlUsersUpdateRequest.verify|verify} messages.
+                     * @param message SqlUsersUpdateRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlUsersUpdateRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlUsersUpdateRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlUsersUpdateRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlUsersUpdateRequest;
+
+                    /**
+                     * Decodes a SqlUsersUpdateRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlUsersUpdateRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlUsersUpdateRequest;
+
+                    /**
+                     * Verifies a SqlUsersUpdateRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlUsersUpdateRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlUsersUpdateRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlUsersUpdateRequest;
+
+                    /**
+                     * Creates a plain object from a SqlUsersUpdateRequest message. Also converts values to other types if specified.
+                     * @param message SqlUsersUpdateRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlUsersUpdateRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlUsersUpdateRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a User. */
+                interface IUser {
+
+                    /** User kind */
+                    kind?: (string|null);
+
+                    /** User password */
+                    password?: (string|null);
+
+                    /** User etag */
+                    etag?: (string|null);
+
+                    /** User name */
+                    name?: (string|null);
+
+                    /** User host */
+                    host?: (string|null);
+
+                    /** User instance */
+                    instance?: (string|null);
+
+                    /** User project */
+                    project?: (string|null);
+
+                    /** User type */
+                    type?: (google.cloud.sql.v1.User.SqlUserType|keyof typeof google.cloud.sql.v1.User.SqlUserType|null);
+
+                    /** User sqlserverUserDetails */
+                    sqlserverUserDetails?: (google.cloud.sql.v1.ISqlServerUserDetails|null);
+                }
+
+                /** Represents a User. */
+                class User implements IUser {
+
+                    /**
+                     * Constructs a new User.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IUser);
+
+                    /** User kind. */
+                    public kind: string;
+
+                    /** User password. */
+                    public password: string;
+
+                    /** User etag. */
+                    public etag: string;
+
+                    /** User name. */
+                    public name: string;
+
+                    /** User host. */
+                    public host: string;
+
+                    /** User instance. */
+                    public instance: string;
+
+                    /** User project. */
+                    public project: string;
+
+                    /** User type. */
+                    public type: (google.cloud.sql.v1.User.SqlUserType|keyof typeof google.cloud.sql.v1.User.SqlUserType);
+
+                    /** User sqlserverUserDetails. */
+                    public sqlserverUserDetails?: (google.cloud.sql.v1.ISqlServerUserDetails|null);
+
+                    /** User userDetails. */
+                    public userDetails?: "sqlserverUserDetails";
+
+                    /**
+                     * Creates a new User instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns User instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IUser): google.cloud.sql.v1.User;
+
+                    /**
+                     * Encodes the specified User message. Does not implicitly {@link google.cloud.sql.v1.User.verify|verify} messages.
+                     * @param message User message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IUser, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified User message, length delimited. Does not implicitly {@link google.cloud.sql.v1.User.verify|verify} messages.
+                     * @param message User message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IUser, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a User message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns User
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.User;
+
+                    /**
+                     * Decodes a User message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns User
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.User;
+
+                    /**
+                     * Verifies a User message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a User message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns User
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.User;
+
+                    /**
+                     * Creates a plain object from a User message. Also converts values to other types if specified.
+                     * @param message User
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.User, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this User to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                namespace User {
+
+                    /** SqlUserType enum. */
+                    enum SqlUserType {
+                        BUILT_IN = 0,
+                        CLOUD_IAM_USER = 1,
+                        CLOUD_IAM_SERVICE_ACCOUNT = 2
+                    }
+                }
+
+                /** Properties of a SqlServerUserDetails. */
+                interface ISqlServerUserDetails {
+
+                    /** SqlServerUserDetails disabled */
+                    disabled?: (boolean|null);
+
+                    /** SqlServerUserDetails serverRoles */
+                    serverRoles?: (string[]|null);
+                }
+
+                /** Represents a SqlServerUserDetails. */
+                class SqlServerUserDetails implements ISqlServerUserDetails {
+
+                    /**
+                     * Constructs a new SqlServerUserDetails.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.ISqlServerUserDetails);
+
+                    /** SqlServerUserDetails disabled. */
+                    public disabled: boolean;
+
+                    /** SqlServerUserDetails serverRoles. */
+                    public serverRoles: string[];
+
+                    /**
+                     * Creates a new SqlServerUserDetails instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SqlServerUserDetails instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.ISqlServerUserDetails): google.cloud.sql.v1.SqlServerUserDetails;
+
+                    /**
+                     * Encodes the specified SqlServerUserDetails message. Does not implicitly {@link google.cloud.sql.v1.SqlServerUserDetails.verify|verify} messages.
+                     * @param message SqlServerUserDetails message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.ISqlServerUserDetails, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SqlServerUserDetails message, length delimited. Does not implicitly {@link google.cloud.sql.v1.SqlServerUserDetails.verify|verify} messages.
+                     * @param message SqlServerUserDetails message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.ISqlServerUserDetails, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SqlServerUserDetails message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SqlServerUserDetails
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.SqlServerUserDetails;
+
+                    /**
+                     * Decodes a SqlServerUserDetails message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SqlServerUserDetails
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.SqlServerUserDetails;
+
+                    /**
+                     * Verifies a SqlServerUserDetails message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SqlServerUserDetails message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SqlServerUserDetails
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.SqlServerUserDetails;
+
+                    /**
+                     * Creates a plain object from a SqlServerUserDetails message. Also converts values to other types if specified.
+                     * @param message SqlServerUserDetails
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.SqlServerUserDetails, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SqlServerUserDetails to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a UsersListResponse. */
+                interface IUsersListResponse {
+
+                    /** UsersListResponse kind */
+                    kind?: (string|null);
+
+                    /** UsersListResponse items */
+                    items?: (google.cloud.sql.v1.IUser[]|null);
+
+                    /** UsersListResponse nextPageToken */
+                    nextPageToken?: (string|null);
+                }
+
+                /** Represents a UsersListResponse. */
+                class UsersListResponse implements IUsersListResponse {
+
+                    /**
+                     * Constructs a new UsersListResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: google.cloud.sql.v1.IUsersListResponse);
+
+                    /** UsersListResponse kind. */
+                    public kind: string;
+
+                    /** UsersListResponse items. */
+                    public items: google.cloud.sql.v1.IUser[];
+
+                    /** UsersListResponse nextPageToken. */
+                    public nextPageToken: string;
+
+                    /**
+                     * Creates a new UsersListResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns UsersListResponse instance
+                     */
+                    public static create(properties?: google.cloud.sql.v1.IUsersListResponse): google.cloud.sql.v1.UsersListResponse;
+
+                    /**
+                     * Encodes the specified UsersListResponse message. Does not implicitly {@link google.cloud.sql.v1.UsersListResponse.verify|verify} messages.
+                     * @param message UsersListResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: google.cloud.sql.v1.IUsersListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified UsersListResponse message, length delimited. Does not implicitly {@link google.cloud.sql.v1.UsersListResponse.verify|verify} messages.
+                     * @param message UsersListResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: google.cloud.sql.v1.IUsersListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a UsersListResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns UsersListResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.sql.v1.UsersListResponse;
+
+                    /**
+                     * Decodes a UsersListResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns UsersListResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.sql.v1.UsersListResponse;
+
+                    /**
+                     * Verifies a UsersListResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a UsersListResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns UsersListResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): google.cloud.sql.v1.UsersListResponse;
+
+                    /**
+                     * Creates a plain object from a UsersListResponse message. Also converts values to other types if specified.
+                     * @param message UsersListResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: google.cloud.sql.v1.UsersListResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this UsersListResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+            }
+
             /** Namespace v1beta4. */
             namespace v1beta4 {
 
