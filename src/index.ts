@@ -16,6 +16,7 @@
 // ** https://github.com/googleapis/synthtool **
 // ** All changes to this file may be overwritten. **
 
+import * as v1 from './v1';
 import * as v1beta4 from './v1beta4';
 
 const SqlBackupRunsServiceClient = v1beta4.SqlBackupRunsServiceClient;
@@ -36,6 +37,7 @@ const SqlUsersServiceClient = v1beta4.SqlUsersServiceClient;
 type SqlUsersServiceClient = v1beta4.SqlUsersServiceClient;
 
 export {
+  v1,
   v1beta4,
   SqlBackupRunsServiceClient,
   SqlDatabasesServiceClient,
@@ -47,6 +49,7 @@ export {
   SqlUsersServiceClient,
 };
 export default {
+  v1,
   v1beta4,
   SqlBackupRunsServiceClient,
   SqlDatabasesServiceClient,
